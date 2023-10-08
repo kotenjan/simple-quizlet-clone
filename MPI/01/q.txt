@@ -1,0 +1,17 @@
+Definitnost matic;Definitnost matic.png
+Derivace ve směru;Derivace ve směru.png
+Druhá parciální derivace;Druhá parciální derivace.png
+Extrémy na omezených a uzavřených množinách;Extrémy na omezených a uzavřených množinách.png
+Hessova matice;Hessova matice.png
+Hromadný bod;Hromadný bod.png
+Izolovaný bod;Izolovaný bod.png
+Konvexní funkce;Konvexní funkce.png
+Kritické body;Kritické body.png
+Limita funkce více proměnných;Limita funkce více proměnných.png
+Limita funkce;Limita funkce.png
+Lokální extrémy;Lokální extrémy.png
+Norma;Norma.png
+Okolí bodu;Okolí bodu.png
+Parciální derivace;Parciální derivace.png
+Postačující podmínky lokálních extrémů;Postačující podmínky lokálních extrémů.png
+Tečná nadrovina;Tečná nadrovina.png

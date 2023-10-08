@@ -27,7 +27,7 @@ class QuestionApp(tk.Tk):
 
     def show_question(self):
         if self.current_index < len(self.questions_answers):
-            question_var.set(self.questions_answers[self.current_index][0])
+            question_var.set(f"{self.current_index + 1}/{len(self.questions_answers)} {self.questions_answers[self.current_index][0]}")
             result_var.set('')
             if self.img_label:
                 self.img_label.pack_forget()
@@ -145,5 +145,5 @@ if __name__ == "__main__":
     if len(sys.argv) != 2:
         print("Usage: python your_script.py <>")
     else:
-        app = QuestionApp("KOP")
+        app = QuestionApp(sys.argv[1])
         app.mainloop()

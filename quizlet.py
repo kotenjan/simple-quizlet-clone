@@ -1,11 +1,12 @@
 import tkinter as tk
 from tkinter import ttk
 from PIL import Image, ImageTk
+import sys
 
 class QuestionApp(tk.Tk):
     def __init__(self, directory):
         super().__init__()
-        self.title("Question App")
+        self.title(f"Question App [{directory}/*]")
         self.geometry("1600x900")
         self.configure(bg='#2E2E2E')
         self.questions_answers = []
@@ -141,5 +142,8 @@ class QuestionApp(tk.Tk):
         self.bind('<BackSpace>', self.on_backspace_pressed)
 
 if __name__ == "__main__":
-    app = QuestionApp('KOP')
-    app.mainloop()
+    if len(sys.argv) != 2:
+        print("Usage: python your_script.py <>")
+    else:
+        app = QuestionApp("KOP")
+        app.mainloop()

@@ -1,0 +1,9 @@
+Jaký je účel hodnocení algoritmů?;Cíle hodnocení zahrnují porozumění, srovnání a předpovídání chování algoritmů a hodnocení jejich vhodnosti pro zamýšlené funkce.
+Jaké jsou hlavní přístupy k hodnocení algoritmů?;Analytické přístupy hodnotí nejhorší a průměrné případy a zaměřují se na teoretické aspekty, zatímco experimentální přístupy nabízejí praktické poznatky a zaměřují se na aplikace v reálném světě.
+Co jsou to vstupní a výstupní metriky?;Vstupní a výstupní metriky jsou nezbytné pro zobecnění a interpretaci dat naměřených během jednotlivých běhů algoritmu.
+Co znamená pojem "odvozené metriky"?;Odvozené metriky jsou hodnoty přímo měřené a porovnávané pomocí vizualizačních nástrojů a kvantitativních srovnávacích metod.
+Jak jsou algoritmy obvykle porovnávány?;Algoritmy jsou často porovnávány na základě parametrů distribuce a dominance, aby bylo možné pochopit kvalitu a relevanci jejich řešení pro specifické instance.
+Co je analyzováno při hodnocení robustnosti heuristik?;Hodnocení robustnosti heuristik zahrnuje vyhodnocení vlivu změn pořadí proměnných a měření variance způsobené perturbací.
+Co zahrnuje inženýrská algoritmika?;Inženýrská algoritmika se zabývá výzvami, jako je generování instancí a potlačení variance, a také zdůrazňuje význam veřejně dostupných sad instancí a diskutuje o omezeních statistických předpokladů a průměrování.
+Co je struktura IMRaD?;Struktura IMRaD je standardní formát prezentace výzkumu, který obsahuje Úvod, Metody, Výsledky a Diskuzi, a zaměřuje se na kontext výzkumu, detaily provedení, zjištění a důsledky odpovědí.
+Jaká jsou klíčová kritéria při prezentaci a interpretaci dat?;Jasnost a přesnost jsou zásadní při prezentaci dat, grafů a tabulek, zatímco grafy by měly předávat jasné a stručné poselství a jejich interpretace by měla být logická a podporovat výzkumné zjištění.

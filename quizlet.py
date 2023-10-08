@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import ttk
 from PIL import Image, ImageTk
 import sys
+import textwrap
 
 class QuestionApp(tk.Tk):
     def __init__(self, directory):
@@ -11,7 +12,7 @@ class QuestionApp(tk.Tk):
         self.configure(bg='#2E2E2E')
         self.questions_answers = []
         self.directory = directory
-        self._load_questions(f"{directory}/q.txt")
+        self._load_questions(f"{directory}q.txt")
         self.current_index = 0
         self.img_label = None
         self.showing_answer = False
@@ -26,8 +27,10 @@ class QuestionApp(tk.Tk):
                 self.questions_answers.append((q, a))
 
     def show_question(self):
+        max_line_length = 80
         if self.current_index < len(self.questions_answers):
-            question_var.set(f"{self.current_index + 1}/{len(self.questions_answers)} {self.questions_answers[self.current_index][0]}")
+            wrapped_text = self.split_text(self.questions_answers[self.current_index][0], max_line_length)
+            question_var.set(f"{self.current_index + 1}/{len(self.questions_answers)} {wrapped_text}")
             result_var.set('')
             if self.img_label:
                 self.img_label.pack_forget()
@@ -36,16 +39,20 @@ class QuestionApp(tk.Tk):
             question_var.set('No more questions!')
             result_var.set("")
 
+    def split_text(self, text, max_line_length):
+        return "\n".join(textwrap.wrap(text, max_line_length))
+
     def display_answer(self):
         answer = self.questions_answers[self.current_index][1]
         max_width = 1000  
         max_height = 800  
+        max_line_length = 100  # You might adjust this value
 
         if answer.lower().endswith(".png"):
             if self.img_label:
                 self.img_label.pack_forget()
             
-            with Image.open(f"{self.directory}/{answer}") as img:
+            with Image.open(f"{self.directory}{answer}") as img:
                 if img.width > max_width or img.height > max_height:
                     scale = min(max_width/img.width, max_height/img.height)
                     new_width = int(img.width * scale)
@@ -57,7 +64,8 @@ class QuestionApp(tk.Tk):
             self.img_label.photo = photo  
             self.img_label.pack(pady=20)
         else:
-            result_var.set(answer)
+            wrapped_text = self.split_text(answer, max_line_length)
+            result_var.set(wrapped_text)
             if self.img_label:
                 self.img_label.pack_forget()
 
@@ -112,7 +120,7 @@ class QuestionApp(tk.Tk):
 
         if self.current_index + 10 < len(self.questions_answers):
             self.questions_answers.insert(self.current_index + 10, self.questions_answers[self.current_index])
-        else:
+        elif self.current_index < len(self.questions_answers):
             self.questions_answers.append(self.questions_answers[self.current_index])
         
         self.current_index += 1

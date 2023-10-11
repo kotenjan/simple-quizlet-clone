@@ -20,7 +20,7 @@ A simple quiz app built using Tkinter in Python.
 - `Escape`: Quit the app.
 
 ## Example Usage
-```python your_script_name.py your_directory -s -t 10```
+```python quizlet.py /path/to/directory -s -t 10```
 
 # PNG to q.txt Generator
 

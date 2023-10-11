@@ -15,8 +15,8 @@ A simple quiz app built using Tkinter in Python.
 - `-t` or `--steps`: Optional, sets the number of steps/questions. Default is 5. If user flags question as incorrect it will be repeated in -t steps.
 
 ## Controls
-- `Enter`: Show answer or move to next question.
-- `Backspace`: Show answer or mark question for review.
+- `Enter`: 1) Show answer. 2) Move to next question.
+- `Backspace`: 1) Show answer 2) Mark question as incorrect. (will be repeated in -t questions)
 - `Escape`: Quit the app.
 
 ## Example Usage

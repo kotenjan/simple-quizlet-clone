@@ -20,4 +20,4 @@ A simple quiz app built using Tkinter in Python.
 - `Escape`: Quit the app.
 
 ## Example Usage
-"""python your_script_name.py your_directory -s -t 10"""
+```python your_script_name.py your_directory -s -t 10```

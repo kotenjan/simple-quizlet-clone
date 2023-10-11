@@ -33,7 +33,7 @@ A Python script to generate a `q.txt` file from `.png` image files in a specifie
 - `directory_path`: Path to the directory containing `.png` files.
 
 ## Example Usage
-`python your_script.py /path/to/directory`
+`python image_2_question.py /path/to/directory`
 
 ## Output
 A file named `q.txt` will be generated in the specified directory. This file will contain the image names and corresponding `.png` filenames, separated by a semicolon (`;`).

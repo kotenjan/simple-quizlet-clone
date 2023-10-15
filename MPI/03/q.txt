@@ -1,0 +1,12 @@
+Lagrangeova funkce při rovnostních i nerovnostních vazbách;Lagrangeova funkce při rovnostních i nerovnostních vazbách.png
+Lagrangeova funkce při rovnostních vazbách;Lagrangeova funkce při rovnostních vazbách.png
+Lokální minimum vzhledem k množině;Lokální minimum vzhledem k množině.png
+Množina aktivních omezení;Množina aktivních omezení.png
+Množina přípustných řešení;Množina přípustných řešení.png
+Postačující podmínka existence ostrého lokálního maxima;Postačující podmínka existence ostrého lokálního maxima.png
+Postačující podmínka existence ostrého lokálního minima pro rovnostní vazby;Postačující podmínka existence ostrého lokálního minima pro rovnostní vazby.png
+Postačující podmínka existence ostrého lokálního minima;Postačující podmínka existence ostrého lokálního minima.png
+Technické předpoklady k diferencovatelnosti;Technické předpoklady k diferencovatelnosti.png
+Úloha kvadratického programování;Úloha kvadratického programování.png
+Úloha lineárního programování;Úloha lineárního programování.png
+Úloha vázaného extrému;Úloha vázaného extrému.png

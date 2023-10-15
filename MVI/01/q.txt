@@ -1,0 +1,8 @@
+Efekty mutací;Efekty mutací.png
+Lineární škálování;Lineární škálování.png
+Očekávaný počet jedinců ve schématu S v čase t+1;Očekávaný počet jedinců ve schématu S v čase t+1.png
+Počítání fitness;Počítání fitness.png
+Pravděpodobnost výběru jedince;Pravděpodobnost výběru jedince.png
+Pravděpodobnost, že schéma přežije 1-point crossover;Pravděpodobnost, že schéma přežije 1-point crossover.png
+Terminologie genetického algoritmu;Terminologie genetického algoritmu.png
+Typy inicializace genetického algoritmu;Typy inicializace genetického algoritmu.png

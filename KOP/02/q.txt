@@ -1,9 +1,16 @@
-Jaký je účel hodnocení algoritmů?;Cíle hodnocení zahrnují porozumění, srovnání a předpovídání chování algoritmů a hodnocení jejich vhodnosti pro zamýšlené funkce.
-Jaké jsou hlavní přístupy k hodnocení algoritmů?;Analytické přístupy hodnotí nejhorší a průměrné případy a zaměřují se na teoretické aspekty, zatímco experimentální přístupy nabízejí praktické poznatky a zaměřují se na aplikace v reálném světě.
-Co jsou to vstupní a výstupní metriky?;Vstupní a výstupní metriky jsou nezbytné pro zobecnění a interpretaci dat naměřených během jednotlivých běhů algoritmu.
-Co znamená pojem "odvozené metriky"?;Odvozené metriky jsou hodnoty přímo měřené a porovnávané pomocí vizualizačních nástrojů a kvantitativních srovnávacích metod.
-Jak jsou algoritmy obvykle porovnávány?;Algoritmy jsou často porovnávány na základě parametrů distribuce a dominance, aby bylo možné pochopit kvalitu a relevanci jejich řešení pro specifické instance.
-Co je analyzováno při hodnocení robustnosti heuristik?;Hodnocení robustnosti heuristik zahrnuje vyhodnocení vlivu změn pořadí proměnných a měření variance způsobené perturbací.
-Co zahrnuje inženýrská algoritmika?;Inženýrská algoritmika se zabývá výzvami, jako je generování instancí a potlačení variance, a také zdůrazňuje význam veřejně dostupných sad instancí a diskutuje o omezeních statistických předpokladů a průměrování.
-Co je struktura IMRaD?;Struktura IMRaD je standardní formát prezentace výzkumu, který obsahuje Úvod, Metody, Výsledky a Diskuzi, a zaměřuje se na kontext výzkumu, detaily provedení, zjištění a důsledky odpovědí.
-Jaká jsou klíčová kritéria při prezentaci a interpretaci dat?;Jasnost a přesnost jsou zásadní při prezentaci dat, grafů a tabulek, zatímco grafy by měly předávat jasné a stručné poselství a jejich interpretace by měla být logická a podporovat výzkumné zjištění.
+Účel Hodnocení - Cíle?;Porozumění, srovnání a předpovídání chování algoritmů a hodnocení jejich vhodnosti pro zamýšlené funkce.
+Účel Hodnocení - Analytické vs. Experimentální?;Analytické nástroje hodnotí nejhorší a průměrné případy, zaměřují se na teoretické aspekty. Experimentální nástroje nabízejí praktické poznatky o složitosti a výkonu algoritmů, zaměřují se na aplikace v reálném světě.
+Složitost Algoritmů - Praktický Design?;Algoritmy se skládají z několika kroků, každý je grafickým algoritmem se složitostí závislou na vlastnostech grafu popisujícího obvod.
+Složitost Algoritmů - Otázky Zájmu?;Zaměřují se na kvalitu řešení a závislost výpočetního času na velikosti instance.
+Výběr Metrik - Vstupní a Výstupní Metriky?;Nezbytné pro zobecnění a interpretaci naměřených dat pro jednotlivé běhy algoritmu.
+Výběr Metrik - Odvodené Metriky?;Přímo měřené hodnoty jsou porovnávány pomocí vizualizačních nástrojů a kvantitativních srovnávacích metod.
+Srovnání Algoritmů - Parametry Distribuce a Dominance?;Algoritmy jsou porovnávány na základě těchto parametrů, aby bylo možné pochopit kvalitu a relevance řešení pro specifické instance.
+Srovnání Algoritmů - Hodnocení na Instancích?;Zohledňuje se variance v instancích a randomizace při interpretaci statistik.
+Robustnost Heuristik - Vliv Pořadí Proměnných?;Hodnotí vliv změny pořadí proměnných ve vzorci nebo programu na řešení a výkon algoritmů.
+Robustnost Heuristik - Měření Robustnosti?;Variance způsobená perturbací se měří a interpretuje, přičemž všechny perturbace jsou považovány za stejně pravděpodobné.
+Inženýrská Algoritmika - Generování Instancí a Potlačení Variance?;Řeší výzvy při generování náhodných reálných obvodů a testování heuristik na nich, při interpretaci statistik se zohledňuje variance v instancích a randomizace.
+Inženýrská Algoritmika - Standardní Sady a Omezení?;Zdůrazňuje význam veřejně dostupných sad instancí a diskutuje o omezeních statistických předpokladů a průměrování při srovnání.
+Struktura IMRaD - Standardní Struktura pro Prezentaci Výzkumu?;Skládá se z Úvodu, Metod, Výsledků a Diskuze, zaměřuje se na kontext výzkumu, detaily provedení, zjištění a důsledky odpovědí.
+Struktura IMRaD - Úvod a Závěr?;Musí mít širší zaměření, aby komplexně řešily kontext a důsledky výzkumu.
+Prezentace a Interpretace Dat - Jasnost a Přesnost?;Jsou zásadní při prezentaci dat, grafů a tabulek. Neúplné sloupce v tabulkách a nejasné, matoucí popisky jsou nežádoucí.
+Prezentace a Interpretace Dat - Rozumná Prezentace?;Grafy by měly předávat jasné a stručné poselství, a jejich interpretace by měla být logická a podporovat výzkumné zjištění.

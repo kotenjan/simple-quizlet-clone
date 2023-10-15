@@ -3,14 +3,18 @@ from tkinter import ttk
 from PIL import Image, ImageTk
 import sys
 import textwrap
+import random
+import argparse
 
 class QuestionApp(tk.Tk):
-    def __init__(self, directory):
+    def __init__(self, directory, steps, shuffle):
         super().__init__()
-        self.title(f"Question App [{directory}/*]")
+        self.title(f"Question App [{directory}*]")
         self.geometry("1600x900")
         self.configure(bg='#2E2E2E')
         self.questions_answers = []
+        self.steps = steps
+        self.shuffle = shuffle
         self.directory = directory
         self._load_questions(f"{directory}q.txt")
         self.current_index = 0
@@ -18,6 +22,9 @@ class QuestionApp(tk.Tk):
         self.showing_answer = False
         self._setup_ui()
         self.show_question()
+        
+    def quit(self, event=None):
+        super().quit()
 
     def _load_questions(self, question_file):
         with open(question_file, 'r') as file:
@@ -25,6 +32,8 @@ class QuestionApp(tk.Tk):
             for line in lines:
                 q, a = line.strip().split(';')
                 self.questions_answers.append((q, a))
+            if self.shuffle:
+                random.shuffle(self.questions_answers)
 
     def show_question(self):
         max_line_length = 80
@@ -118,13 +127,22 @@ class QuestionApp(tk.Tk):
         self.question_label.pack(pady=30)
         self.result_label.pack(pady=20)
 
-        if self.current_index + 10 < len(self.questions_answers):
-            self.questions_answers.insert(self.current_index + 10, self.questions_answers[self.current_index])
+        if self.current_index + self.steps < len(self.questions_answers):
+            self.questions_answers.insert(self.current_index + self.steps, self.questions_answers[self.current_index])
         elif self.current_index < len(self.questions_answers):
             self.questions_answers.append(self.questions_answers[self.current_index])
         
         self.current_index += 1
         self.show_question()
+        
+    def prev_question(self):
+        if self.current_index > 0:
+            self.current_index -= 1
+            self.show_question()
+
+    def on_left_arrow_pressed(self, event=None):
+        if not self.showing_answer:
+            self.prev_question()
 
     def _setup_ui(self):
         style = ttk.Style(self)
@@ -148,10 +166,17 @@ class QuestionApp(tk.Tk):
 
         self.bind('<Return>', self.on_enter_pressed)
         self.bind('<BackSpace>', self.on_backspace_pressed)
+        self.bind('<Escape>', self.quit)
+        self.bind('<Left>', self.on_left_arrow_pressed)
 
 if __name__ == "__main__":
-    if len(sys.argv) != 2:
-        print("Usage: python your_script.py <>")
-    else:
-        app = QuestionApp(sys.argv[1])
-        app.mainloop()
+    parser = argparse.ArgumentParser(description="A simple quiz app")
+    parser.add_argument("filename", help="The filename of the question file")
+    parser.add_argument("-s", "--shuffle", help="Shuffle questions", action="store_true")
+    parser.add_argument("-t", "--steps", type=int, help="Number of steps/questions", default=5)
+
+    args = parser.parse_args()
+    path = args.filename if args.filename.endswith("/") else args.filename + "/"
+    
+    app = QuestionApp(path, steps=args.steps, shuffle=args.shuffle)
+    app.mainloop()

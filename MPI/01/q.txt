@@ -1,7 +1,7 @@
 Definitnost matic;Definitnost matic.png
 Derivace ve směru;Derivace ve směru.png
 Druhá parciální derivace;Druhá parciální derivace.png
-Extrémy na omezených a uzavřených množinách;Extrémy na omezených a uzavřených množinách.png
+Definice omezené, otevřené a uzavřené množiny;Extrémy na omezených a uzavřených množinách.png
 Hessova matice;Hessova matice.png
 Hromadný bod;Hromadný bod.png
 Izolovaný bod;Izolovaný bod.png

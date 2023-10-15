@@ -1,15 +1,14 @@
-Jaký je hlavní problém s konstrukcí algoritmů pro neuronové sítě?;Neumíme sestrojit uspokojivý algoritmus, pouze specifikujeme vstupy a výstupy a systém najde vhodný způsob řešení.
-Co je charakteristické pro heuristickou optimalizaci?;Využití jednoduchých příkladů pro řešení obtížnějších problémů.
-Co znamená jednorázové nasazení v kontextu typů nasazení?;Jednorázové nasazení umožňuje provádět ruční změny, dokud se nedosáhne požadovaného výsledku a většinou je prováděné autorem programu.
-Co se stane při nasazení v rutinním provozu?;Software se šíří mimo dosah autora.
-Jaké jsou některé typy heuristik?;Heuristika nejbližšího souseda a simulované ochlazování.
-Co obnáší problém v kontextu konfigurace, omezení a proměnných?;Vstupní proměnné, výstupní proměnné, konfigurační proměnné, omezení a optimalizační kritérium, pokud je třeba.
-Co je ohodnocení konfiguračních proměnných v kontextu konfigurace?;Ohodnocení konfiguračních proměnných.
-Jak lze definovat řešení v kontextu konfigurace a optimalizace?;Řešení je konfigurace, která vyhovuje omezuícím podmínkám, optimální řešení má nejlepší hodnotu optimalizačního kritéria a suboptimální řešení má přijatelnou hodnotu optimalizačního kritéria.
-Jaké jsou aspekty instancí v kontextu ohodnocení proměnných?;Ohodnocení vstupních proměnných.
-Co jsou konfigurační proměnné a co umožňují?;Konfigurační proměnné jsou to, co nastavuje hrubá síla, to, na čem se nechají zkontrolovat všechna omezení, to, co vyjadřuje všechny kombinace a to, z čeho je možné vypočíst hodnotu optimalizačního kritéria.
-Jaké jsou některé typy problémů bez optimalizačního kritéria a jak je lze charakterizovat?;Rozhodovací problém zkoumá, zda existuje Y tak, že R(I, Y) platí pro všechna Y, konstruktivní problém žádá o sestrojení nějakého Y tak, že R(I, Y), enumerační problém žádá o sestrojení všech Y tak, že R(I, Y), početní problém spočívá v určení, kolik je Y takových, že R(I, Y), a evaluační problém hledá nejlepší možné C(Y) tak, že R(I, Y).
-Co v podstatě představují vstupní proměnné v kontextu jazyka a formálních systémů?;Jazyk, protože jde vyjádřit jako podmnožina {0, 1}*.
-Jak je definován problém splnitelnosti booleovy formule SAT?;Množina n proměnných X = {x_1, …}, booleova formule F(X) v konjunktivní normální formě a je třeba nalézt ohodnocení Y: X --> {0, 1} proměnných x_1, … takové, že F(Y(X)) = 1.
-Co charakterizuje k-SAT problém?;Zároveň v každé klauzuli je právě k literálů.
-Jaké jsou různé verze optimalizačního problému SAT?;Rozhodovací - nejméně Q jedniček, konstruktivní - co nejvíce jedniček, enumerační - F(Y) = 1 a počet jedniček v Y je nějak omezen.
+Neuronové sítě;Neumíme sestrojit uspokojivý algoritmus. Puze specifikujeme vstupy a výstupy a systém najde vhodný způsob řešení
+Heuristická optimalizace;Využití jednoduchých příkladů pro řešení obtížnějších
+Typy nasazení;Jednorázové nasazení - je možné provádět ruční změny, dokud se nedosáhne požadovaného výsledku, Většinou prováděné autorem programu, Nasazení v rutinním provozu - Software se šíří mimo dosah autora
+Typy heuristik;Heuristika nejbližšího souseda, Simulované ochlazování
+Problém;Vstupní proměnné, Výstupní proměnné, Konfigurační proměnné, Omezení, Optimalizační kritérium, pokud je třeba
+Konfigurace;Ohodnocení konfiguračních proměnných
+Řešení;konfigurace, který vyhovuje omezuícím podmínkám, Optimální řešení - řešení, které má nejlepší hodnotu optimalizčního kritéria, Suboptimální řešení - řešení, která má přijatelnou hodnotu optimalizačního kritéria
+Instance;Ohodnocení vstupních proměnných
+Konfigurace;Konfigurační proměnné - To, co nastavuje hrubá síla, To, na čem se nechají zkontrolovat všechna omezení, To, co vyjadřuje všechny kombinace, To, z čeho je možné vypočíst hodnotu optimalizačního kritéria
+Problémy bez optimalizačního kritéria;Nechť I je instance, Y konfigurace, R(I, Y) omezení …tedy říká, jestli je Y řešením R(I, Y), Rozhodovací problém - Existuje Y takové, že R(I, Y)? Platí pro všechna Y?, Konstruktivní problém - Sestrojte nějaké Y takové, že R(I, Y), Enumerační problém - Sestrojit všechna Y taková, že R(I, Y), Početní problém - Kolik je Y takových, že R(I, Y), Evaluační problém - Nejlepší možné C(Y) takové, že R(I, Y)
+Co jsou v podstatě vstupní proměnné?;Jazyk, protože jde vyjádřit jako podmnožina {0, 1}*
+Problém splnitelnosti booleovy formule SAT;Množina n proměnných X = {x_1, …}, Booleova formule F(X) v konjunktivní normální formě, Je třeba nalézt ohodnocení Y: X --> {0, 1} proměnných x_1, … takové, že F(Y(X)) = 1
+k-SAT;Zároveň v každé klauzuli je právě k literálů
+Optimalizační verze SAT;Rozhodovací - nejméně Q jedniček, Konstruktivní - Co nejvíce jedniček, Enumerační - F(Y) = 1 a počet jedniček v Y je nějak omezen.

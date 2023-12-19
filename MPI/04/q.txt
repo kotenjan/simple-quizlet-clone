@@ -1,0 +1,14 @@
+Darbouxův integrál;Darbouxův integrál.png
+horní a dolní součet funkce;horní a dolní součet funkce.png
+Jacobiho matice;Jacobiho matice.png
+Množina míry nula;Množina míry nula.png
+Newtonova formule;Newtonova formule.png
+Obecná oblast;Obecná oblast.png
+Per partes pro určitý integrál;Per partes pro určitý integrál.png
+Primitivní funkce;Primitivní funkce.png
+rozdělení intervalu;rozdělení intervalu.png
+Substituce v určitém integrálu;Substituce v určitém integrálu.png
+Typy integrálů;Typy integrálů.png
+Výpočet dvojného integrálu nad obdélníhovou oblastí 2;Výpočet dvojného integrálu nad obdélníhovou oblastí 2.png
+Výpočet dvojného integrálu nad obdélníhovou oblastí;Výpočet dvojného integrálu nad obdélníhovou oblastí.png
+Věta o substituci;Věta o substituci.png

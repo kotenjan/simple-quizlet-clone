@@ -28,17 +28,30 @@ class QuestionApp(tk.Tk):
 
     def _load_questions(self, question_file):
         with open(question_file, 'r') as file:
-            lines = file.readlines()
-            for line in lines:
-                q, a = line.strip().split(';')
-                self.questions_answers.append((q, a))
-            if self.shuffle:
-                random.shuffle(self.questions_answers)
+            content = file.read()
+            qa_pairs = content.split('\n\n')
+
+            for pair in qa_pairs:
+                if pair.strip():  # Check if the pair is not empty
+                    last_semicolon_index = pair.rfind(';')
+                    q = pair[:last_semicolon_index].strip()
+                    a = pair[last_semicolon_index + 1:].strip()
+                    self.questions_answers.append((q, a))
+
+        if self.shuffle:
+            random.shuffle(self.questions_answers)
+
 
     def show_question(self):
         max_line_length = 80
         if self.current_index < len(self.questions_answers):
-            wrapped_text = self.split_text(self.questions_answers[self.current_index][0], max_line_length)
+            question = self.questions_answers[self.current_index][0]
+            
+            if '\n' in question:
+                wrapped_text = "\n".join([self.split_text(line, max_line_length) for line in question.split('\n')])
+            else:
+                wrapped_text = self.split_text(question, max_line_length)
+
             question_var.set(f"{self.current_index + 1}/{len(self.questions_answers)} {wrapped_text}")
             result_var.set('')
             if self.img_label:
@@ -47,6 +60,7 @@ class QuestionApp(tk.Tk):
         else:
             question_var.set('No more questions!')
             result_var.set("")
+
 
     def split_text(self, text, max_line_length):
         return "\n".join(textwrap.wrap(text, max_line_length))
@@ -73,7 +87,7 @@ class QuestionApp(tk.Tk):
             self.img_label.photo = photo  
             self.img_label.pack(pady=20)
         else:
-            wrapped_text = self.split_text(answer, max_line_length)
+            wrapped_text = "\n".join([self.split_text(line, max_line_length) for line in answer.split('\n')])
             result_var.set(wrapped_text)
             if self.img_label:
                 self.img_label.pack_forget()

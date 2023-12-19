@@ -1,16 +1,27 @@
-Účel Hodnocení - Cíle?;Porozumění, srovnání a předpovídání chování algoritmů a hodnocení jejich vhodnosti pro zamýšlené funkce.
-Účel Hodnocení - Analytické vs. Experimentální?;Analytické nástroje hodnotí nejhorší a průměrné případy, zaměřují se na teoretické aspekty. Experimentální nástroje nabízejí praktické poznatky o složitosti a výkonu algoritmů, zaměřují se na aplikace v reálném světě.
-Složitost Algoritmů - Praktický Design?;Algoritmy se skládají z několika kroků, každý je grafickým algoritmem se složitostí závislou na vlastnostech grafu popisujícího obvod.
-Složitost Algoritmů - Otázky Zájmu?;Zaměřují se na kvalitu řešení a závislost výpočetního času na velikosti instance.
-Výběr Metrik - Vstupní a Výstupní Metriky?;Nezbytné pro zobecnění a interpretaci naměřených dat pro jednotlivé běhy algoritmu.
-Výběr Metrik - Odvodené Metriky?;Přímo měřené hodnoty jsou porovnávány pomocí vizualizačních nástrojů a kvantitativních srovnávacích metod.
-Srovnání Algoritmů - Parametry Distribuce a Dominance?;Algoritmy jsou porovnávány na základě těchto parametrů, aby bylo možné pochopit kvalitu a relevance řešení pro specifické instance.
-Srovnání Algoritmů - Hodnocení na Instancích?;Zohledňuje se variance v instancích a randomizace při interpretaci statistik.
-Robustnost Heuristik - Vliv Pořadí Proměnných?;Hodnotí vliv změny pořadí proměnných ve vzorci nebo programu na řešení a výkon algoritmů.
-Robustnost Heuristik - Měření Robustnosti?;Variance způsobená perturbací se měří a interpretuje, přičemž všechny perturbace jsou považovány za stejně pravděpodobné.
-Inženýrská Algoritmika - Generování Instancí a Potlačení Variance?;Řeší výzvy při generování náhodných reálných obvodů a testování heuristik na nich, při interpretaci statistik se zohledňuje variance v instancích a randomizace.
-Inženýrská Algoritmika - Standardní Sady a Omezení?;Zdůrazňuje význam veřejně dostupných sad instancí a diskutuje o omezeních statistických předpokladů a průměrování při srovnání.
-Struktura IMRaD - Standardní Struktura pro Prezentaci Výzkumu?;Skládá se z Úvodu, Metod, Výsledků a Diskuze, zaměřuje se na kontext výzkumu, detaily provedení, zjištění a důsledky odpovědí.
-Struktura IMRaD - Úvod a Závěr?;Musí mít širší zaměření, aby komplexně řešily kontext a důsledky výzkumu.
-Prezentace a Interpretace Dat - Jasnost a Přesnost?;Jsou zásadní při prezentaci dat, grafů a tabulek. Neúplné sloupce v tabulkách a nejasné, matoucí popisky jsou nežádoucí.
-Prezentace a Interpretace Dat - Rozumná Prezentace?;Grafy by měly předávat jasné a stručné poselství, a jejich interpretace by měla být logická a podporovat výzkumné zjištění.
+Check if problem is NP;Check if problem is NP.png
+Classification of Problems;Classification of Problems.png
+CO-NP graphically;CO-NP graphically.png
+CO-NP Problems;CO-NP Problems.png
+Complexity of Combinatory problems;Complexity of Combinatory problems.png
+Decision version of the knapsack problem;Decision version of the knapsack problem.png
+Description of non-deterministic turing machine;Description of non-deterministic turing machine.png
+Deterministický turingův stroj;Deterministický turingův stroj.png
+Karpova redukce, polynomiální ekivalence;Karpova redukce, polynomiální ekivalence.png
+Nedeterministický Turingův stroj;Nedeterministický Turingův stroj.png
+Non-deterministic turing machine;Non-deterministic turing machine.png
+NP-Class;NP-Class.png
+NP-úplný;NP-úplný.png
+NPO;NPO.png
+Oracle;Oracle.png
+P-class;P-class.png
+Problem solving by non-deterministic turing machine;Problem solving by non-deterministic turing machine.png
+SAT certificate version;SAT certificate version.png
+Solution of decision problems;Solution of decision problems.png
+Turing Machine;Turing Machine.png
+Třída NP;Třída NP.png
+Třída P;Třída P.png
+Třídy PSPACE, EXPTIME;Třídy PSPACE, EXPTIME.png
+verify co-NP;verify co-NP.png
+X-těžký a X-úplný;X-těžký a X-úplný.png
+Řešení problému deterministickým turingovým strojem;Řešení problému deterministickým turingovým strojem.png
+Řešení problému nedeterministickým turingovým strojem;Řešení problému nedeterministickým turingovým strojem.png

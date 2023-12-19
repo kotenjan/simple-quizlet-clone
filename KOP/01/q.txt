@@ -1,14 +1,18 @@
-Neuronové sítě;Neumíme sestrojit uspokojivý algoritmus. Puze specifikujeme vstupy a výstupy a systém najde vhodný způsob řešení
-Heuristická optimalizace;Využití jednoduchých příkladů pro řešení obtížnějších
-Typy nasazení;Jednorázové nasazení - je možné provádět ruční změny, dokud se nedosáhne požadovaného výsledku, Většinou prováděné autorem programu, Nasazení v rutinním provozu - Software se šíří mimo dosah autora
-Typy heuristik;Heuristika nejbližšího souseda, Simulované ochlazování
-Problém;Vstupní proměnné, Výstupní proměnné, Konfigurační proměnné, Omezení, Optimalizační kritérium, pokud je třeba
-Konfigurace;Ohodnocení konfiguračních proměnných
-Řešení;konfigurace, který vyhovuje omezuícím podmínkám, Optimální řešení - řešení, které má nejlepší hodnotu optimalizčního kritéria, Suboptimální řešení - řešení, která má přijatelnou hodnotu optimalizačního kritéria
-Instance;Ohodnocení vstupních proměnných
-Konfigurace;Konfigurační proměnné - To, co nastavuje hrubá síla, To, na čem se nechají zkontrolovat všechna omezení, To, co vyjadřuje všechny kombinace, To, z čeho je možné vypočíst hodnotu optimalizačního kritéria
-Problémy bez optimalizačního kritéria;Nechť I je instance, Y konfigurace, R(I, Y) omezení …tedy říká, jestli je Y řešením R(I, Y), Rozhodovací problém - Existuje Y takové, že R(I, Y)? Platí pro všechna Y?, Konstruktivní problém - Sestrojte nějaké Y takové, že R(I, Y), Enumerační problém - Sestrojit všechna Y taková, že R(I, Y), Početní problém - Kolik je Y takových, že R(I, Y), Evaluační problém - Nejlepší možné C(Y) takové, že R(I, Y)
-Co jsou v podstatě vstupní proměnné?;Jazyk, protože jde vyjádřit jako podmnožina {0, 1}*
-Problém splnitelnosti booleovy formule SAT;Množina n proměnných X = {x_1, …}, Booleova formule F(X) v konjunktivní normální formě, Je třeba nalézt ohodnocení Y: X --> {0, 1} proměnných x_1, … takové, že F(Y(X)) = 1
-k-SAT;Zároveň v každé klauzuli je právě k literálů
-Optimalizační verze SAT;Rozhodovací - nejméně Q jedniček, Konstruktivní - Co nejvíce jedniček, Enumerační - F(Y) = 1 a počet jedniček v Y je nějak omezen.
+Asymptotic Complexity;Asymptotic Complexity.png
+Charakterizace instance problému;Charakterizace instance problému.png
+Charakterizace problému;Charakterizace problému.png
+Combinatory problems;Combinatory problems.png
+Configuration variables;Configuration variables.png
+Instance encoding;Instance encoding.png
+Knapsack problem;Knapsack problem.png
+Konfigurace;Konfigurace.png
+Konfigurační proměnné;Konfigurační proměnné.png
+Optimální řešení;Optimální řešení.png
+Possibilities of solving combinatorial problems;Possibilities of solving combinatorial problems.png
+SAT;SAT.png
+Suboptimální řešení;Suboptimální řešení.png
+Types of Combinatorial problems 2;Types of Combinatorial problems 2.png
+Types of combinatorial problems;Types of combinatorial problems.png
+Verze optimalizačních problémů;Verze optimalizačních problémů.png
+Verze problémů bez optimalizačního kritéria;Verze problémů bez optimalizačního kritéria.png
+Řešení;Řešení.png

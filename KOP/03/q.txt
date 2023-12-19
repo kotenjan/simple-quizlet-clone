@@ -1,0 +1,21 @@
+Complexity classes graphically;Complexity classes graphically.png
+Cook reduction example;Cook reduction example.png
+Cook reduction;Cook reduction.png
+Cook's theorem;Cook's theorem.png
+Independent set problem;Independent set problem.png
+Karp reduction example;Karp reduction example.png
+Karp reduction properties;Karp reduction properties.png
+Karp reduction;Karp reduction.png
+Karp vs. Turing reduction;Karp vs. Turing reduction.png
+NP-Complete;NP-Complete.png
+NP-Hard;NP-Hard.png
+NP-Intermediate;NP-Intermediate.png
+Proof of NP-Completeness;Proof of NP-Completeness.png
+Pseudopolynomiální algoritmus;Pseudopolynomiální algoritmus.png
+Relations summary 1;Relations summary 1.png
+Relations summary 2;Relations summary 2.png
+SAT variants;SAT variants.png
+Turingova transformace;Turingova transformace.png
+Turint reduction;Turint reduction.png
+X-Hard;X-Hard.png
+Řešení optimalizačního problému turingovým strojem;Řešení optimalizačního problému turingovým strojem.png

@@ -3,7 +3,7 @@ import sys
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
-        print("Usage: python your_script.py <>")
+        print("Usage: python image_2_question.py <>")
     else:
         current_dir = sys.argv[1]
 
@@ -15,6 +15,6 @@ if __name__ == "__main__":
             # Write image names to q.txt in the specified format
             for png_file in png_files:
                 image_name = os.path.splitext(png_file)[0]
-                txt_file.write(f"{image_name};{png_file}\n")
+                txt_file.write(f"{image_name};{png_file}\n\n")
 
         print("q.txt has been created with image names.")

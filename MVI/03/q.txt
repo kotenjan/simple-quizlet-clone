@@ -1,0 +1,14 @@
+Pojmy genetického algoritmu;Pojmy genetického algoritmu.png
+
+Jak odhadnu počet jedinců patřících pod schéma v Nté generaci;Jak odhadnu počet jedinců patřících pod schéma v Nté generaci.png
+
+Definice evolučních algoritmů;Definice evolučních algoritmů.png
+
+Jak balancovat exploraci a exploitaci;Jak balancovat exploraci a exploitaci.png
+
+Co je teorie schémat;Co je teorie schémat.png
+
+Typy genetických algoritmů;Typy genetických algoritmů.png
+
+Selekce;Selekce.png
+

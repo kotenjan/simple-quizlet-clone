@@ -1,2 +1,0 @@
-Vlastnosti A_star;Vlastnosti A_star.png
-Řešení úloh - tvorba pasivních artefaktů;Řešení úloh - tvorba pasivních artefaktů.png

@@ -33,7 +33,10 @@ class Question:
         question = self.question
         
         if self.hints:
-            question += f"$hint\n" + "\n".join(self.hints)
+            question += f"\n$hint\n" + "\n".join(self.hints)
+            
+        if self.image_question:
+            question += f"\n$image\n" + self.image_question
             
         question += "\n$answer"
         
@@ -44,7 +47,7 @@ class Question:
             question += f"\n$wrong\n" + "\n".join(self.incorrect_answers)
             
         if self.other_answers:
-            question += f"\n$other\n" + "\n".join(self.other_answers)
+            question += f"\n$other\n" + self.other_answers
             
         if self.image_answer:
             question += f"\n$image\n" + self.image_answer

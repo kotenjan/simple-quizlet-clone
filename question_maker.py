@@ -1,15 +1,10 @@
-import sys
 import os
-import colorama
-from colorama import Fore, Back, Style
-import textwrap
-import random
-import shutil
 import time
+import re
+import colorama
 from prompt_toolkit import prompt
 from prompt_toolkit.completion import PathCompleter
 import cv2
-import re
 
 colorama.init(autoreset=True)
 
@@ -68,13 +63,14 @@ class QuizCreator:
         self.img_path = img_path
         self.img_index = 0
         self.questions = []
-        if self.img_path:
-            self.images = [img for img in os.listdir(self.img_path) if img.endswith('.png')]
             
     def select_image(self):
+
+        images = sorted([img for img in os.listdir(self.img_path) if img.endswith('.png')])
+
         def show_image(index):
             # Read and show the current image
-            img_path = os.path.join(self.img_path, self.images[index])
+            img_path = os.path.join(self.img_path, images[index])
             img = cv2.imread(img_path)
             cv2.imshow("Image Browser", img)
 
@@ -89,14 +85,14 @@ class QuizCreator:
             if key == ord('q') or key == 27:  # Quit on 'q' or ESC
                 break
             elif key == 13:  # Enter key
-                img_path = os.path.join(self.img_path, self.images[self.img_index])
-                self.img_index = (self.img_index + 1) % len(self.images)
+                img_path = os.path.join(self.img_path, images[self.img_index])
+                self.img_index = (self.img_index + 1) % len(images)
                 break
             elif key == 81 or key == 2424832:  # Left arrow
-                self.img_index = (self.img_index - 1) % len(self.images)
+                self.img_index = (self.img_index - 1) % len(images)
                 show_image(self.img_index)
             elif key == 83 or key == 2555904:  # Right arrow
-                self.img_index = (self.img_index + 1) % len(self.images)
+                self.img_index = (self.img_index + 1) % len(images)
                 show_image(self.img_index)
 
         cv2.destroyAllWindows()
@@ -145,11 +141,8 @@ class QuizCreator:
             print("\n🖼️ Got a pic that gives it away? Share the answer image path (or keep the suspense): ")
             question.image_answer = self.select_image()
             print("\n    " + str(question.image_answer) + " 📷")
-            
-        question.write(self.filename)
-            
-        print("\n🚀 Ready to launch to the next? Press enter to continue or ESC to say 'Bye bye!' 🌌")
 
+        return question
 
     def get_key_press(self):
         if os.name == 'nt':
@@ -170,9 +163,10 @@ class QuizCreator:
 
     def run(self):
         while True:
-            self.add_question()
+            question = self.add_question()
             if self.get_key_press() == 'esc':
-                break            
+                break     
+            question.write(self.filename)       
             
 def get_filename_with_hinting(text, verify=True):
     completer = PathCompleter()

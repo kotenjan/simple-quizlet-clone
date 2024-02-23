@@ -1,0 +1,70 @@
+Klasická definice pravděpodobnosti
+$answer
+$image
+VSM/i_1/Screenshot 2024-02-22 222115.png
+
+Geometrická definice pravděpodobnosti
+$answer
+$image
+VSM/i_1/Screenshot 2024-02-22 222124.png
+
+Pravděpodobnostní prostor
+$answer
+$image
+VSM/i_1/Screenshot 2024-02-22 222132.png
+
+Prostor elementárních jevů
+$answer
+$image
+VSM/i_1/Screenshot 2024-02-22 222139.png
+
+Náhodné jevy
+$answer
+$image
+VSM/i_1/Screenshot 2024-02-22 222146.png
+
+Operace s náhodnými jevy
+$answer
+$image
+VSM/i_1/Screenshot 2024-02-22 222201.png
+
+Pravděpodobnostní míra
+$answer
+$image
+VSM/i_1/Screenshot 2024-02-22 222210.png
+
+Definice rovnoměrné pravděpodobnosti
+$answer
+$image
+VSM/i_1/Screenshot 2024-02-22 222335.png
+
+Vlastnostni pravděpodobnosti
+$answer
+$image
+VSM/i_1/Screenshot 2024-02-22 222341.png
+
+Podmíněná pravděpodobnost
+$answer
+$image
+VSM/i_1/Screenshot 2024-02-22 222348.png
+
+Vlastnosti podmíněné pravděpodobnosti
+$answer
+$image
+VSM/i_1/Screenshot 2024-02-22 222356.png
+
+Rozklad pravděpodobnosti a Bayesova věta
+$answer
+$image
+VSM/i_1/Screenshot 2024-02-22 222402.png
+
+Nezávislost náhodných jevů
+$answer
+$image
+VSM/i_1/Screenshot 2024-02-22 222410.png
+
+Vztah nezávislých jevů a podmíněné pravděpodobnosti
+$answer
+$image
+VSM/i_1/Screenshot 2024-02-22 222421.png
+

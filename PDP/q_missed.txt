@@ -1,5 +1,0 @@
-APRAM model a implementace synchronizační bariéry
-$answer
-$image
-PDP/images/Screenshot 2024-02-19 205600.png
-

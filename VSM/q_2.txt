@@ -1,0 +1,125 @@
+Definice náhodné veličiny, distribuční funkce
+$answer
+$image
+VSM/i_2/Screenshot 2024-02-23 093208.png
+
+Náhodná veličina a její rozdělení
+$answer
+$image
+VSM/i_2/Screenshot 2024-02-23 093235.png
+
+Vlastnosti distribuční funkce
+$answer
+$image
+VSM/i_2/Screenshot 2024-02-23 093247.png
+
+Vuyužití distribuční funkce
+$answer
+$image
+VSM/i_2/Screenshot 2024-02-23 093346.png
+
+Typy náhodných veličin
+$answer
+$image
+VSM/i_2/Screenshot 2024-02-23 093354.png
+
+Typy náhodných veličin a jejich distribuční funkce
+$answer
+$image
+VSM/i_2/Screenshot 2024-02-23 093402.png
+
+Diskrétní náhodné veličiny
+$answer
+$image
+VSM/i_2/Screenshot 2024-02-23 093410.png
+
+Spojité náhodné veličiny, hustota
+$answer
+$image
+VSM/i_2/Screenshot 2024-02-23 093534.png
+
+Vlastnosti spojitých náhodných veličin
+$answer
+$image
+VSM/i_2/Screenshot 2024-02-23 093655.png
+
+Vztah hustoty a pravděpodobnosti
+$answer
+$image
+VSM/i_2/Screenshot 2024-02-23 093731.png
+
+Transformace náhodné veličiny
+$answer
+$image
+VSM/i_2/Screenshot 2024-02-23 093741.png
+
+Střední hodnota
+$answer
+$image
+VSM/i_2/Screenshot 2024-02-23 093805.png
+
+Střední hodnota funkce náhodné veličiny
+$answer
+$image
+VSM/i_2/Screenshot 2024-02-23 093857.png
+
+Vlastnosti střední hodnoty
+$answer
+$image
+VSM/i_2/Screenshot 2024-02-23 093906.png
+
+Rozptyl
+$answer
+$image
+VSM/i_2/Screenshot 2024-02-23 093919.png
+
+Další charakteristiky náhodných veličin
+$answer
+$image
+VSM/i_2/Screenshot 2024-02-23 093933.png
+
+Opakování důležitých diskrétních rozdělení
+$answer
+$image
+VSM/i_2/Screenshot 2024-02-23 093954.png
+
+Opakování důležitých spojitých rozdělení
+$answer
+$image
+VSM/i_2/Screenshot 2024-02-23 094005.png
+
+Další spojitá rozdělení (gamma funkcee)
+$answer
+$image
+VSM/i_2/Screenshot 2024-02-23 094012.png
+
+Gamma rozdělení
+$answer
+$image
+VSM/i_2/Screenshot 2024-02-23 094020.png
+
+Vizualizace Gamma rozdělení
+$answer
+$image
+VSM/i_2/Screenshot 2024-02-23 094116.png
+
+X^2 rozdělení
+$answer
+$image
+VSM/i_2/Screenshot 2024-02-23 094132.png
+
+Vizualizace X^2 rozdělení
+$answer
+$image
+VSM/i_2/Screenshot 2024-02-23 101026.png
+
+Studentovo rozdělelní
+$answer
+$image
+VSM/i_2/Screenshot 2024-02-23 095604.png
+
+Vizualizace studentova rozdělení
+$answer
+$image
+VSM/i_2/Screenshot 2024-02-23 095644.png
+

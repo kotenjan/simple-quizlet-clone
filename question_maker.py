@@ -49,7 +49,7 @@ class Question:
         question = re.sub(r'\n+', '\n', question)
         question += "\n\n"    
             
-        with open(filename, "a", encoding="utf-8") as f:
+        with open(filename, 'a', encoding='utf-8', errors='ignore') as f:
             f.write(question)
 
 class QuizCreator:
@@ -164,8 +164,11 @@ class QuizCreator:
     def run(self):
         while True:
             question = self.add_question()
-            if self.get_key_press() == 'esc':
+            key_pressed = self.get_key_press()
+            if key_pressed == 'esc':
                 break     
+            if key_pressed == 'r':
+                continue
             question.write(self.filename)       
             
 def get_filename_with_hinting(text, verify=True):

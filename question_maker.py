@@ -5,6 +5,7 @@ import colorama
 from prompt_toolkit import prompt
 from prompt_toolkit.completion import PathCompleter
 import cv2
+from time import sleep
 
 colorama.init(autoreset=True)
 
@@ -124,7 +125,7 @@ class QuizCreator:
             question.hints = self.multiline_input("Enter hints", line_start="  - ")
             
         if self.question_img:
-            print("\n📸 Snap! Add a picture to your question (leave blank for a mystery): ")
+            print("\n📸 Snap! Add a picture to your question: ")
             question.image_question = self.select_image()
             print("\n    " + str(question.image_question) + " 🖼️")
             
@@ -138,7 +139,7 @@ class QuizCreator:
             question.incorrect_answers = self.multiline_input("\nEnter incorrect answers", line_start="  - ")
         
         if self.answer_img:
-            print("\n🖼️ Got a pic that gives it away? Share the answer image path (or keep the suspense): ")
+            print("\n🖼️ Share the answer image path: ")
             question.image_answer = self.select_image()
             print("\n    " + str(question.image_answer) + " 📷")
 
@@ -168,8 +169,11 @@ class QuizCreator:
             if key_pressed == 'esc':
                 break     
             if key_pressed == 'r':
+                print("Not saving that one ❌")
                 continue
+            print("Moving onto another ⏭️")
             question.write(self.filename)       
+            sleep(1)
             
 def get_filename_with_hinting(text, verify=True):
     completer = PathCompleter()
@@ -195,7 +199,7 @@ def get_image_path_with_hinting(text, verify=True):
         if verify:
             if os.path.exists(filename):
                 if not any(file.lower().endswith(('.png', '.jpg', '.jpeg', '.gif', '.bmp')) for file in os.listdir(filename)):
-                    answer = input(f"I don't see any images in {filename}. 👀 Should we try again? (Yes/no)")
+                    answer = input(f"I don't see any images in {filename}. 👀 Should we try again? (Yes/no) ")
                     if answer.strip().lower() in ['yes', 'y', '']:
                         continue
             else:

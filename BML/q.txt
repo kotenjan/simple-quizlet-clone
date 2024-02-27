@@ -1,0 +1,87 @@
+Joe je notorický alkoholik. Každou půlnoc buď leží pod stolem zpity nebo ještě pije. Jakým modelem můžeme popsat jeho půlnoční stav?
+$answer
+$other
+Bernoulliho rozdělením - Bernoulliho rozdělení se používá, protože máme pouze dvě možnosti s pevnými pravděpodobnostmi.
+
+Joe je notorický alkoholik a čas, který tráví večer pitím, má průměr 5 hodin s odchylkou 1 hodinu. Jakým rozdělením popsat délku Joeova pití?
+$answer
+$other
+Normálním rozdělením - Normální rozdělení popisuje jevy, které se vyznačují symetrií kolem střední hodnoty a jejichž hodnoty se vyskytují s určitou variabilitou; často se používá, pokud máme dostatečně velký vzorek.
+
+Joe je notorický alkoholik. V průměru leží pod stolem zpity 3x za měsíc. Jakým rozdělením popsat počet večerů, kdy Joe leží pod stolem?
+$answer
+$other
+Poisonnovým rozdělením - Poissonovo rozdělení popisuje počet událostí, které nastanou v pevném časovém intervalu, pokud tyto události nastávají s pevnou průměrnou frekvencí a nezávisle na čase od poslední události.
+
+Joe je notorický alkoholik. Pravděpodobnost, že večer skončí zpity pod stolem, je proměnlivá a omezená na interval [0,1]. Jakým rozdělením popsat pravděpodobnost Joeova opilosti v závislosti na čase?
+$answer
+$other
+Beta rozdělením - Beta rozdělení je vhodné pro modelování pravděpodobností, které jsou omezené na interval [0,1], a dokáže zachytit různé tvary distribucí v tomto intervalu.
+
+Joe je notorický alkoholik. Během večera může skončit buď zpity pod stolem, zpity v posteli nebo jen mírně podnapilý. Jakým rozdělením popsat výsledek Joeova večera s pravděpodobnostmi pro každý výsledek?
+$answer
+$other
+Multinomickým rozdělením - Multinomické rozdělení je zobecněním Bernoulliho rozdělení pro případy, kdy máme více než dvě možné kategorie a je vhodné pro popis výsledků, kde může nastat více než jedna „úspěšná“ kategorie.
+
+Apriorní znalost je taková, kterou:
+$answer
+$other
+máme před zahrnutím nových dat Bayesovvou větou
+
+Neurčitost spojenou s odhadem parametru můžeme vyjádřit
+$answer
+$other
+Směrodatnou odchylkou aposteriorní distribuce
+
+Hustota pravděpodobnosti
+$answer
+$other
+má integrál rovný jedné
+není klesající funkcí
+nemá vždy tvar gaussovy křivky
+není vždy definována na omezeném intervalu
+
+Jako bodový odhad odhadované veličiny můžeme použít
+$answer
+$other
+modus aposteriorní distribuce
+medián aposteriorní distribuce
+
+Jako bodový odhad odhadované veličiny NEmůžeme použít
+$answer
+$other
+Směrodatnou odchylku aposteriorní distribuce
+
+Aposteriorní znalost je taková, kterou
+$answer
+$other
+získáme po zahrnutí nových dat (měření, pozorování) pomocí bayesovy věty
+
+Neurčitost odhadu měříme zpravidla
+$answer
+$other
+Směrodatnou odchylkou apriorní/aposteriorní distribuce
+Bayesovou větou
+
+Neurčitost odhadu nemůžeme měřit
+$answer
+$other
+mediánem apriorní/aposteriorní distribuce
+
+Proporcionalita v Bayesově větě
+$answer
+$other
+Slouží pro zjednoduššení zápisu. Je vynechána normalizace
+
+Jako bodový odhad parametru můžeme použít 
+$answer
+$other
+Modus aposteriorní distribuce
+
+Jako bodový odhad nemůžeme použít
+$answer
+$other
+Varianci aposteriorní distribuce
+Směrodatnou odchylku aposteriorní distribuce
+Minimum aposteriorní distribuce
+

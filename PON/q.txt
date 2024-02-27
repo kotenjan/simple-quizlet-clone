@@ -1,0 +1,195 @@
+Optimalizace - definice a matematická formulace
+$answer
+$image
+PON/images/Screenshot 2024-02-26 093205.png
+
+Druhy optimalizačních úloh
+$answer
+$image
+PON/images/Screenshot 2024-02-26 093304.png
+
+Jak optimalizovat
+$answer
+$image
+PON/images/Screenshot 2024-02-26 093311.png
+
+Totální derivace a jacobyho matice
+$answer
+$image
+PON/images/Screenshot 2024-02-26 093337.png
+
+Řetězové pravodlo
+$answer
+$image
+PON/images/Screenshot 2024-02-26 093413.png
+
+Gradient jakožto směr největšího růstu
+$answer
+$image
+PON/images/Screenshot 2024-02-26 093455.png
+
+Nevázanáná optimalizace obecně
+$answer
+$image
+PON/images/Screenshot 2024-02-26 093547.png
+
+Line search
+$answer
+$image
+PON/images/Screenshot 2024-02-26 093608.png
+
+Volba délky kroku
+$answer
+$image
+PON/images/Screenshot 2024-02-26 093622.png
+
+Metoda nejvyššího spádu
+$answer
+$image
+PON/images/Screenshot 2024-02-26 093707.png
+
+Newtonova metoda - volba směru
+$answer
+$image
+PON/images/Screenshot 2024-02-26 093723.png
+
+Newtonova metoda
+$answer
+$image
+PON/images/Screenshot 2024-02-26 093755.png
+
+Důkaz newtonovy metody
+$answer
+$image
+PON/images/Screenshot 2024-02-26 093806.png
+
+Modifikace Newtonovy metody
+$answer
+$image
+PON/images/Screenshot 2024-02-26 093940.png
+
+Kvazinewtonovské metody
+$answer
+$image
+PON/images/Screenshot 2024-02-26 102927.png
+
+Nevázaná/volná optimalizace ve speciálních případech - konvexní funkce
+$answer
+$image
+PON/images/Screenshot 2024-02-26 103006.png
+
+Operace s konvexními množinami a funkcemi - speciální případy
+$answer
+$image
+PON/images/Screenshot 2024-02-26 103036.png
+
+Konvexní funkce - podmínky 1. řádu
+$answer
+$image
+PON/images/Screenshot 2024-02-26 103048.png
+
+Nerovnosti pro symetrucké matice
+$answer
+$image
+PON/images/Screenshot 2024-02-26 103132.png
+
+Konvexní funkce - 2. podmínka řádu
+$answer
+$image
+PON/images/Screenshot 2024-02-26 103140.png
+
+Konvexita v metodě největšího spádu
+$answer
+$image
+PON/images/Screenshot 2024-02-26 103207.png
+
+Stochastický gradientní sestup a jeho úpravy
+$answer
+$image
+PON/images/Screenshot 2024-02-26 103232.png
+
+Modifikace SGD gradientního sestupu
+$answer
+$image
+PON/images/Screenshot 2024-02-26 103252.png
+
+¨Vázaná optimalizace
+$answer
+$image
+PON/images/Screenshot 2024-02-26 103302.png
+
+Dualita
+$answer
+$image
+PON/images/Screenshot 2024-02-26 103352.png
+
+Dolní mez pomocí duální funkce
+$answer
+$image
+PON/images/Screenshot 2024-02-26 103404.png
+
+Konkavita duální funkce
+$answer
+$image
+PON/images/Screenshot 2024-02-26 103412.png
+
+Konvexita a dualita
+$answer
+$image
+PON/images/Screenshot 2024-02-26 103434.png
+
+KKT podmínky
+$answer
+$image
+PON/images/Screenshot 2024-02-26 103446.png
+
+Konvexní vs. KKT
+$answer
+$image
+PON/images/Screenshot 2024-02-26 103455.png
+
+Kvadratické programování 
+$answer
+$image
+PON/images/Screenshot 2024-02-26 103505.png
+
+Kvadratické programování - nerovnostní podmínky
+$answer
+$image
+PON/images/Screenshot 2024-02-26 103533.png
+
+Sekvenční kvadratické programování
+$answer
+$image
+PON/images/Screenshot 2024-02-26 103543.png
+
+Sekvenční kvadratické programování - rovnostní podmínky
+$answer
+$image
+PON/images/Screenshot 2024-02-26 103554.png
+
+Sekvenční kvadratické programování - nerovnostní podmínky
+$answer
+$image
+PON/images/Screenshot 2024-02-26 103604.png
+
+Penalizační metody
+$answer
+$image
+PON/images/Screenshot 2024-02-26 103615.png
+
+Kvadratická penalizace
+$answer
+$image
+PON/images/Screenshot 2024-02-26 103622.png
+
+Metoda vnitřního bodu
+$answer
+$image
+PON/images/Screenshot 2024-02-26 103702.png
+
+Moderní metody vnitřního bodu
+$answer
+$image
+PON/images/Screenshot 2024-02-26 103738.png
+

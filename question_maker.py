@@ -169,9 +169,10 @@ class QuizCreator:
             if key_pressed == 'esc':
                 break     
             if key_pressed == 'r':
-                print("Not saving that one ❌")
+                print("\nNot saving that one ❌")
+                sleep(1)
                 continue
-            print("Moving onto another ⏭️")
+            print("\nMoving onto another ⏭️")
             question.write(self.filename)       
             sleep(1)
             

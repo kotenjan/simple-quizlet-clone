@@ -47,7 +47,7 @@ class Question:
             question += f"\n$wrong\n" + "\n".join(self.incorrect_answers)
             
         if self.other_answers:
-            question += f"\n$other\n" + self.other_answers
+            question += f"\n$other\n" + "\n".join(self.other_answers)
             
         if self.image_answer:
             question += f"\n$image\n" + self.image_answer
@@ -176,6 +176,8 @@ class QuizApp:
         self.streak = 0
         self.max_streak = 0
         self.missed_file = missed_file
+        if os.path.exists(self.missed_file):
+            os.remove(self.missed_file)
         if s:
             random.shuffle(self.questions)
         

@@ -1,0 +1,38 @@
+Uvažujeme modelování čpravděpodobnosti červené barvy na semaforu (2 stavy). Jako data použijeme počet červených, na který ten den narazíme. Platí
+$hint
+Bude-li datový model normální rozdělení, povede beta apriorno na aposteriorní rodistribuci, která bude rověnž beta
+Vhodným datovým modelem pro barvu semaforu bude binomická distribuce
+Vhodným modelem pro odhad čpravděpodobnosti červené bude beta rozdělení
+Vhodným datovým modelem pro barvu semaforu bude beta distribuce
+$answer
+$correct
+Vhodným datovým modelem pro barvu semaforu bude binomická distribuce
+Vhodným modelem pro odhad pravděpodobnosti červené bude beta rozdělení
+$wrong
+Vhodným datovým modelem pro barvu semaforu bude beta distribuce
+Bude-li datový model normální rozdělení, povede beta apriorno na aposteriorní distribuci, která bude rověnž beta
+
+pojem hyperparametr označuje
+$hint
+parametry modelu dat
+parametr hypogeometrického rozdělení¨
+parametr aprionrní či aposteriorní distribuce
+$answer
+$correct
+parametr apriorní či aposteriorní distribuce
+$wrong
+parametr modelu dat
+parametr hypogeometrického rozdělení
+
+Aposteriorní distribuce vyjadřuje 
+$hint
+vhodnost zvoleného regresního modelu
+znalost o odhadovaném parametru modelu
+Znalost o hodnotě měření
+$answer
+$correct
+znalost o odhadovaném parametru modelu
+$wrong
+Znalost o hodnotě měření
+vhodnost zvoleného regresního modelu
+

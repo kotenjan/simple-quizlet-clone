@@ -1,0 +1,104 @@
+Výhodou konjugované apriorní distribuce je, že
+$hint
+aposteriorní distribuce bude stejného typu
+datový model bude stejného typu
+prediktivní distribuce bude stejného typu
+$answer
+$correct
+aposteriorní distribuce bude stejného typu
+$wrong
+datový model bude stejného typu
+prediktivní distribuce bude stejného typu
+
+Uvažujeme modelování čpravděpodobnosti červené barvy na semaforu (2 stavy). Jako data použijeme počet červených, na který ten den narazíme. Platí
+$hint
+Vhodným datovým modelem pro barvu semaforu bude binomická distribuce
+Vhodným datovým modelem pro barvu semaforu bude beta distribuce
+Vhodným modelem pro odhad čpravděpodobnosti červené bude beta rozdělení
+Bude-li datový model normální rozdělení, povede beta apriorno na aposteriorní rodistribuci, která bude rověnž beta
+$answer
+$correct
+Vhodným datovým modelem pro barvu semaforu bude binomická distribuce
+Vhodným modelem pro odhad pravděpodobnosti červené bude beta rozdělení
+$wrong
+Vhodným datovým modelem pro barvu semaforu bude beta distribuce
+Bude-li datový model normální rozdělení, povede beta apriorno na aposteriorní distribuci, která bude rověnž beta
+
+Uvažujme uvedený model kvadratické regrese s měřeními x.  platí pro: y_t ~ N(B^T*X_t, delta^2) 
+$answer
+$correct
+[B_0, B_1, B_2]
+
+čČím větší je variance dat, (měření), tím
+$hint
+menší bude variance odhadu
+větší bude variance odhadu
+ani jedna z odpovědí je správná
+$answer
+$correct
+větší bude variance odhadu
+$wrong
+menší bude variance odhadu
+ani jedna z odpovědí  není správná
+
+pojem hyperparametr označuje
+$hint
+parametr hypogeometrického rozdělení¨
+parametry modelu dat
+parametr aprionrní či aposteriorní distribuce
+$answer
+$correct
+parametr apriorní či aposteriorní distribuce
+$wrong
+parametr modelu dat
+parametr hypogeometrického rozdělení
+
+Použijeme-li pro odhad neznámého parametru apriorní distribuci, která je konjugovaná k modelu, potom
+$hint
+model je téhož typu, jako aposteriorní distribuce
+aposteriorní distribuce je téhož typu, jako model
+aposteriorní distribuce je téhož typu, jako apriorní
+$answer
+$correct
+aposteriorní distribuce je téhož typu, jako apriorní
+$wrong
+aposteriorní distribuce je téhož typu, jako model
+model je téhož typu, jako aposteriorní distribuce
+
+Uvažujme modelování pravděpodobnosti červené barvy na semaforu
+$hint
+Vhodným datovým modelem pro barvu semaforu bude beta distribuce
+Vhodným datovým modelem pro barvu semaforu bude bernoulliho rozdělení
+Vhodným dmodelem pro odhad pravděpodobnosti bude beta rozdělení
+Bude-li datový model bernoulliho rozdělení, povede beta apriorno na aposteriorní distribuci, která bude rovněž beta
+$answer
+$correct
+vhodným datovým modelem pro barvu semaforu bude bernoulliho rozdělení
+vhodným modelem pro odhad pravděpodobnosti bude beta rozdělení
+Bude-li datový model bernoulliho rozdělení, povede beta apriorno na aposteriorní distribuci, která bude rověnž beta
+$wrong
+Vhodným datovým modelem pro barvu semaforu bude beta distribuce
+
+Aposteriorní distribuce vyjadřuje 
+$hint
+Znalost o hodnotě měření
+vhodnost zvoleného regresního modelu
+znalost o odhadovaném parametru modelu
+$answer
+$correct
+znalost o odhadovaném parametru modelu
+$wrong
+Znalost o hodnotě měření
+vhodnost zvoleného regresního modelu
+
+Modelujeme poissonovu veličinu. Neznámzý parametr lambda odhadujeme gama distribucí s parametry a, b. Vyberte správné tvrzení
+$hint
+Hyperparametry jsou a, b
+Hyperparametrem je lambda
+Ani jedna z ostatních dvou odpovědí není správná
+$answer
+$correct
+Hyperparametry jsou a, b
+$wrong
+hyperparametrem je lambda
+

@@ -1,0 +1,80 @@
+Definice náhodných vektorů
+$answer
+$image
+VSM/i_3/Screenshot 2024-03-01 115055.png
+
+Sdružené rozdělení
+$answer
+$image
+VSM/i_3/Screenshot 2024-03-01 115106.png
+
+Sdružené diskrétní rozdělení
+$answer
+$image
+VSM/i_3/Screenshot 2024-03-01 115113.png
+
+Vizualizace sdruuženého diskrétního rozdělení
+$answer
+$image
+VSM/i_3/Screenshot 2024-03-01 115217.png
+
+Sdružené spojité rozdělení
+$answer
+$image
+VSM/i_3/Screenshot 2024-03-01 115226.png
+
+Vizualizace sdruženého spojitého rozdělení
+$answer
+$image
+VSM/i_3/Screenshot 2024-03-01 115434.png
+
+Marginální rozdělení
+$answer
+$image
+VSM/i_3/Screenshot 2024-03-01 115441.png
+
+Nezávislost náhodných veličin
+$answer
+$image
+VSM/i_3/Screenshot 2024-03-01 115542.png
+
+Součet náhondých veličin
+$answer
+$image
+VSM/i_3/Screenshot 2024-03-01 115609.png
+
+Střední hodnota funkce náhodného vektoru
+$answer
+$image
+VSM/i_3/Screenshot 2024-03-01 115617.png
+
+Kovariace a korelace
+$answer
+$image
+VSM/i_3/Screenshot 2024-03-01 115634.png
+
+Kovariace a korelační koeficient - vlastnosti
+$answer
+$image
+VSM/i_3/Screenshot 2024-03-01 115641.png
+
+Podmíněné rozdělení diskrétních veličin
+$answer
+$image
+VSM/i_3/Screenshot 2024-03-01 115703.png
+
+Podmíněná střední hodnota diskrétní náhodné veličiny
+$answer
+$image
+VSM/i_3/Screenshot 2024-03-01 115711.png
+
+Podmíněné rozdělení spojitých náhodných veličin
+$answer
+$image
+VSM/i_3/Screenshot 2024-03-01 115715.png
+
+Podmíněná střední hodnota spojité náhodné veličiny
+$answer
+$image
+VSM/i_3/Screenshot 2024-03-01 115722.png
+

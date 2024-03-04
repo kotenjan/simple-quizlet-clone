@@ -1,0 +1,100 @@
+Střední hodnota náohodnýého vektoru
+$answer
+$image
+VSM/i_4/Screenshot 2024-03-01 142255.png
+
+Linearita střední hodnoty
+$answer
+$image
+VSM/i_4/Screenshot 2024-03-01 142327.png
+
+Varianční matice náhodného vektoru
+$answer
+$image
+VSM/i_4/Screenshot 2024-03-01 142342.png
+
+Vektorové vyjádření varianční matice
+$answer
+$image
+VSM/i_4/Screenshot 2024-03-01 142358.png
+
+Vlastnosti varianční matice
+$answer
+$image
+VSM/i_4/Screenshot 2024-03-01 142406.png
+
+Pozitivní semidefinitnost varianční matice
+$answer
+$image
+VSM/i_4/Screenshot 2024-03-01 142413.png
+
+Vícerozměrné normální rozdělení
+$answer
+$image
+VSM/i_4/Screenshot 2024-03-01 142457.png
+
+Vícerozměrné normální rozdělení
+$answer
+$image
+VSM/i_4/Screenshot 2024-03-01 142457.png
+
+Vícerozměrné normální rozdělení - rozšíření na noráhodné vektory
+$answer
+$image
+VSM/i_4/Screenshot 2024-03-01 142522.png
+
+Vizualizace vícerozměrného normálního rozdělení
+$answer
+$image
+VSM/i_4/Screenshot 2024-03-01 142547.png
+
+Parametry vícerozměrného normálního rozdělení
+$answer
+$image
+VSM/i_4/Screenshot 2024-03-01 142608.png
+
+Lineární transformace
+$answer
+$image
+VSM/i_4/Screenshot 2024-03-01 142626.png
+
+Marginální rozdělení
+$answer
+$image
+VSM/i_4/Screenshot 2024-03-01 142631.png
+
+Vztah nezávislosti a nekorelovanosti
+$answer
+$image
+VSM/i_4/Screenshot 2024-03-01 142645.png
+
+Vztah nezávislosti a nekorelovanosti - důsledek
+$answer
+$image
+VSM/i_4/Screenshot 2024-03-01 142721.png
+
+Součty normálních rozdělení
+$answer
+$image
+VSM/i_4/Screenshot 2024-03-01 142726.png
+
+Analýza hlavních komponent 
+$answer
+$image
+VSM/i_4/Screenshot 2024-03-01 142736.png
+
+Vizualizace hlavních komponent - příklad
+$answer
+$image
+VSM/i_4/Screenshot 2024-03-01 142802.png
+
+Vizualizace hlavních komponent - příklad 2
+$answer
+$image
+VSM/i_4/Screenshot 2024-03-01 142816.png
+
+Vizualizace hlavních komponent - příklad 3
+$answer
+$image
+VSM/i_4/Screenshot 2024-03-01 142820.png
+

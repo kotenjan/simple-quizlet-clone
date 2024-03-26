@@ -1,0 +1,65 @@
+Testové statistiky
+$answer
+$image
+VSM/i_11/Screenshot 2024-03-25 090705.png
+
+Testování hypotéz pomocí testových statistik
+$answer
+$image
+VSM/i_11/Screenshot 2024-03-25 090710.png
+
+Testy o střední hodnotě normálního rozděllení
+$answer
+$image
+VSM/i_11/Screenshot 2024-03-25 090714.png
+
+Testy o parametrech normálního rozdělení
+$answer
+$image
+VSM/i_11/Screenshot 2024-03-25 090756.png
+
+Test o střední hodnotě - příklad
+$answer
+$image
+VSM/i_11/Screenshot 2024-03-25 090813.png
+
+Párový a dvouvýběrový t-test
+$answer
+$image
+VSM/i_11/Screenshot 2024-03-25 090822.png
+
+Párový t-test - prříklad
+$answer
+$image
+VSM/i_11/Screenshot 2024-03-25 090830.png
+
+Dvouvýběrtový t-test
+$answer
+$image
+VSM/i_11/Screenshot 2024-03-25 090835.png
+
+Dvouvýběrový t-test - stejné rozptyly
+$answer
+$image
+VSM/i_11/Screenshot 2024-03-25 090849.png
+
+Dvouvýběrový t-test - různé rozptyly
+$answer
+$image
+VSM/i_11/Screenshot 2024-03-25 090856.png
+
+Dvouvýběrový t-test - příklad
+$answer
+$image
+VSM/i_11/Screenshot 2024-03-25 090902.png
+
+F-test rovnosti rozptylů
+$answer
+$image
+VSM/i_11/Screenshot 2024-03-25 090914.png
+
+F-test rovnosti rozptylů - příklad
+$answer
+$image
+VSM/i_11/Screenshot 2024-03-25 090921.png
+

@@ -1,0 +1,95 @@
+Použřžžívvaná notace pro diskrétní náhodné veličiny
+$answer
+$image
+VSM/i_5/Screenshot 2024-03-05 151012.png
+
+Entropie diskrétní náhodné veličiny
+$answer
+$image
+VSM/i_5/Screenshot 2024-03-05 151119.png
+
+Jednotky entropie
+$answer
+$image
+VSM/i_5/Screenshot 2024-03-05 151129.png
+
+Entropie jako očekávaná míra neurčitosti
+$answer
+$image
+VSM/i_5/Screenshot 2024-03-05 151154.png
+
+NNezápornost entropie
+$answer
+$image
+VSM/i_5/Screenshot 2024-03-05 151204.png
+
+Souvislosti entropie s optimálním počtem binárních otázek
+$answer
+$image
+VSM/i_5/Screenshot 2024-03-05 151241.png
+
+Sdružená a podmíněná entropie
+$answer
+$image
+VSM/i_5/Screenshot 2024-03-05 151252.png
+
+Podmíněná entropie
+$answer
+$image
+VSM/i_5/Screenshot 2024-03-05 151343.png
+
+ČŘetězové pravidlo
+$answer
+$image
+VSM/i_5/Screenshot 2024-03-05 151407.png
+
+Demonstrace řetězového pravidla
+$answer
+$image
+VSM/i_5/Screenshot 2024-03-05 151418.png
+
+Relativní entropie
+$answer
+$image
+VSM/i_5/Screenshot 2024-03-05 151514.png
+
+Vzájemná informace
+$answer
+$image
+VSM/i_5/Screenshot 2024-03-05 151535.png
+
+Vztah vzájemné informace a entropie
+$answer
+$image
+VSM/i_5/Screenshot 2024-03-05 151615.png
+
+VzGrafické znázornění vzájemné informace a entropie
+$answer
+$image
+VSM/i_5/Screenshot 2024-03-05 151624.png
+
+Tabulkové znázornění vzájemné informace a entropie
+$answer
+$image
+VSM/i_5/Screenshot 2024-03-05 151644.png
+
+Jensenova nerovnost
+$answer
+$image
+VSM/i_5/Screenshot 2024-03-05 151712.png
+
+Informační nerovnost
+$answer
+$image
+VSM/i_5/Screenshot 2024-03-05 151824.png
+
+Důsledky informační nerovnosti
+$answer
+$image
+VSM/i_5/Screenshot 2024-03-05 151843.png
+
+Demonstrace důsledků informační nerovnosti
+$answer
+$image
+VSM/i_5/Screenshot 2024-03-05 151927.png
+

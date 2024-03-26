@@ -1,0 +1,34 @@
+Entropie spojíté náhodné veličiny
+$answer
+$image
+VSM/i_7/Screenshot 2024-03-25 084253.png
+
+Entropie rovnoměrného rozdělení
+$answer
+$image
+VSM/i_7/Screenshot 2024-03-25 084341.png
+
+Vztah diferenciální entropie a diskrétní entorpie
+$answer
+$image
+VSM/i_7/Screenshot 2024-03-25 084412.png
+
+Vztah diferenciální entropie a diskrétní entropie
+$answer
+$image
+VSM/i_7/Screenshot 2024-03-25 084437.png
+
+Sdružená a podmíněná entropie
+$answer
+$image
+VSM/i_7/Screenshot 2024-03-25 084445.png
+
+Relativní entropie a vzájemná informace
+$answer
+$image
+VSM/i_7/Screenshot 2024-03-25 084514.png
+
+Maximalizace diferenciální entropie
+$answer
+$image
+VSM/i_7/Screenshot 2024-03-25 085055.png

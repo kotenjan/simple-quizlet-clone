@@ -80,6 +80,6 @@ if __name__ == '__main__':
     orientation = 'vertical' if args.orientation == 'v' else 'horizontal'
 
     # Replace the path below with the directory path where your PNG files are located.
-    dir_path = "/mnt/c/Users/jan/Pictures/Screenshots"
+    dir_path = "/mnt/c/Users/koten/Pictures/Screenshots"
     merger = ImageMerger(dir_path, orientation)
     merger.merge_last_two_png_files()

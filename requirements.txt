@@ -2,3 +2,4 @@ colorama
 textwrap3
 prompt_toolkit
 opencv-python
+pillow

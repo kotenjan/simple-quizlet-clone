@@ -1,0 +1,65 @@
+Statiistické metody
+$answer
+$image
+VSM/i_9/Screenshot 2024-03-25 085329.png
+
+Náhodný vžýběr 
+$answer
+$image
+VSM/i_9/Screenshot 2024-03-25 085337.png
+
+Kroky statistického uvažování
+$answer
+$image
+VSM/i_9/Screenshot 2024-03-25 085340.png
+
+Odhad tvaru rozdělení
+$answer
+$image
+VSM/i_9/Screenshot 2024-03-25 085352.png
+
+Bodové odhady
+$answer
+$image
+VSM/i_9/Screenshot 2024-03-25 085358.png
+
+Nejužívanější bodové odhady
+$answer
+$image
+VSM/i_9/Screenshot 2024-03-25 085407.png
+
+Vlastnosti bodových odhadů
+$answer
+$image
+VSM/i_9/Screenshot 2024-03-25 085425.png
+
+Nestranné odhady
+$answer
+$image
+VSM/i_9/Screenshot 2024-03-25 085434.png
+
+Konstrukce bodových iodhadů
+$answer
+$image
+VSM/i_9/Screenshot 2024-03-25 085440.png
+
+Intervaly spolehlivosti
+$answer
+$image
+VSM/i_9/Screenshot 2024-03-25 085506.png
+
+Postup sestavnení intervalů spolehlivosti
+$answer
+$image
+VSM/i_9/Screenshot 2024-03-25 085513.png
+
+Intervaly spolehlivosto pro střední hodnotu
+$answer
+$image
+VSM/i_9/Screenshot 2024-03-25 085519.png
+
+Intervaly spolehlivosti pro rozptyl
+$answer
+$image
+VSM/i_9/Screenshot 2024-03-25 085549.png
+

@@ -1,0 +1,25 @@
+Limitní vety
+$answer
+$image
+VSM/i_8/Screenshot 2024-03-25 085141.png
+
+Zákony velkých čísel
+$answer
+$image
+VSM/i_8/Screenshot 2024-03-25 085208.png
+
+Silný zákon velkých čísel
+$answer
+$image
+VSM/i_8/Screenshot 2024-03-25 085227.png
+
+Konvergence v distribuci
+$answer
+$image
+VSM/i_8/Screenshot 2024-03-25 085241.png
+
+Centrální limitní věta
+$answer
+$image
+VSM/i_8/Screenshot 2024-03-25 085259.png
+

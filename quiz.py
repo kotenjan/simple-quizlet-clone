@@ -10,6 +10,9 @@ from prompt_toolkit import prompt
 from prompt_toolkit.completion import PathCompleter
 import cv2
 import re
+from PIL import Image
+import numpy as np
+import tkinter
 
 colorama.init(autoreset=True)
 
@@ -92,9 +95,38 @@ class Question:
             print()
         if self.image_question:
             self.show_image_question()
+
+    def add_black_background_to_16_9(self, image):
+        image = Image.fromarray(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
+        original_width, original_height = image.size
+        root = tkinter.Tk()
+        screen_width = root.winfo_screenwidth()
+        screen_height = root.winfo_screenheight()
+        target_aspect_ratio = screen_width / screen_height
+        current_aspect_ratio = original_width / original_height
+
+        # New width based on the target aspect ratio, keeping the original height
+        new_width = max(original_width, screen_width)
+        new_height = max(original_height, screen_height)
+        
+        if current_aspect_ratio < target_aspect_ratio:
+            new_width = max(int(target_aspect_ratio * original_height), screen_width)
+        elif current_aspect_ratio > target_aspect_ratio:
+            new_height = max(int(original_width / target_aspect_ratio), screen_height)
+
+        new_image = Image.new('RGB', (new_width, new_height), (61, 61, 61))
+        # Calculating the position to center the original image
+        left = (new_width - original_width) // 2
+        top = (new_height - original_height) // 2
+        new_image.paste(image, (left, top))
+    
+        return cv2.cvtColor(np.array(new_image), cv2.COLOR_RGB2BGR)
             
     def show_image_answer(self):
         img = cv2.imread(self.image_answer.strip(), cv2.IMREAD_ANYCOLOR)
+
+        img = self.add_black_background_to_16_9(img)
+
         cv2.namedWindow("Answer", cv2.WND_PROP_FULLSCREEN)
         cv2.setWindowProperty("Answer", cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
         cv2.imshow("Answer", img)
@@ -103,6 +135,9 @@ class Question:
 
     def show_image_question(self):
         img = cv2.imread(self.image_question.strip(), cv2.IMREAD_ANYCOLOR)
+
+        img = self.add_black_background_to_16_9(img)
+
         cv2.namedWindow("Question", cv2.WND_PROP_FULLSCREEN)
         cv2.setWindowProperty("Question", cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
         cv2.imshow("Question", img)

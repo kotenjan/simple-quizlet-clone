@@ -1,0 +1,70 @@
+Kód náhodné veličiny
+$answer
+$image
+VSM/i_6/Screenshot 2024-03-25 082356.png
+
+Střední  délka kódu
+$answer
+$image
+VSM/i_6/Screenshot 2024-03-25 083121.png
+
+StPříklad střední délky kódu
+$answer
+$image
+VSM/i_6/Screenshot 2024-03-25 083143.png
+
+Nesingulární kód
+$answer
+$image
+VSM/i_6/Screenshot 2024-03-25 083231.png
+
+Jednoznačně dekódovatelný kód
+$answer
+$image
+VSM/i_6/Screenshot 2024-03-25 083248.png
+
+Instantní kód
+$answer
+$image
+VSM/i_6/Screenshot 2024-03-25 083253.png
+
+Hierarchie kódu
+$answer
+$image
+VSM/i_6/Screenshot 2024-03-25 083320.png
+
+Kraftova nerovnost
+$answer
+$image
+VSM/i_6/Screenshot 2024-03-25 083332.png
+
+Kraftova nerovnost pro jednoznačně dek=ódovatelné ´kódy
+$answer
+$image
+VSM/i_6/Screenshot 2024-03-25 083749.png
+
+Dolní mez délky instantního kódu
+$answer
+$image
+VSM/i_6/Screenshot 2024-03-25 083816.png
+
+Střední délka optimálního kódu
+$answer
+$image
+VSM/i_6/Screenshot 2024-03-25 083836.png
+
+StHuffmanovo kódování
+$answer
+$image
+VSM/i_6/Screenshot 2024-03-25 083903.png
+
+Algoritmus sestrojení binárního Huffmanova kódu
+$answer
+$image
+VSM/i_6/Screenshot 2024-03-25 083913.png
+
+Optimalita Huffmanova kódu
+$answer
+$image
+VSM/i_6/Screenshot 2024-03-25 084032.png
+

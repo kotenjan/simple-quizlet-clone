@@ -1,0 +1,40 @@
+Multinomické rozdělení
+$answer
+$image
+VSM/i_12/Screenshot 2024-03-25 091025.png
+
+Vlastnosti multinomického rozdělení
+$answer
+$image
+VSM/i_12/Screenshot 2024-03-25 091039.png
+
+Test X^2 při známých parametrech
+$answer
+$image
+VSM/i_12/Screenshot 2024-03-25 091057.png
+
+Test X^2 při neznýámých parametrech
+$answer
+$image
+VSM/i_12/Screenshot 2024-03-25 091125.png
+
+Test nezávislosti v kontigenčních tabulkách
+$answer
+$image
+VSM/i_12/Screenshot 2024-03-25 091314.png
+
+Blokové testy nezávislosti
+$answer
+$image
+VSM/i_12/Screenshot 2024-03-25 091428.png
+
+Bloky nad/pod stř.hodnotou (runs above/below the mean)
+$answer
+$image
+VSM/i_12/Screenshot 2024-03-25 091436.png
+
+Bloky nahoru/dolů
+$answer
+$image
+VSM/i_12/Screenshot 2024-03-25 091441.png
+

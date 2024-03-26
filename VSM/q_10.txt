@@ -1,0 +1,90 @@
+Motivace tesování hypotéz
+$answer
+$image
+VSM/i_10/Screenshot 2024-03-25 090347.png
+
+Hypotézy a jejich testování
+$answer
+$image
+VSM/i_10/Screenshot 2024-03-25 090353.png
+
+Chyby při testování hypotéz
+$answer
+$image
+VSM/i_10/Screenshot 2024-03-25 090407.png
+
+Výsledky testování
+$answer
+$image
+VSM/i_10/Screenshot 2024-03-25 090418.png
+
+Matematická formulace
+$answer
+$image
+VSM/i_10/Screenshot 2024-03-25 090424.png
+
+Kritický obor
+$answer
+$image
+VSM/i_10/Screenshot 2024-03-25 090432.png
+
+Definice p-hodnoty
+$answer
+$image
+VSM/i_10/Screenshot 2024-03-25 090437.png
+
+Rozdělení p-hodnoty
+$answer
+$image
+VSM/i_10/Screenshot 2024-03-25 090450.png
+
+Hypotézy a jejich typy 
+$answer
+$image
+VSM/i_10/Screenshot 2024-03-25 090502.png
+
+Testování pomocí intervalů spolehlivosti
+$answer
+$image
+VSM/i_10/Screenshot 2024-03-25 090509.png
+
+Oboustranná alternativa - hladina významnosti
+$answer
+$image
+VSM/i_10/Screenshot 2024-03-25 090516.png
+
+Parametrické testy s jednostrannou alternativou
+$answer
+$image
+VSM/i_10/Screenshot 2024-03-25 090522.png
+
+Jednostranná alternativa - hladina významnosti
+$answer
+$image
+VSM/i_10/Screenshot 2024-03-25 090532.png
+
+Parametrické testy a intervaly spolehlivosti - ilustrace
+$answer
+$image
+VSM/i_10/Screenshot 2024-03-25 090537.png
+
+Testy o parametrech normálního trozdělení 
+$answer
+$image
+VSM/i_10/Screenshot 2024-03-25 090544.png
+
+Testy o parametrech normálního rozdělení
+$answer
+$image
+VSM/i_10/Screenshot 2024-03-25 090600.png
+
+Testování hypotéz pomocí intervalů spolehlivosti - příklad
+$answer
+$image
+VSM/i_10/Screenshot 2024-03-25 090608.png
+
+Testování hypotéz pomocí intervalů spolehlivosti - příklad
+$answer
+$image
+VSM/i_10/Screenshot 2024-03-25 090629.png
+

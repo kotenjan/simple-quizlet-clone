@@ -61,7 +61,7 @@ class Question:
         with open(filename, "a", encoding="utf-8") as f:
             f.write(question)
 
-    def print_divider(self, title, symbol="-", style=Fore.YELLOW + Back.BLUE + Style.BRIGHT):
+    def print_divider(self, title, symbol="-", style=Fore.YELLOW + Style.BRIGHT):
         length = shutil.get_terminal_size().columns
         print(style + symbol * length)
         wrapped_title = textwrap.fill(title, width=length-4, subsequent_indent=' ' * ((length - len(title)) // 2))
@@ -76,7 +76,7 @@ class Question:
             print(style + wrapped_text)
 
     def print_section(self, title, answers, color):
-        self.print_divider(title, symbol="-", style=color + Back.BLACK + Style.BRIGHT)
+        self.print_divider(title, symbol="-", style=color + Style.BRIGHT)
         for answer in answers:
             if answer.strip():
                 self.print_styled_text("- " + answer, color + Style.NORMAL)
@@ -84,7 +84,7 @@ class Question:
 
     def print_question(self, i, l, streak, max_streak):
         i+=1
-        self.print_divider(f"Question {i}/{l}, {l-i} Left, Current Streak: {streak}, Max Streak: {max_streak} ", symbol="=", style=Fore.BLACK + Back.BLACK + Style.BRIGHT)
+        self.print_divider(f"Question {i}/{l}, {l-i} Left, Current Streak: {streak}, Max Streak: {max_streak} ", symbol="=", style=Fore.BLACK + Style.BRIGHT)
         print()
         self.print_styled_text(self.question, Fore.RESET + Style.BRIGHT + Style.BRIGHT)
         print()
@@ -216,7 +216,7 @@ class QuizApp:
         if s:
             random.shuffle(self.questions)
         
-    def print_divider(self, title, symbol="-", middle_symbol="-", middle_symbol_length=0, style=Fore.YELLOW + Back.BLUE + Style.BRIGHT):
+    def print_divider(self, title, symbol="-", middle_symbol="-", middle_symbol_length=0, style=Fore.YELLOW + Style.BRIGHT):
         length = shutil.get_terminal_size().columns
         print(style + symbol * length)
         adjusted_length = length - 4 - len(title)
@@ -281,7 +281,7 @@ class QuizApp:
         
         self.streak = 0
         
-        self.print_divider(random.choice(incorrect_answers), style=Fore.RED + Back.BLACK + Style.BRIGHT, middle_symbol_length=-1)
+        self.print_divider(random.choice(incorrect_answers), style=Fore.RED + Style.BRIGHT, middle_symbol_length=-1)
         time.sleep(1)
         
         question = self.questions[self.n]
@@ -326,7 +326,7 @@ class QuizApp:
         if self.streak > self.max_streak:
             self.max_streak = self.streak
         
-        self.print_divider(random.choice(correct_answers), style=Fore.GREEN + Back.BLACK + Style.BRIGHT, middle_symbol_length=-1)
+        self.print_divider(random.choice(correct_answers), style=Fore.GREEN + Style.BRIGHT, middle_symbol_length=-1)
         time.sleep(1)
         
         self.next_question()
@@ -357,7 +357,7 @@ class QuizApp:
         ]
         
         if self.n >= len(self.questions):
-            self.print_divider(f"{random.choice(end_of_quiz)}, Your max streak was {self.max_streak}", style=Fore.CYAN + Back.BLACK + Style.BRIGHT, middle_symbol_length=-2)
+            self.print_divider(f"{random.choice(end_of_quiz)}, Your max streak was {self.max_streak}", style=Fore.CYAN + Style.BRIGHT, middle_symbol_length=-2)
             restart = input("🔁 Wanna do that all over again? (Yes/no) ")
             if restart.strip().lower() in ['yes', 'y', '']:
                 self.n = 0
@@ -432,7 +432,7 @@ if __name__ == "__main__":
             steps = 10
 
         print(f"🎮 Running quiz with {'🔀 shuffled' if shuffle else '📚 ordered'} questions, 🔄 every {steps} questions for repeats, from file 📁 {filename}")
-        for i in range(5, 0, -1):
+        for i in range(3, 0, -1):
             print(f"\r🚀 And we're beginninng in {i}... 🚀", end="", flush=True)
             time.sleep(1)
 

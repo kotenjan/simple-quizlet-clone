@@ -99,9 +99,10 @@ class Question:
     def add_black_background_to_16_9(self, image):
         image = Image.fromarray(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
         original_width, original_height = image.size
-        root = tkinter.Tk()
-        screen_width = root.winfo_screenwidth()
-        screen_height = root.winfo_screenheight()
+
+        screen_width = 1920
+        screen_height = 1080
+
         target_aspect_ratio = screen_width / screen_height
         current_aspect_ratio = original_width / original_height
 
@@ -201,7 +202,7 @@ class QuestionParser:
         return self.questions
 
 class QuizApp:
-    def __init__(self, filepath, t=10, s=True, missed_file="missed.txt"):
+    def __init__(self, filepath, t=5, s=True, missed_file="missed.txt"):
         self.running = True
         self.answer_printed = False
         self.filepath = filepath
@@ -361,6 +362,7 @@ class QuizApp:
             restart = input("🔁 Wanna do that all over again? (Yes/no) ")
             if restart.strip().lower() in ['yes', 'y', '']:
                 self.n = 0
+                self.streak = 0
                 print("All right! 👌")
                 print(f"🎮 Running quiz with {'🔀 shuffled' if shuffle else '📚 ordered'} questions, 🔄 every {steps} questions for repeats, from file 📁 {filename}")
                 for i in range(5, 0, -1):
@@ -428,8 +430,7 @@ if __name__ == "__main__":
             assert steps_ans
             steps = int(steps_ans.strip())
         except Exception:
-            print("🤔 That doesn't look like a number. I'll just assume you're cool with revisiting every 10 questions.")
-            steps = 10
+            steps = 5
 
         print(f"🎮 Running quiz with {'🔀 shuffled' if shuffle else '📚 ordered'} questions, 🔄 every {steps} questions for repeats, from file 📁 {filename}")
         for i in range(3, 0, -1):

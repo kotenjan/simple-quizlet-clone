@@ -1,0 +1,42 @@
+[A
+$image
+BML/i_6/Screenshot 2024-04-08 215419.png
+$answer
+$image
+BML/i_6/Screenshot 2024-04-08 215428.png
+
+
+$image
+BML/i_6/Screenshot 2024-04-08 215434.png
+$answer
+$image
+BML/i_6/Screenshot 2024-04-08 215438.png
+
+
+$image
+BML/i_6/Screenshot 2024-04-08 215445.png
+$answer
+$image
+BML/i_6/Screenshot 2024-04-08 215448.png
+
+
+$image
+BML/i_6/Screenshot 2024-04-08 215451.png
+$answer
+$image
+BML/i_6/Screenshot 2024-04-08 215455.png
+
+
+$image
+BML/i_6/Screenshot 2024-04-08 215459.png
+$answer
+$image
+BML/i_6/Screenshot 2024-04-08 215508.png
+
+
+$image
+BML/i_6/Screenshot 2024-04-08 215517.png
+$answer
+$image
+BML/i_6/Screenshot 2024-04-08 215521.png
+

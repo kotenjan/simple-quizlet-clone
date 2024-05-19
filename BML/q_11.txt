@@ -1,0 +1,69 @@
+
+$image
+BML/i_11/Screenshot 2024-05-07 080637.png
+$answer
+$image
+BML/i_11/Screenshot 2024-05-07 080642.png
+
+
+$image
+BML/i_11/Screenshot 2024-05-07 080645.png
+$answer
+$image
+BML/i_11/Screenshot 2024-05-07 080649.png
+
+
+$image
+BML/i_11/Screenshot 2024-05-07 080652.png
+$answer
+$image
+BML/i_11/Screenshot 2024-05-07 080656.png
+
+
+$image
+BML/i_11/Screenshot 2024-05-07 080702.png
+$answer
+$image
+BML/i_11/Screenshot 2024-05-07 080704.png
+
+
+$image
+BML/i_11/Screenshot 2024-05-07 080712.png
+$answer
+$image
+BML/i_11/Screenshot 2024-05-07 080715.png
+
+
+$image
+BML/i_11/Screenshot 2024-05-07 080718.png
+$answer
+$image
+BML/i_11/Screenshot 2024-05-07 080722.png
+
+
+$image
+BML/i_11/Screenshot 2024-05-07 080725.png
+$answer
+$image
+BML/i_11/Screenshot 2024-05-07 080728.png
+
+
+$image
+BML/i_11/Screenshot 2024-05-07 081718.png
+$answer
+$image
+BML/i_11/Screenshot 2024-05-07 081722.png
+
+
+$image
+BML/i_11/Screenshot 2024-05-07 081725.png
+$answer
+$image
+BML/i_11/Screenshot 2024-05-07 081728.png
+
+
+$image
+BML/i_11/Screenshot 2024-05-07 081730.png
+$answer
+$image
+BML/i_11/Screenshot 2024-05-07 081732.png

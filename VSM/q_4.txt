@@ -33,11 +33,6 @@ $answer
 $image
 VSM/i_4/Screenshot 2024-03-01 142457.png
 
-Vícerozměrné normální rozdělení
-$answer
-$image
-VSM/i_4/Screenshot 2024-03-01 142457.png
-
 Vícerozměrné normální rozdělení - rozšíření na noráhodné vektory
 $answer
 $image

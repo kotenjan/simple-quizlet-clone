@@ -417,11 +417,7 @@ if __name__ == "__main__":
 
         shuffle_ans = input("🎲 Do you love surprises? Should I shuffle the questions? ")
         
-        missed_file = get_filename_with_path_hinting("📄 Where should we save answers you miss? ", test=False)
-        if missed_file == '':
-            print(f"👌 Alright! We won't save them for now.")
-        else: 
-            print(f"👌 Alright! We'll keep them in {missed_file}")
+        missed_file = filename.split(".txt")[0] + "_missed.txt"
         
         steps_ans = input("💭 How often should we revisit the ones you miss? ")
 

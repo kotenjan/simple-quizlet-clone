@@ -1,44 +1,30 @@
 
 $image
-DDW/images/Screenshot 2024-05-19 140356.png
+DDW/images/Screenshot 2024-05-19 140321.png
 $answer
 $image
-DDW/images/Screenshot 2024-05-19 140400.png
+DDW/images/Screenshot 2024-05-19 140325.png
 
 
 $image
-DDW/images/Screenshot 2024-05-19 140852.png
+DDW/images/Screenshot 2024-05-19 140708.png
 $answer
 $image
-DDW/images/Screenshot 2024-05-19 140858.png
+DDW/images/Screenshot 2024-05-19 140711.png
 
 
 $image
-DDW/images/Screenshot 2024-05-19 140806.png
+DDW/images/Screenshot 2024-05-19 140404.png
 $answer
 $image
-DDW/images/Screenshot 2024-05-19 140809.png
+DDW/images/Screenshot 2024-05-19 140408.png
 
 
 $image
-DDW/images/Screenshot 2024-05-19 140117.png
+DDW/images/Screenshot 2024-05-19 140957.png
 $answer
 $image
-DDW/images/Screenshot 2024-05-19 140122.png
-
-
-$image
-DDW/images/Screenshot 2024-05-19 160440.png
-$answer
-$image
-DDW/images/Screenshot 2024-05-19 160445.png
-
-
-$image
-DDW/images/Screenshot 2024-05-19 140038.png
-$answer
-$image
-DDW/images/Screenshot 2024-05-19 140042.png
+DDW/images/Screenshot 2024-05-19 141001.png
 
 
 $image
@@ -49,85 +35,29 @@ DDW/images/Screenshot 2024-05-19 140222.png
 
 
 $image
-DDW/images/Screenshot 2024-05-19 141004.png
+DDW/images/Screenshot 2024-05-19 140730.png
 $answer
 $image
-DDW/images/Screenshot 2024-05-19 141007.png
+DDW/images/Screenshot 2024-05-19 140733.png
 
 
 $image
-DDW/images/Screenshot 2024-05-19 140800.png
+DDW/images/Screenshot 2024-05-19 140404.png
 $answer
 $image
-DDW/images/Screenshot 2024-05-19 140803.png
+DDW/images/Screenshot 2024-05-19 140408.png
 
 
 $image
-DDW/images/Screenshot 2024-05-19 140549.png
+DDW/images/Screenshot 2024-05-19 160457.png
 $answer
 $image
-DDW/images/Screenshot 2024-05-19 140554.png
+DDW/images/Screenshot 2024-05-19 160501.png
 
 
 $image
-DDW/images/Screenshot 2024-05-19 141119.png
+DDW/images/Screenshot 2024-05-19 140908.png
 $answer
 $image
-DDW/images/Screenshot 2024-05-19 141123.png
-
-
-$image
-DDW/images/Screenshot 2024-05-19 140021.png
-$answer
-$image
-DDW/images/Screenshot 2024-05-19 140025.png
-
-
-$image
-DDW/images/Screenshot 2024-05-19 141101.png
-$answer
-$image
-DDW/images/Screenshot 2024-05-19 141103.png
-
-
-$image
-DDW/images/Screenshot 2024-05-19 140902.png
-$answer
-$image
-DDW/images/Screenshot 2024-05-19 140905.png
-
-
-$image
-DDW/images/Screenshot 2024-05-19 140902.png
-$answer
-$image
-DDW/images/Screenshot 2024-05-19 140905.png
-
-
-$image
-DDW/images/Screenshot 2024-05-19 140610.png
-$answer
-$image
-DDW/images/Screenshot 2024-05-19 140613.png
-
-
-$image
-DDW/images/Screenshot 2024-05-19 140250.png
-$answer
-$image
-DDW/images/Screenshot 2024-05-19 140253.png
-
-
-$image
-DDW/images/Screenshot 2024-05-19 140824.png
-$answer
-$image
-DDW/images/Screenshot 2024-05-19 140827.png
-
-
-$image
-DDW/images/Screenshot 2024-05-19 140902.png
-$answer
-$image
-DDW/images/Screenshot 2024-05-19 140905.png
+DDW/images/Screenshot 2024-05-19 140913.png
 

@@ -6,17 +6,13 @@ from prompt_toolkit import prompt
 from prompt_toolkit.completion import PathCompleter
 import cv2
 from time import sleep
+import sys
 
 colorama.init(autoreset=True)
 
 class Question:
-    def __init__(self, question, image_question, hints, correct_answers, incorrect_answers, other_answers, image_answer):
-        self.question = question
+    def __init__(self, image_question, image_answer):
         self.image_question = image_question
-        self.hints = hints
-        self.correct_answers = correct_answers
-        self.incorrect_answers = incorrect_answers
-        self.other_answers = other_answers
         self.image_answer = image_answer
         self.miss = 0
         
@@ -25,24 +21,12 @@ class Question:
         if filename == '':
             return
         
-        question = self.question
+        question = ""
         
-        if self.hints:
-            question += f"\n$hint\n" + "\n".join(self.hints)
-            
         if self.image_question:
             question += f"\n$image\n" + self.image_question
-            
-        question += "\n$answer"
         
-        if self.correct_answers:
-            question += f"\n$correct\n" + "\n".join(self.correct_answers)
-            
-        if self.incorrect_answers:
-            question += f"\n$wrong\n" + "\n".join(self.incorrect_answers)
-            
-        if self.other_answers:
-            question += f"\n$other\n" + self.other_answers
+        question += "\n$answer"
             
         if self.image_answer:
             question += f"\n$image\n" + self.image_answer
@@ -54,13 +38,8 @@ class Question:
             f.write(question)
 
 class QuizCreator:
-    def __init__(self, filename, question_img=False, question_hint=False, default_answer=False, correct_answer=False, answer_img=False, img_path=None):
+    def __init__(self, filename, img_path=None):
         self.filename = filename
-        self.question_img = question_img
-        self.question_hint = question_hint
-        self.default_answer = default_answer
-        self.correct_answer = correct_answer
-        self.answer_img = answer_img
         self.img_path = img_path
         self.img_index = 0
         self.questions = []
@@ -99,49 +78,21 @@ class QuizCreator:
         cv2.destroyAllWindows()
         
         return img_path
-    
-    def multiline_input(self, prompt, line_start):
-        print(prompt + " (Enter on a new line when finished) \n")
-        lines = []
-        while True:
-            line = input(line_start)
-            if line == "":
-                print("\033[A                             \033[A")
-                break
-            lines.append(line)
-        return lines
-
             
     def add_question(self):
         os.system('cls' if os.name == 'nt' else 'clear')
         
-        question = Question(None, None, None, None, None, None, None)
+        question = Question(None, None)
 
         print("🌟 Let's craft a new question! \n")
-        question.question = "\n".join(self.multiline_input("✏️  Spin the question wheel!", line_start="    "))
 
-        if self.question_hint:
-            print("💡 Need a hint? Drop some breadcrumbs here: ")
-            question.hints = self.multiline_input("Enter hints", line_start="  - ")
-            
-        if self.question_img:
-            print("\n📸 Snap! Add a picture to your question: ")
-            question.image_question = self.select_image()
-            print("\n    " + str(question.image_question) + " 🖼️")
-            
-        if self.default_answer:
-            question.other_answers = "\n".join(self.multiline_input("\nEnter answer", line_start="    "))
-
-        if self.correct_answer:
-            question.correct_answers = self.multiline_input("\nEnter correct answers", line_start="  - ")
-
-        if self.correct_answer:
-            question.incorrect_answers = self.multiline_input("\nEnter incorrect answers", line_start="  - ")
+        print("\n📸 Snap! Add a picture to your question: ")
+        question.image_question = self.select_image()
+        print("\n    " + str(question.image_question) + " 🖼️")
         
-        if self.answer_img:
-            print("\n🖼️ Share the answer image path: ")
-            question.image_answer = self.select_image()
-            print("\n    " + str(question.image_answer) + " 📷")
+        print("\n🖼️ Share the answer image path: ")
+        question.image_answer = self.select_image()
+        print("\n    " + str(question.image_answer) + " 📷")
 
         return question
 
@@ -174,7 +125,7 @@ class QuizCreator:
                 continue
             print("\nMoving onto another ⏭️")
             question.write(self.filename)       
-            sleep(1)
+            sleep(0.2)
             
 def get_filename_with_hinting(text, verify=True):
     completer = PathCompleter()
@@ -213,35 +164,31 @@ def get_image_path_with_hinting(text, verify=True):
 if __name__ == "__main__":
     
     try:
+        
+        filename = sys.argv[1]
+        
         os.system('cls' if os.name == 'nt' else 'clear')
         
         print("🌟 Welcome to the Ultimate Quiz Creator! Let's craft some engaging quizzes. 🚀")
         print("Before we dive in, I need a bit more info to tailor the experience... 🛠️")
 
-        filename = get_filename_with_hinting("📁 Tell me, where do you wish to store your questions? ")
+        if not os.path.isdir(os.path.dirname(filename)):
+            filename = get_filename_with_hinting("📁 Couldn't find the questions directory🥺 Tell me, where do you wish to store your questions? ")
         
-        print("📌 Note: For questions and answers with images, ensure you have the images ready. ")
-        question_img = input("🖼️ Do the questions include images? (Yes/no) ")
-        question_img = question_img.strip().lower() in ['yes', 'y', '']
-        question_hint = input("💡 Do the questions include hints? (Yes/no) ")
-        question_hint = question_hint.strip().lower() in ['yes', 'y', '']
-        default_answer = input("🔮 Do you want to set a default answer for the questions? (Yes/no) ")
-        default_answer = default_answer.strip().lower() in ['yes', 'y', '']
-        correct_answer = input("✅/❌ Will you specify correct answers for questions? (Yes/no) ")
-        correct_answer = correct_answer.strip().lower() in ['yes', 'y', '']
-        answer_img = input("🖼️ Do the answers include images? (Yes/no) ")
-        answer_img = answer_img.strip().lower() in ['yes', 'y', '']
-        img_path = None
-        if answer_img or question_img:
-            img_path = get_image_path_with_hinting("📁 Tell me, where should I look for images? ", verify=True)
+        print("📌 Note: Ensure you have the images ready. ")
+        
+        img_path = os.path.join(os.path.dirname(sys.argv[1]), "i_" + re.search(r'_(\d+)', os.path.basename(sys.argv[1])).group(1))
+        
+        if not os.path.isdir(img_path):
+            img_path = get_image_path_with_hinting("📁 Couldn't find the images directory🥺 Tell me, where should I look for images? ", verify=True)
 
-        print(f"✨ Creating a quiz with {'images in questions' if question_img else 'no images in questions'}, {'hints' if question_hint else 'no hints'}, {'a default answer' if default_answer else 'no default answer'}, {'correct and incorrect answers explicitly marked' if correct_answer else 'not marking correct or incorrect answers explicitly'}, and {'images in answers' if answer_img else 'no images in answers'}, all stored in 🗂️ {filename}.")
+        print(f"✨ Creating a quiz, storing in 🗂️ {filename}.")
         for i in range(3, 0, -1):
             print(f"\r🎉 Let the crafting begin in {i}... 🎉", end="", flush=True)
             time.sleep(1)
 
         try:
-            app = QuizCreator(filename, question_img=question_img, question_hint=question_hint, default_answer=default_answer, correct_answer=correct_answer, answer_img=answer_img, img_path=img_path)
+            app = QuizCreator(filename, img_path=img_path)
             app.run()
         except KeyboardInterrupt:
             pass

@@ -1,7 +1,49 @@
 
 $image
-PDP/i_2/Screenshot 2024-06-18 120711.png
+PDP/i_2/Screenshot 2024-06-20 164228.png
 $answer
 $image
-PDP/i_2/Screenshot 2024-06-18 120717.png
+PDP/i_2/Screenshot 2024-06-20 164232.png
+
+
+$image
+PDP/i_2/Screenshot 2024-06-20 164235.png
+$answer
+$image
+PDP/i_2/Screenshot 2024-06-20 164303.png
+
+
+$image
+PDP/i_2/Screenshot 2024-06-20 164306.png
+$answer
+$image
+PDP/i_2/Screenshot 2024-06-20 164312.png
+
+
+$image
+PDP/i_2/Screenshot 2024-06-20 164315.png
+$answer
+$image
+PDP/i_2/Screenshot 2024-06-20 164320.png
+
+
+$image
+PDP/i_2/Screenshot 2024-06-20 164323.png
+$answer
+$image
+PDP/i_2/Screenshot 2024-06-20 164329.png
+
+
+$image
+PDP/i_2/Screenshot 2024-06-20 164228.png
+$answer
+$image
+PDP/i_2/Screenshot 2024-06-20 164232.png
+
+
+$image
+PDP/i_2/Screenshot 2024-06-20 164235.png
+$answer
+$image
+PDP/i_2/Screenshot 2024-06-20 164303.png
 

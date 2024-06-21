@@ -1,0 +1,35 @@
+
+$image
+PDP/i_16/Screenshot 2024-06-21 184902.png
+$answer
+$image
+PDP/i_16/Screenshot 2024-06-21 184905.png
+
+
+$image
+PDP/i_16/Screenshot 2024-06-21 184908.png
+$answer
+$image
+PDP/i_16/Screenshot 2024-06-21 184911.png
+
+
+$image
+PDP/i_16/Screenshot 2024-06-21 184914.png
+$answer
+$image
+PDP/i_16/Screenshot 2024-06-21 184918.png
+
+
+$image
+PDP/i_16/Screenshot 2024-06-21 184941.png
+$answer
+$image
+PDP/i_16/Screenshot 2024-06-21 184944.png
+
+
+$image
+PDP/i_16/Screenshot 2024-06-21 184950.png
+$answer
+$image
+PDP/i_16/Screenshot 2024-06-21 185000.png
+

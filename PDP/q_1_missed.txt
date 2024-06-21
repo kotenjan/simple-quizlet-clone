@@ -1,84 +1,35 @@
 
 $image
-PDP/i_1/Screenshot 2024-06-17 101116.png
+PDP/i_1/Screenshot 2024-06-20 160502.png
 $answer
 $image
-PDP/i_1/Screenshot 2024-06-17 101119.png
+PDP/i_1/Screenshot 2024-06-20 160505.png
 
 
 $image
-PDP/i_1/Screenshot 2024-06-17 101122.png
+PDP/i_1/Screenshot 2024-06-20 160509.png
 $answer
 $image
-PDP/i_1/Screenshot 2024-06-17 101125.png
+PDP/i_1/Screenshot 2024-06-20 160511.png
 
 
 $image
-PDP/i_1/Screenshot 2024-06-17 101351.png
+PDP/i_1/Screenshot 2024-06-20 160519.png
 $answer
 $image
-PDP/i_1/Screenshot 2024-06-17 101354.png
+PDP/i_1/Screenshot 2024-06-20 160521.png
 
 
 $image
-PDP/i_1/Screenshot 2024-06-17 101356.png
+PDP/i_1/Screenshot 2024-06-20 160524.png
 $answer
 $image
-PDP/i_1/Screenshot 2024-06-17 101359.png
+PDP/i_1/Screenshot 2024-06-20 160529.png
 
 
 $image
-PDP/i_1/Screenshot 2024-06-17 101403.png
+PDP/i_1/Screenshot 2024-06-20 160502.png
 $answer
 $image
-PDP/i_1/Screenshot 2024-06-17 101406.png
-
-
-$image
-PDP/i_1/Screenshot 2024-06-17 101356.png
-$answer
-$image
-PDP/i_1/Screenshot 2024-06-17 101359.png
-
-
-$image
-PDP/i_1/Screenshot 2024-06-17 101403.png
-$answer
-$image
-PDP/i_1/Screenshot 2024-06-17 101406.png
-
-
-$image
-PDP/i_1/Screenshot 2024-06-17 101409.png
-$answer
-$image
-PDP/i_1/Screenshot 2024-06-17 101412.png
-
-
-$image
-PDP/i_1/Screenshot 2024-06-17 101546.png
-$answer
-$image
-PDP/i_1/Screenshot 2024-06-17 101552.png
-
-
-$image
-PDP/i_1/Screenshot 2024-06-17 101555.png
-$answer
-$image
-PDP/i_1/Screenshot 2024-06-17 101557.png
-
-
-$image
-PDP/i_1/Screenshot 2024-06-17 101753.png
-$answer
-$image
-PDP/i_1/Screenshot 2024-06-17 101756.png
-
-
-$image
-PDP/i_1/Screenshot 2024-06-17 101747.png
-$answer
-$image
-PDP/i_1/Screenshot 2024-06-17 101751.png
+PDP/i_1/Screenshot 2024-06-20 160505.png
 

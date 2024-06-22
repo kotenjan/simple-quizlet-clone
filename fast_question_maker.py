@@ -1,7 +1,12 @@
 import os
-import shutil
-import sys
+import time
 import re
+import colorama
+from prompt_toolkit import prompt
+from prompt_toolkit.completion import PathCompleter
+import cv2
+from time import sleep
+import sys
 
 class Question:
     def __init__(self, image_question, image_answer):
@@ -92,51 +97,29 @@ def get_image_path_with_hinting(text, verify=True):
                 if answer.strip().lower() in ['yes', 'y', '']:
                     continue
         return filename
-
-if len(sys.argv) != 3:
-    print("Usage: python script.py <source_directory> <destination_directory>")
-    sys.exit(1)
-
-source_dir = sys.argv[1]
-dest_dir = sys.argv[2]
-
-image_extensions = ('.png', '.jpg', '.jpeg', '.gif', '.bmp')
-images = [f for f in os.listdir(source_dir) if os.path.isfile(os.path.join(source_dir, f)) and f.lower().endswith(image_extensions)]
-
-num_files = len(images)
-
-# Ask user if they want to move half of the images
-user_input = input(f"Do you want to move: \n\t{num_files} images \nfrom: \n\t{source_dir} \nto \n\t{dest_dir}? \n(Yes/no): ")
-
-if user_input.lower() in ["", "y", "yes"]:
-    for file in images:
-        shutil.move(os.path.join(source_dir, file), os.path.join(dest_dir, file))
-    
-    print(f"Moved {num_files} images.")
-
-    try:
-                
-        img_path = dest_dir
-
-        if not os.path.isdir(img_path):
-            img_path = get_image_path_with_hinting("📁 Couldn't find the images directory🥺 Tell me, where should I look for images? ", verify=True)
             
-        filename = os.path.join(os.path.dirname(dest_dir), "q_" + re.search(r'_(\d+)', os.path.basename(dest_dir)).group(1)) + ".txt"
+
+if __name__ == "__main__":
+    
+    try:
+        
+        filename = sys.argv[1]
         
         if not os.path.isdir(os.path.dirname(filename)):
             filename = get_filename_with_hinting("📁 Couldn't find the questions directory🥺 Tell me, where do you wish to store your questions? ")
+        
+        img_path = os.path.join(os.path.dirname(sys.argv[1]), "i_" + re.search(r'_(\d+)', os.path.basename(sys.argv[1])).group(1))
+        
+        if not os.path.isdir(img_path):
+            img_path = get_image_path_with_hinting("📁 Couldn't find the images directory🥺 Tell me, where should I look for images? ", verify=True)
 
         try:
             app = QuizCreator(filename, img_path=img_path)
             app.run()
-            
-            print(f"Created {filename}")
         except KeyboardInterrupt:
             pass
 
     except KeyboardInterrupt:
         pass
-else:
-    print("Operation cancelled.")
 
 

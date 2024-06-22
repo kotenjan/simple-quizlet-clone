@@ -1,0 +1,70 @@
+
+$image
+/mnt/c/Users/koten/Documents/QUIZ/PDP/i_29/Screenshot 2024-06-22 151830.png
+$answer
+$image
+/mnt/c/Users/koten/Documents/QUIZ/PDP/i_29/Screenshot 2024-06-22 151835.png
+
+
+$image
+/mnt/c/Users/koten/Documents/QUIZ/PDP/i_29/Screenshot 2024-06-22 151838.png
+$answer
+$image
+/mnt/c/Users/koten/Documents/QUIZ/PDP/i_29/Screenshot 2024-06-22 151852.png
+
+
+$image
+/mnt/c/Users/koten/Documents/QUIZ/PDP/i_29/Screenshot 2024-06-22 151925.png
+$answer
+$image
+/mnt/c/Users/koten/Documents/QUIZ/PDP/i_29/Screenshot 2024-06-22 151930.png
+
+
+$image
+/mnt/c/Users/koten/Documents/QUIZ/PDP/i_29/Screenshot 2024-06-22 151934.png
+$answer
+$image
+/mnt/c/Users/koten/Documents/QUIZ/PDP/i_29/Screenshot 2024-06-22 151937.png
+
+
+$image
+/mnt/c/Users/koten/Documents/QUIZ/PDP/i_29/Screenshot 2024-06-22 151940.png
+$answer
+$image
+/mnt/c/Users/koten/Documents/QUIZ/PDP/i_29/Screenshot 2024-06-22 151943.png
+
+
+$image
+/mnt/c/Users/koten/Documents/QUIZ/PDP/i_29/Screenshot 2024-06-22 151949.png
+$answer
+$image
+/mnt/c/Users/koten/Documents/QUIZ/PDP/i_29/Screenshot 2024-06-22 151952.png
+
+
+$image
+/mnt/c/Users/koten/Documents/QUIZ/PDP/i_29/Screenshot 2024-06-22 151955.png
+$answer
+$image
+/mnt/c/Users/koten/Documents/QUIZ/PDP/i_29/Screenshot 2024-06-22 151959.png
+
+
+$image
+/mnt/c/Users/koten/Documents/QUIZ/PDP/i_29/Screenshot 2024-06-22 152002.png
+$answer
+$image
+/mnt/c/Users/koten/Documents/QUIZ/PDP/i_29/Screenshot 2024-06-22 152005.png
+
+
+$image
+/mnt/c/Users/koten/Documents/QUIZ/PDP/i_29/Screenshot 2024-06-22 152009.png
+$answer
+$image
+/mnt/c/Users/koten/Documents/QUIZ/PDP/i_29/Screenshot 2024-06-22 152012.png
+
+
+$image
+/mnt/c/Users/koten/Documents/QUIZ/PDP/i_29/Screenshot 2024-06-22 152015.png
+$answer
+$image
+/mnt/c/Users/koten/Documents/QUIZ/PDP/i_29/Screenshot 2024-06-22 152019.png
+

@@ -1,0 +1,14 @@
+
+$image
+PDP/i_16/Screenshot 2024-06-21 184908.png
+$answer
+$image
+PDP/i_16/Screenshot 2024-06-21 184911.png
+
+
+$image
+PDP/i_16/Screenshot 2024-06-21 184914.png
+$answer
+$image
+PDP/i_16/Screenshot 2024-06-21 184918.png
+

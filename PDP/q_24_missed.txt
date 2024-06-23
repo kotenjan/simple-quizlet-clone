@@ -1,0 +1,7 @@
+
+$image
+/mnt/c/Users/koten/Documents/QUIZ/PDP/i_24/Screenshot 2024-06-22 142815.png
+$answer
+$image
+/mnt/c/Users/koten/Documents/QUIZ/PDP/i_24/Screenshot 2024-06-22 142819.png
+

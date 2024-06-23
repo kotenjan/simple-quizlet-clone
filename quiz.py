@@ -58,8 +58,15 @@ class Question:
         question = re.sub(r'\n+', '\n', question)
         question += "\n\n"    
             
-        with open(filename, "a", encoding="utf-8") as f:
-            f.write(question)
+        try:
+            with open(filename, "r", encoding="utf-8") as f:
+                content = f.read()
+        except:
+            content = ""
+            
+        if question not in content:
+            with open(filename, "a", encoding="utf-8") as f:
+                f.write(question)
 
     def print_divider(self, title, symbol="-", style=Fore.YELLOW + Style.BRIGHT):
         length = shutil.get_terminal_size().columns
@@ -290,7 +297,8 @@ class QuizApp:
         
         self.questions.insert(min(self.n + self.t, len(self.questions)), question)
         
-        question.write(self.missed_file)
+        if question.miss > 1:
+            question.write(self.missed_file)
         
         for _ in range(question.miss - 1):
             self.questions.insert(random.randint(self.n + 1, len(self.questions)), question)

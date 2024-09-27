@@ -297,7 +297,7 @@ class QuizApp:
         
         self.questions.insert(min(self.n + self.t, len(self.questions)), question)
         
-        if question.miss > 1:
+        if question.miss > 0:
             question.write(self.missed_file)
         
         for _ in range(question.miss - 1):

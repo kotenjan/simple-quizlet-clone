@@ -1,0 +1,385 @@
+
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 210427.png
+$answer
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 210435.png
+
+
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 210439.png
+$answer
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 210453.png
+
+
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 210502.png
+$answer
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 210510.png
+
+
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 210521.png
+$answer
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 210526.png
+
+
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 210539.png
+$answer
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 210542.png
+
+
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 210548.png
+$answer
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 210552.png
+
+
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 210602.png
+$answer
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 210624.png
+
+
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 210640.png
+$answer
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 210644.png
+
+
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 210653.png
+$answer
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 210656.png
+
+
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 210719.png
+$answer
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 210722.png
+
+
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 210728.png
+$answer
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 210732.png
+
+
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 211403.png
+$answer
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 211406.png
+
+
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 211410.png
+$answer
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 211412.png
+
+
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 211442.png
+$answer
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 211445.png
+
+
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 211452.png
+$answer
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 211455.png
+
+
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 211515.png
+$answer
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 211525.png
+
+
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 211840.png
+$answer
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 211846.png
+
+
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 212525.png
+$answer
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 212539.png
+
+
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 212651.png
+$answer
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 212659.png
+
+
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 212740.png
+$answer
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 212745.png
+
+
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 212908.png
+$answer
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 212912.png
+
+
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 213202.png
+$answer
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 213205.png
+
+
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 213427.png
+$answer
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 213429.png
+
+
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 213526.png
+$answer
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 213530.png
+
+
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 213603.png
+$answer
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 213606.png
+
+
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 213632.png
+$answer
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 213634.png
+
+
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 213642.png
+$answer
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 213653.png
+
+
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 213714.png
+$answer
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 213719.png
+
+
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 213731.png
+$answer
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 213733.png
+
+
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 213843.png
+$answer
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 213845.png
+
+
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 214131.png
+$answer
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 214138.png
+
+
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 214255.png
+$answer
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 214303.png
+
+
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 214352.png
+$answer
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 214400.png
+
+
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 214411.png
+$answer
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 214414.png
+
+
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 214440.png
+$answer
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 214445.png
+
+
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 214541.png
+$answer
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 214543.png
+
+
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 214608.png
+$answer
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 214613.png
+
+
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 214625.png
+$answer
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 214629.png
+
+
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 214757.png
+$answer
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 214801.png
+
+
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 214832.png
+$answer
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 214835.png
+
+
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 214852.png
+$answer
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 214855.png
+
+
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 214903.png
+$answer
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 214906.png
+
+
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 214909.png
+$answer
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 214913.png
+
+
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 215831.png
+$answer
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 215834.png
+
+
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 215902.png
+$answer
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 215906.png
+
+
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 220714.png
+$answer
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 220717.png
+
+
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 220720.png
+$answer
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 220724.png
+
+
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 220823.png
+$answer
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 220825.png
+
+
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 220827.png
+$answer
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 220830.png
+
+
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 220841.png
+$answer
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 220844.png
+
+
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 220851.png
+$answer
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 220855.png
+
+
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 220859.png
+$answer
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 220903.png
+
+
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 220908.png
+$answer
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 220958.png
+
+
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 221010.png
+$answer
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 221013.png
+
+
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 221150.png
+$answer
+$image
+/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 221153.png
+

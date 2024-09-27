@@ -1,0 +1,77 @@
+
+$image
+./MPI/i_1/Screenshot 2024-09-24 140002.png
+$answer
+$image
+./MPI/i_1/Screenshot 2024-09-24 140009.png
+
+
+$image
+./MPI/i_1/Screenshot 2024-09-24 140014.png
+$answer
+$image
+./MPI/i_1/Screenshot 2024-09-24 140018.png
+
+
+$image
+./MPI/i_1/Screenshot 2024-09-24 140022.png
+$answer
+$image
+./MPI/i_1/Screenshot 2024-09-24 140027.png
+
+
+$image
+./MPI/i_1/Screenshot 2024-09-24 140032.png
+$answer
+$image
+./MPI/i_1/Screenshot 2024-09-24 140036.png
+
+
+$image
+./MPI/i_1/Screenshot 2024-09-24 140238.png
+$answer
+$image
+./MPI/i_1/Screenshot 2024-09-24 140241.png
+
+
+$image
+./MPI/i_1/Screenshot 2024-09-24 140246.png
+$answer
+$image
+./MPI/i_1/Screenshot 2024-09-24 140251.png
+
+
+$image
+./MPI/i_1/Screenshot 2024-09-24 140257.png
+$answer
+$image
+./MPI/i_1/Screenshot 2024-09-24 140301.png
+
+
+$image
+./MPI/i_1/Screenshot 2024-09-24 140307.png
+$answer
+$image
+./MPI/i_1/Screenshot 2024-09-24 140311.png
+
+
+$image
+./MPI/i_1/Screenshot 2024-09-24 140317.png
+$answer
+$image
+./MPI/i_1/Screenshot 2024-09-24 140322.png
+
+
+$image
+./MPI/i_1/Screenshot 2024-09-24 140327.png
+$answer
+$image
+./MPI/i_1/Screenshot 2024-09-24 140331.png
+
+
+$image
+./MPI/i_1/Screenshot 2024-09-24 140335.png
+$answer
+$image
+./MPI/i_1/Screenshot 2024-09-24 140340.png
+

@@ -1,0 +1,420 @@
+
+$image
+SCR/i_4/Screenshot 2024-10-22 150608.png
+$answer
+$image
+SCR/i_4/Screenshot 2024-10-22 150614.png
+
+
+$image
+SCR/i_4/Screenshot 2024-10-22 150618.png
+$answer
+$image
+SCR/i_4/Screenshot 2024-10-22 150623.png
+
+
+$image
+SCR/i_4/Screenshot 2024-10-22 150627.png
+$answer
+$image
+SCR/i_4/Screenshot 2024-10-22 150633.png
+
+
+$image
+SCR/i_4/Screenshot 2024-10-22 150637.png
+$answer
+$image
+SCR/i_4/Screenshot 2024-10-22 150641.png
+
+
+$image
+SCR/i_4/Screenshot 2024-10-22 150646.png
+$answer
+$image
+SCR/i_4/Screenshot 2024-10-22 150651.png
+
+
+$image
+SCR/i_4/Screenshot 2024-10-22 150657.png
+$answer
+$image
+SCR/i_4/Screenshot 2024-10-22 150702.png
+
+
+$image
+SCR/i_4/Screenshot 2024-10-22 150706.png
+$answer
+$image
+SCR/i_4/Screenshot 2024-10-22 150711.png
+
+
+$image
+SCR/i_4/Screenshot 2024-10-22 150715.png
+$answer
+$image
+SCR/i_4/Screenshot 2024-10-22 150720.png
+
+
+$image
+SCR/i_4/Screenshot 2024-10-22 150725.png
+$answer
+$image
+SCR/i_4/Screenshot 2024-10-22 150730.png
+
+
+$image
+SCR/i_4/Screenshot 2024-10-22 150735.png
+$answer
+$image
+SCR/i_4/Screenshot 2024-10-22 150740.png
+
+
+$image
+SCR/i_4/Screenshot 2024-10-22 150747.png
+$answer
+$image
+SCR/i_4/Screenshot 2024-10-22 150751.png
+
+
+$image
+SCR/i_4/Screenshot 2024-10-22 150755.png
+$answer
+$image
+SCR/i_4/Screenshot 2024-10-22 150759.png
+
+
+$image
+SCR/i_4/Screenshot 2024-10-22 150804.png
+$answer
+$image
+SCR/i_4/Screenshot 2024-10-22 150808.png
+
+
+$image
+SCR/i_4/Screenshot 2024-10-22 150812.png
+$answer
+$image
+SCR/i_4/Screenshot 2024-10-22 150817.png
+
+
+$image
+SCR/i_4/Screenshot 2024-10-22 150821.png
+$answer
+$image
+SCR/i_4/Screenshot 2024-10-22 150825.png
+
+
+$image
+SCR/i_4/Screenshot 2024-10-22 150829.png
+$answer
+$image
+SCR/i_4/Screenshot 2024-10-22 150833.png
+
+
+$image
+SCR/i_4/Screenshot 2024-10-22 150837.png
+$answer
+$image
+SCR/i_4/Screenshot 2024-10-22 150843.png
+
+
+$image
+SCR/i_4/Screenshot 2024-10-22 150848.png
+$answer
+$image
+SCR/i_4/Screenshot 2024-10-22 150851.png
+
+
+$image
+SCR/i_4/Screenshot 2024-10-22 150856.png
+$answer
+$image
+SCR/i_4/Screenshot 2024-10-22 150901.png
+
+
+$image
+SCR/i_4/Screenshot 2024-10-22 150906.png
+$answer
+$image
+SCR/i_4/Screenshot 2024-10-22 150911.png
+
+
+$image
+SCR/i_4/Screenshot 2024-10-22 151041.png
+$answer
+$image
+SCR/i_4/Screenshot 2024-10-22 151046.png
+
+
+$image
+SCR/i_4/Screenshot 2024-10-22 151050.png
+$answer
+$image
+SCR/i_4/Screenshot 2024-10-22 151055.png
+
+
+$image
+SCR/i_4/Screenshot 2024-10-22 151059.png
+$answer
+$image
+SCR/i_4/Screenshot 2024-10-22 151104.png
+
+
+$image
+SCR/i_4/Screenshot 2024-10-22 151108.png
+$answer
+$image
+SCR/i_4/Screenshot 2024-10-22 151111.png
+
+
+$image
+SCR/i_4/Screenshot 2024-10-22 151116.png
+$answer
+$image
+SCR/i_4/Screenshot 2024-10-22 151120.png
+
+
+$image
+SCR/i_4/Screenshot 2024-10-22 151126.png
+$answer
+$image
+SCR/i_4/Screenshot 2024-10-22 151129.png
+
+
+$image
+SCR/i_4/Screenshot 2024-10-22 151134.png
+$answer
+$image
+SCR/i_4/Screenshot 2024-10-22 151139.png
+
+
+$image
+SCR/i_4/Screenshot 2024-10-22 151145.png
+$answer
+$image
+SCR/i_4/Screenshot 2024-10-22 151150.png
+
+
+$image
+SCR/i_4/Screenshot 2024-10-22 151155.png
+$answer
+$image
+SCR/i_4/Screenshot 2024-10-22 151201.png
+
+
+$image
+SCR/i_4/Screenshot 2024-10-22 151206.png
+$answer
+$image
+SCR/i_4/Screenshot 2024-10-22 151211.png
+
+
+$image
+SCR/i_4/Screenshot 2024-10-22 151215.png
+$answer
+$image
+SCR/i_4/Screenshot 2024-10-22 151220.png
+
+
+$image
+SCR/i_4/Screenshot 2024-10-22 151225.png
+$answer
+$image
+SCR/i_4/Screenshot 2024-10-22 151233.png
+
+
+$image
+SCR/i_4/Screenshot 2024-10-22 151238.png
+$answer
+$image
+SCR/i_4/Screenshot 2024-10-22 151243.png
+
+
+$image
+SCR/i_4/Screenshot 2024-10-22 151248.png
+$answer
+$image
+SCR/i_4/Screenshot 2024-10-22 151253.png
+
+
+$image
+SCR/i_4/Screenshot 2024-10-22 151257.png
+$answer
+$image
+SCR/i_4/Screenshot 2024-10-22 151300.png
+
+
+$image
+SCR/i_4/Screenshot 2024-10-22 151305.png
+$answer
+$image
+SCR/i_4/Screenshot 2024-10-22 151309.png
+
+
+$image
+SCR/i_4/Screenshot 2024-10-22 151313.png
+$answer
+$image
+SCR/i_4/Screenshot 2024-10-22 151318.png
+
+
+$image
+SCR/i_4/Screenshot 2024-10-22 151323.png
+$answer
+$image
+SCR/i_4/Screenshot 2024-10-22 151328.png
+
+
+$image
+SCR/i_4/Screenshot 2024-10-22 151333.png
+$answer
+$image
+SCR/i_4/Screenshot 2024-10-22 151338.png
+
+
+$image
+SCR/i_4/Screenshot 2024-10-22 151342.png
+$answer
+$image
+SCR/i_4/Screenshot 2024-10-22 151346.png
+
+
+$image
+SCR/i_4/Screenshot 2024-10-22 151448.png
+$answer
+$image
+SCR/i_4/Screenshot 2024-10-22 151452.png
+
+
+$image
+SCR/i_4/Screenshot 2024-10-22 151456.png
+$answer
+$image
+SCR/i_4/Screenshot 2024-10-22 151500.png
+
+
+$image
+SCR/i_4/Screenshot 2024-10-22 151505.png
+$answer
+$image
+SCR/i_4/Screenshot 2024-10-22 151509.png
+
+
+$image
+SCR/i_4/Screenshot 2024-10-22 151513.png
+$answer
+$image
+SCR/i_4/Screenshot 2024-10-22 151517.png
+
+
+$image
+SCR/i_4/Screenshot 2024-10-22 151521.png
+$answer
+$image
+SCR/i_4/Screenshot 2024-10-22 151526.png
+
+
+$image
+SCR/i_4/Screenshot 2024-10-22 151530.png
+$answer
+$image
+SCR/i_4/Screenshot 2024-10-22 151535.png
+
+
+$image
+SCR/i_4/Screenshot 2024-10-22 151542.png
+$answer
+$image
+SCR/i_4/Screenshot 2024-10-22 151547.png
+
+
+$image
+SCR/i_4/Screenshot 2024-10-22 151551.png
+$answer
+$image
+SCR/i_4/Screenshot 2024-10-22 151556.png
+
+
+$image
+SCR/i_4/Screenshot 2024-10-22 151601.png
+$answer
+$image
+SCR/i_4/Screenshot 2024-10-22 151604.png
+
+
+$image
+SCR/i_4/Screenshot 2024-10-22 151609.png
+$answer
+$image
+SCR/i_4/Screenshot 2024-10-22 151613.png
+
+
+$image
+SCR/i_4/Screenshot 2024-10-22 151618.png
+$answer
+$image
+SCR/i_4/Screenshot 2024-10-22 151622.png
+
+
+$image
+SCR/i_4/Screenshot 2024-10-22 151627.png
+$answer
+$image
+SCR/i_4/Screenshot 2024-10-22 151632.png
+
+
+$image
+SCR/i_4/Screenshot 2024-10-22 151638.png
+$answer
+$image
+SCR/i_4/Screenshot 2024-10-22 151643.png
+
+
+$image
+SCR/i_4/Screenshot 2024-10-22 151648.png
+$answer
+$image
+SCR/i_4/Screenshot 2024-10-22 151652.png
+
+
+$image
+SCR/i_4/Screenshot 2024-10-22 151658.png
+$answer
+$image
+SCR/i_4/Screenshot 2024-10-22 151702.png
+
+
+$image
+SCR/i_4/Screenshot 2024-10-22 151706.png
+$answer
+$image
+SCR/i_4/Screenshot 2024-10-22 151710.png
+
+
+$image
+SCR/i_4/Screenshot 2024-10-22 151719.png
+$answer
+$image
+SCR/i_4/Screenshot 2024-10-22 151724.png
+
+
+$image
+SCR/i_4/Screenshot 2024-10-22 151730.png
+$answer
+$image
+SCR/i_4/Screenshot 2024-10-22 151733.png
+
+
+$image
+SCR/i_4/Screenshot 2024-10-22 151737.png
+$answer
+$image
+SCR/i_4/Screenshot 2024-10-22 151741.png
+
+
+$image
+SCR/i_4/Screenshot 2024-10-22 151744.png
+$answer
+$image
+SCR/i_4/Screenshot 2024-10-22 151749.png
+

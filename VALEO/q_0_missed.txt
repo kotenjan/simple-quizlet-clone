@@ -1,7 +1,0 @@
-
-$image
-/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 213731.png
-$answer
-$image
-/mnt/c/Users/koten/Documents/QUIZ/VALEO/i_0/Screenshot 2024-09-16 213733.png
-

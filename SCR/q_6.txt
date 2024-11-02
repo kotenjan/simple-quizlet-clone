@@ -1,0 +1,420 @@
+
+$image
+SCR/i_6/Screenshot 2024-11-02 195012.png
+$answer
+$image
+SCR/i_6/Screenshot 2024-11-02 195016.png
+
+
+$image
+SCR/i_6/Screenshot 2024-11-02 195021.png
+$answer
+$image
+SCR/i_6/Screenshot 2024-11-02 195026.png
+
+
+$image
+SCR/i_6/Screenshot 2024-11-02 195031.png
+$answer
+$image
+SCR/i_6/Screenshot 2024-11-02 195035.png
+
+
+$image
+SCR/i_6/Screenshot 2024-11-02 195039.png
+$answer
+$image
+SCR/i_6/Screenshot 2024-11-02 195044.png
+
+
+$image
+SCR/i_6/Screenshot 2024-11-02 195049.png
+$answer
+$image
+SCR/i_6/Screenshot 2024-11-02 195052.png
+
+
+$image
+SCR/i_6/Screenshot 2024-11-02 195058.png
+$answer
+$image
+SCR/i_6/Screenshot 2024-11-02 195108.png
+
+
+$image
+SCR/i_6/Screenshot 2024-11-02 195113.png
+$answer
+$image
+SCR/i_6/Screenshot 2024-11-02 195117.png
+
+
+$image
+SCR/i_6/Screenshot 2024-11-02 195124.png
+$answer
+$image
+SCR/i_6/Screenshot 2024-11-02 195130.png
+
+
+$image
+SCR/i_6/Screenshot 2024-11-02 195136.png
+$answer
+$image
+SCR/i_6/Screenshot 2024-11-02 195141.png
+
+
+$image
+SCR/i_6/Screenshot 2024-11-02 195147.png
+$answer
+$image
+SCR/i_6/Screenshot 2024-11-02 195152.png
+
+
+$image
+SCR/i_6/Screenshot 2024-11-02 195157.png
+$answer
+$image
+SCR/i_6/Screenshot 2024-11-02 195203.png
+
+
+$image
+SCR/i_6/Screenshot 2024-11-02 195210.png
+$answer
+$image
+SCR/i_6/Screenshot 2024-11-02 195214.png
+
+
+$image
+SCR/i_6/Screenshot 2024-11-02 195219.png
+$answer
+$image
+SCR/i_6/Screenshot 2024-11-02 195223.png
+
+
+$image
+SCR/i_6/Screenshot 2024-11-02 195229.png
+$answer
+$image
+SCR/i_6/Screenshot 2024-11-02 195234.png
+
+
+$image
+SCR/i_6/Screenshot 2024-11-02 195238.png
+$answer
+$image
+SCR/i_6/Screenshot 2024-11-02 195242.png
+
+
+$image
+SCR/i_6/Screenshot 2024-11-02 195246.png
+$answer
+$image
+SCR/i_6/Screenshot 2024-11-02 195251.png
+
+
+$image
+SCR/i_6/Screenshot 2024-11-02 195257.png
+$answer
+$image
+SCR/i_6/Screenshot 2024-11-02 195300.png
+
+
+$image
+SCR/i_6/Screenshot 2024-11-02 195305.png
+$answer
+$image
+SCR/i_6/Screenshot 2024-11-02 195308.png
+
+
+$image
+SCR/i_6/Screenshot 2024-11-02 195313.png
+$answer
+$image
+SCR/i_6/Screenshot 2024-11-02 195316.png
+
+
+$image
+SCR/i_6/Screenshot 2024-11-02 195322.png
+$answer
+$image
+SCR/i_6/Screenshot 2024-11-02 195326.png
+
+
+$image
+SCR/i_6/Screenshot 2024-11-02 195330.png
+$answer
+$image
+SCR/i_6/Screenshot 2024-11-02 195333.png
+
+
+$image
+SCR/i_6/Screenshot 2024-11-02 195337.png
+$answer
+$image
+SCR/i_6/Screenshot 2024-11-02 195342.png
+
+
+$image
+SCR/i_6/Screenshot 2024-11-02 195348.png
+$answer
+$image
+SCR/i_6/Screenshot 2024-11-02 195351.png
+
+
+$image
+SCR/i_6/Screenshot 2024-11-02 195355.png
+$answer
+$image
+SCR/i_6/Screenshot 2024-11-02 195359.png
+
+
+$image
+SCR/i_6/Screenshot 2024-11-02 195404.png
+$answer
+$image
+SCR/i_6/Screenshot 2024-11-02 195406.png
+
+
+$image
+SCR/i_6/Screenshot 2024-11-02 195411.png
+$answer
+$image
+SCR/i_6/Screenshot 2024-11-02 195416.png
+
+
+$image
+SCR/i_6/Screenshot 2024-11-02 195420.png
+$answer
+$image
+SCR/i_6/Screenshot 2024-11-02 195423.png
+
+
+$image
+SCR/i_6/Screenshot 2024-11-02 195428.png
+$answer
+$image
+SCR/i_6/Screenshot 2024-11-02 195432.png
+
+
+$image
+SCR/i_6/Screenshot 2024-11-02 195438.png
+$answer
+$image
+SCR/i_6/Screenshot 2024-11-02 195442.png
+
+
+$image
+SCR/i_6/Screenshot 2024-11-02 195447.png
+$answer
+$image
+SCR/i_6/Screenshot 2024-11-02 195452.png
+
+
+$image
+SCR/i_6/Screenshot 2024-11-02 195458.png
+$answer
+$image
+SCR/i_6/Screenshot 2024-11-02 195502.png
+
+
+$image
+SCR/i_6/Screenshot 2024-11-02 195508.png
+$answer
+$image
+SCR/i_6/Screenshot 2024-11-02 195514.png
+
+
+$image
+SCR/i_6/Screenshot 2024-11-02 195518.png
+$answer
+$image
+SCR/i_6/Screenshot 2024-11-02 195522.png
+
+
+$image
+SCR/i_6/Screenshot 2024-11-02 195530.png
+$answer
+$image
+SCR/i_6/Screenshot 2024-11-02 195534.png
+
+
+$image
+SCR/i_6/Screenshot 2024-11-02 195538.png
+$answer
+$image
+SCR/i_6/Screenshot 2024-11-02 195541.png
+
+
+$image
+SCR/i_6/Screenshot 2024-11-02 195546.png
+$answer
+$image
+SCR/i_6/Screenshot 2024-11-02 195550.png
+
+
+$image
+SCR/i_6/Screenshot 2024-11-02 195554.png
+$answer
+$image
+SCR/i_6/Screenshot 2024-11-02 195557.png
+
+
+$image
+SCR/i_6/Screenshot 2024-11-02 195602.png
+$answer
+$image
+SCR/i_6/Screenshot 2024-11-02 195605.png
+
+
+$image
+SCR/i_6/Screenshot 2024-11-02 195611.png
+$answer
+$image
+SCR/i_6/Screenshot 2024-11-02 195615.png
+
+
+$image
+SCR/i_6/Screenshot 2024-11-02 195621.png
+$answer
+$image
+SCR/i_6/Screenshot 2024-11-02 195626.png
+
+
+$image
+SCR/i_6/Screenshot 2024-11-02 195631.png
+$answer
+$image
+SCR/i_6/Screenshot 2024-11-02 195636.png
+
+
+$image
+SCR/i_6/Screenshot 2024-11-02 195642.png
+$answer
+$image
+SCR/i_6/Screenshot 2024-11-02 195648.png
+
+
+$image
+SCR/i_6/Screenshot 2024-11-02 195654.png
+$answer
+$image
+SCR/i_6/Screenshot 2024-11-02 195658.png
+
+
+$image
+SCR/i_6/Screenshot 2024-11-02 195704.png
+$answer
+$image
+SCR/i_6/Screenshot 2024-11-02 195708.png
+
+
+$image
+SCR/i_6/Screenshot 2024-11-02 195715.png
+$answer
+$image
+SCR/i_6/Screenshot 2024-11-02 195719.png
+
+
+$image
+SCR/i_6/Screenshot 2024-11-02 195724.png
+$answer
+$image
+SCR/i_6/Screenshot 2024-11-02 195728.png
+
+
+$image
+SCR/i_6/Screenshot 2024-11-02 195735.png
+$answer
+$image
+SCR/i_6/Screenshot 2024-11-02 195739.png
+
+
+$image
+SCR/i_6/Screenshot 2024-11-02 195745.png
+$answer
+$image
+SCR/i_6/Screenshot 2024-11-02 195750.png
+
+
+$image
+SCR/i_6/Screenshot 2024-11-02 195758.png
+$answer
+$image
+SCR/i_6/Screenshot 2024-11-02 195802.png
+
+
+$image
+SCR/i_6/Screenshot 2024-11-02 195808.png
+$answer
+$image
+SCR/i_6/Screenshot 2024-11-02 195813.png
+
+
+$image
+SCR/i_6/Screenshot 2024-11-02 195820.png
+$answer
+$image
+SCR/i_6/Screenshot 2024-11-02 195823.png
+
+
+$image
+SCR/i_6/Screenshot 2024-11-02 195830.png
+$answer
+$image
+SCR/i_6/Screenshot 2024-11-02 195834.png
+
+
+$image
+SCR/i_6/Screenshot 2024-11-02 195841.png
+$answer
+$image
+SCR/i_6/Screenshot 2024-11-02 195846.png
+
+
+$image
+SCR/i_6/Screenshot 2024-11-02 195852.png
+$answer
+$image
+SCR/i_6/Screenshot 2024-11-02 195856.png
+
+
+$image
+SCR/i_6/Screenshot 2024-11-02 195902.png
+$answer
+$image
+SCR/i_6/Screenshot 2024-11-02 195905.png
+
+
+$image
+SCR/i_6/Screenshot 2024-11-02 195910.png
+$answer
+$image
+SCR/i_6/Screenshot 2024-11-02 195913.png
+
+
+$image
+SCR/i_6/Screenshot 2024-11-02 195917.png
+$answer
+$image
+SCR/i_6/Screenshot 2024-11-02 195920.png
+
+
+$image
+SCR/i_6/Screenshot 2024-11-02 195930.png
+$answer
+$image
+SCR/i_6/Screenshot 2024-11-02 195933.png
+
+
+$image
+SCR/i_6/Screenshot 2024-11-02 195938.png
+$answer
+$image
+SCR/i_6/Screenshot 2024-11-02 195942.png
+
+
+$image
+SCR/i_6/Screenshot 2024-11-02 195948.png
+$answer
+$image
+SCR/i_6/Screenshot 2024-11-02 195955.png
+

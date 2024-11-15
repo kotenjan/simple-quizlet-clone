@@ -24,7 +24,7 @@ class ImageMerger:
         max_width = max(image.size[0] for image in images)
         scaled_images = [image.resize((max_width, int(max_width / image.width * image.height)), Image.Resampling.LANCZOS) for image in images]
         total_height = sum(image.size[1] for image in scaled_images)
-        new_image = Image.new('RGB', (max_width, total_height))
+        new_image = Image.new('RGB', (max_width, total_height), (61, 61, 61))  # Set background to #3D3D3D
 
         current_height = 0
         for image in scaled_images:
@@ -39,7 +39,7 @@ class ImageMerger:
         max_height = max(image.size[1] for image in images)
         scaled_images = [image.resize((int(max_height / image.height * image.width), max_height), Image.Resampling.LANCZOS) for image in images]
         total_width = sum(image.size[0] for image in scaled_images)
-        new_image = Image.new('RGB', (total_width, max_height))
+        new_image = Image.new('RGB', (total_width, max_height), (61, 61, 61))  # Set background to #3D3D3D
 
         current_width = 0
         for image in scaled_images:
@@ -73,13 +73,12 @@ class ImageMerger:
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Merge the last two PNG images in a directory either vertically or horizontally.')
-    parser.add_argument('--orientation', type=str, required=True, choices=['v', 'h'], help='Choose v for vertical merge or h for horizontal merge.')
+    parser.add_argument('orientation', nargs='?', default='v', choices=['v', 'h'], help='Choose v for vertical merge or h for horizontal merge. Default is v.')
 
     args = parser.parse_args()
 
     orientation = 'vertical' if args.orientation == 'v' else 'horizontal'
 
-    # Replace the path below with the directory path where your PNG files are located.
     dir_path = "/mnt/c/Users/koten/Pictures/Screenshots"
     merger = ImageMerger(dir_path, orientation)
     merger.merge_last_two_png_files()

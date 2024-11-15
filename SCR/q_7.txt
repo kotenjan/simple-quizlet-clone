@@ -1,0 +1,140 @@
+
+$image
+SCR/i_7/Screenshot 2024-11-12 190720.png
+$answer
+$image
+SCR/i_7/Screenshot 2024-11-12 190722.png
+
+
+$image
+SCR/i_7/Screenshot 2024-11-12 190726.png
+$answer
+$image
+SCR/i_7/Screenshot 2024-11-12 190730.png
+
+
+$image
+SCR/i_7/Screenshot 2024-11-12 190736.png
+$answer
+$image
+SCR/i_7/Screenshot 2024-11-12 190739.png
+
+
+$image
+SCR/i_7/Screenshot 2024-11-12 190744.png
+$answer
+$image
+SCR/i_7/Screenshot 2024-11-12 190746.png
+
+
+$image
+SCR/i_7/Screenshot 2024-11-12 190750.png
+$answer
+$image
+SCR/i_7/Screenshot 2024-11-12 190753.png
+
+
+$image
+SCR/i_7/Screenshot 2024-11-12 190758.png
+$answer
+$image
+SCR/i_7/Screenshot 2024-11-12 190801.png
+
+
+$image
+SCR/i_7/Screenshot 2024-11-12 190805.png
+$answer
+$image
+SCR/i_7/Screenshot 2024-11-12 190810.png
+
+
+$image
+SCR/i_7/Screenshot 2024-11-12 190816.png
+$answer
+$image
+SCR/i_7/Screenshot 2024-11-12 190819.png
+
+
+$image
+SCR/i_7/Screenshot 2024-11-12 190823.png
+$answer
+$image
+SCR/i_7/Screenshot 2024-11-12 190826.png
+
+
+$image
+SCR/i_7/Screenshot 2024-11-12 190831.png
+$answer
+$image
+SCR/i_7/Screenshot 2024-11-12 190834.png
+
+
+$image
+SCR/i_7/Screenshot 2024-11-12 190837.png
+$answer
+$image
+SCR/i_7/Screenshot 2024-11-12 190839.png
+
+
+$image
+SCR/i_7/Screenshot 2024-11-12 190843.png
+$answer
+$image
+SCR/i_7/Screenshot 2024-11-12 190845.png
+
+
+$image
+SCR/i_7/Screenshot 2024-11-12 190850.png
+$answer
+$image
+SCR/i_7/Screenshot 2024-11-12 190852.png
+
+
+$image
+SCR/i_7/Screenshot 2024-11-12 190857.png
+$answer
+$image
+SCR/i_7/Screenshot 2024-11-12 190900.png
+
+
+$image
+SCR/i_7/Screenshot 2024-11-12 190905.png
+$answer
+$image
+SCR/i_7/Screenshot 2024-11-12 190907.png
+
+
+$image
+SCR/i_7/Screenshot 2024-11-12 190912.png
+$answer
+$image
+SCR/i_7/Screenshot 2024-11-12 190915.png
+
+
+$image
+SCR/i_7/Screenshot 2024-11-12 190920.png
+$answer
+$image
+SCR/i_7/Screenshot 2024-11-12 190922.png
+
+
+$image
+SCR/i_7/Screenshot 2024-11-12 190927.png
+$answer
+$image
+SCR/i_7/Screenshot 2024-11-12 190930.png
+
+
+$image
+SCR/i_7/Screenshot 2024-11-12 190935.png
+$answer
+$image
+SCR/i_7/Screenshot 2024-11-12 190937.png
+
+
+$image
+SCR/i_7/Screenshot 2024-11-12 190941.png
+$answer
+$image
+SCR/i_7/Screenshot 2024-11-12 190945.png
+

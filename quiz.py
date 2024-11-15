@@ -13,6 +13,8 @@ import re
 from PIL import Image
 import numpy as np
 import tkinter
+import json
+import hashlib
 
 colorama.init(autoreset=True)
 
@@ -27,6 +29,29 @@ class Question:
         self.image_answer = image_answer
         self.miss = 0
         random.shuffle(self.hints)
+        
+    def generate_id(self):
+        """
+        Generates a unique ID based on the object's attributes.
+        """
+        # Create a dictionary of all relevant attributes
+        data = {
+            'question': self.question,
+            'image_question': self.image_question,
+            'hints': self.hints,
+            'correct_answers': self.correct_answers,
+            'incorrect_answers': self.incorrect_answers,
+            'other_answers': self.other_answers,
+            'image_answer': self.image_answer
+        }
+        
+        # Serialize the dictionary into a JSON string with sorted keys
+        json_string = json.dumps(data, sort_keys=True)
+        
+        # Generate a SHA-256 hash of the JSON string
+        unique_id = hashlib.sha256(json_string.encode()).hexdigest()
+        
+        return unique_id
         
     def write(self, filename):
         
@@ -90,7 +115,6 @@ class Question:
         print()
 
     def print_question(self, i, l, streak, max_streak):
-        i+=1
         self.print_divider(f"Question {i}/{l}, {l-i} Left, Current Streak: {streak}, Max Streak: {max_streak} ", symbol="=", style=Fore.BLACK + Style.BRIGHT)
         print()
         self.print_styled_text(self.question, Fore.RESET + Style.BRIGHT + Style.BRIGHT)
@@ -209,7 +233,7 @@ class QuestionParser:
         return self.questions
 
 class QuizApp:
-    def __init__(self, filepath, t=5, s=True, missed_file="missed.txt"):
+    def __init__(self, filepath, phrase_dir='phrases', t=5, s=True, stats_file=None):
         self.running = True
         self.answer_printed = False
         self.filepath = filepath
@@ -218,12 +242,33 @@ class QuizApp:
         self.t = t
         self.streak = 0
         self.max_streak = 0
-        self.missed_file = missed_file
-        if os.path.exists(self.missed_file):
-            os.remove(self.missed_file)
+        self.stats_file = stats_file
+        self.phrase_dir = phrase_dir
+
+        # Load phrases from files
+        self.incorrect_answers = self.load_phrases('incorrect_answers.txt')
+        self.correct_answers = self.load_phrases('correct_answers.txt')
+        self.end_of_quiz = self.load_phrases('end_of_quiz.txt')
+        
+        self.stats = self.load_stats()
+        
         if s:
             random.shuffle(self.questions)
-        
+            
+        self.questions = sorted(
+            self.questions,
+            key=lambda question: 0 if question.generate_id() not in self.stats else max(1, self.stats[question.generate_id()][0] - self.stats[question.generate_id()][1])
+        )
+
+    def load_phrases(self, filename):
+        path = os.path.join(self.phrase_dir, filename)
+        if not os.path.exists(path):
+            print(f"Phrase file {path} not found. Please ensure it exists.")
+            sys.exit(1)
+        with open(path, 'r', encoding='utf-8') as f:
+            phrases = [line.strip() for line in f if line.strip()]
+        return phrases
+
     def print_divider(self, title, symbol="-", middle_symbol="-", middle_symbol_length=0, style=Fore.YELLOW + Style.BRIGHT):
         length = shutil.get_terminal_size().columns
         print(style + symbol * length)
@@ -256,49 +301,35 @@ class QuizApp:
                 termios.tcsetattr(fd, termios.TCSADRAIN, old_settings)
             return ch
 
-
     def next_question(self):
-        if self.n < len(self.questions):
+        if self.n < len(self.questions) - 1:
             self.n += 1
             self.answer_printed = False
+        else:
+            self.n += 1  # To trigger end of quiz
+        self.save_stats()
 
     def wrong_answer(self):
         if not self.answer_printed:
             return
         
-        incorrect_answers = [
-            "Swing and a miss. 🏓",
-            "Next one's yours! 💖",
-            "Ah, almost! 🤏",
-            "Seemed right to me 🧐",
-            "Who's counting anyways? 🤓",
-            "Missed! 🚀",
-            "Whoopsie daisy! 🌼",
-            "Swing and a miss! ⚾",
-            "That was a toughie. 🤷",
-            "Next time definitely! 😉",
-            "Missed! Keep swinging. 🏌️‍♂️",
-            "I still believe in you. 🌟",
-            "Let's try another. 🎲",
-            "Whoops! 🫣",
-            "Almost! Keep going! 👣",
-            "That one was tough! 🤨",
-            "Shell we try again? 🐚",
-            "Oh no... anyway... 👉"
-        ]
-        
+        message = random.choice(self.incorrect_answers)
         self.streak = 0
         
-        self.print_divider(random.choice(incorrect_answers), style=Fore.RED + Style.BRIGHT, middle_symbol_length=-1)
+        self.print_divider(message, style=Fore.RED + Style.BRIGHT, middle_symbol_length=-1)
         time.sleep(1)
         
         question = self.questions[self.n]
+        
+        if question.generate_id() in self.stats:
+            self.stats[question.generate_id()][1] = self.stats[question.generate_id()][1] + 1
+        else:
+            self.stats[question.generate_id()] = [0, 1]
+            
         question.miss += 1
         
-        self.questions.insert(min(self.n + self.t, len(self.questions)), question)
-        
-        if question.miss > 0:
-            question.write(self.missed_file)
+        insert_position = min(self.n + self.t, len(self.questions))
+        self.questions.insert(insert_position, question)
         
         for _ in range(question.miss - 1):
             self.questions.insert(random.randint(self.n + 1, len(self.questions)), question)
@@ -309,33 +340,20 @@ class QuizApp:
         if not self.answer_printed:
             return
         
-        correct_answers = [
-            "🎉 You're on fire!",
-            "Spot on! 🌟",
-            "🏆 You're crushing it!",
-            "Right you are! 🧠",
-            "Nailed it! ⚒️",
-            "Yes! 💡",
-            "Aced it! ✅",
-            "Absolutely right! 📚",
-            "Slow down Einstein! 🤯",
-            "Perfect! 🌈",
-            "You're on fire. 🔥",
-            "You're a genius. 🧠",
-            "Yes! Keep rolling. 🎳",
-            "You're unstoppable. 🚄",
-            "Crushing it. 🥊",
-            "Aced it! 🌟",
-            "You're a rock star. 🎸",
-            "Perfect!🏆",
-            "Absolutely! 😎",
-        ]
+        message = random.choice(self.correct_answers)
+        
+        question = self.questions[self.n]
+        
+        if question.generate_id() in self.stats:
+            self.stats[question.generate_id()][0] = self.stats[question.generate_id()][0] + 1
+        else:
+            self.stats[question.generate_id()] = [1, 0]
         
         self.streak += 1
         if self.streak > self.max_streak:
             self.max_streak = self.streak
         
-        self.print_divider(random.choice(correct_answers), style=Fore.GREEN + Style.BRIGHT, middle_symbol_length=-1)
+        self.print_divider(message, style=Fore.GREEN + Style.BRIGHT, middle_symbol_length=-1)
         time.sleep(1)
         
         self.next_question()
@@ -344,37 +362,27 @@ class QuizApp:
         if self.n > 0:
             self.n -= 1
             self.answer_printed = False
-            
+
     def print_controlls(self):
-        print(Fore.LIGHTWHITE_EX + Style.DIM + "Press any key to show answer, 'a' to repeat, 'd' to proceed, 'w' to return, 'q' to quit.\n")
+        print(Fore.LIGHTWHITE_EX + Style.DIM + "Press any key to show answer, 'a' to mark incorrect, 'd' to mark correct, 'w' to go back, 'q' to quit.\n")
 
     def print_prompt(self):
         os.system('cls' if os.name == 'nt' else 'clear')
         self.print_controlls()
         
-        end_of_quiz = [
-            "Quiz completed! 🎉 You're a star! 🌟",
-            "All done! 🏁 Your brain deserves a trophy. 🏆",
-            "That's all, folks! 🐷 Time to celebrate! 🎊",
-            "End of the road! 🛣️ You've done splendidly! 💐",
-            "No more questions! 🚫 You've conquered this quiz! 🏔️",
-            "Quiz over! 📚 Time for a well-deserved break! ☕",
-            "You've reached the end! 🏠 What a journey, huh? 🌍",
-            "All out of questions! 📖 You're officially a quiz whiz! 🧙‍♂️",
-            "Finished! 🏆 Take a bow; you've earned it! 🎻",
-            "That's a wrap! 🎬 You've aced this challenge! 🥇",
-        ]
+        end_of_quiz_messages = self.end_of_quiz
         
         if self.n >= len(self.questions):
-            self.print_divider(f"{random.choice(end_of_quiz)}, Your max streak was {self.max_streak}", style=Fore.CYAN + Style.BRIGHT, middle_symbol_length=-2)
+            message = random.choice(end_of_quiz_messages)
+            self.print_divider(f"{message}, Your max streak was {self.max_streak}", style=Fore.CYAN + Style.BRIGHT, middle_symbol_length=-2)
             restart = input("🔁 Wanna do that all over again? (Yes/no) ")
             if restart.strip().lower() in ['yes', 'y', '']:
                 self.n = 0
                 self.streak = 0
                 print("All right! 👌")
-                print(f"🎮 Running quiz with {'🔀 shuffled' if shuffle else '📚 ordered'} questions, 🔄 every {steps} questions for repeats, from file 📁 {filename}")
+                print(f"🎮 Running quiz with 🔀 shuffled questions, 🔄 every {self.t} questions for repeats, from file 📁 {self.filepath}")
                 for i in range(5, 0, -1):
-                    print(f"\r🚀 And we're beginninng in {i}... 🚀", end="", flush=True)
+                    print(f"\r🚀 And we're beginning in {i}... 🚀", end="", flush=True)
                     time.sleep(1)
                 self.print_prompt()
             else:
@@ -382,24 +390,49 @@ class QuizApp:
                 sys.exit()
         
         else:
-            self.questions[self.n].print_question(self.n, len(self.questions), self.streak, self.max_streak)
-            if not self.answer_printed and not self.questions[self.n].image_question:
-                self.get_key_press()
-            self.questions[self.n].print_answers()
-            self.answer_printed = True
+            current_question = self.questions[self.n]
+            current_question.print_question(self.n + 1, len(self.questions), self.streak, self.max_streak)
+            if not self.answer_printed and not getattr(current_question, 'image_question', False):
+                key = self.get_key_press()
+                if key == 'q':
+                    self.running = False
+                    sys.exit()
+                elif key == 'esc':
+                    self.running = False
+                    sys.exit()
+                # Handle other keys if necessary
+            if not self.answer_printed:
+                self.questions[self.n].print_answers()
+                self.answer_printed = True
 
     def run(self):
         while self.running:
             self.print_prompt()
             key = self.get_key_press()
-            if key == 'esc':
+            if key == 'esc' or key.lower() == 'q':
+                print("👋 Exiting the quiz. Goodbye!")
                 break
-            elif key == 'a':
+            elif key.lower() == 'a':
                 self.wrong_answer()
-            elif key == 'd':
+            elif key.lower() == 'd':
                 self.correct_answer()
-            elif key == 'w':
+            elif key.lower() == 'w':
                 self.previous_answer()
+                
+    def load_stats(self):
+        if os.path.exists(self.stats_file):
+            with open(self.stats_file, 'r', encoding='utf-8') as f:
+                try:
+                    return json.load(f)
+                except json.JSONDecodeError:
+                    print(f"Error decoding JSON from {self.stats_file}. Initializing empty stats.")
+                    return {}
+        else:
+            return {}
+            
+    def save_stats(self):
+        with open(self.stats_file, 'w', encoding='utf-8') as f:
+            json.dump(self.stats, f, indent=4)
             
             
 def get_filename_with_path_hinting(text, test=True):
@@ -425,7 +458,7 @@ if __name__ == "__main__":
 
         shuffle_ans = input("🎲 Do you love surprises? Should I shuffle the questions? ")
         
-        missed_file = filename.split(".txt")[0] + "_missed.txt"
+        stats_file = filename.split(".txt")[0] + "_stats.json"
         
         steps_ans = input("💭 How often should we revisit the ones you miss? ")
 
@@ -441,7 +474,7 @@ if __name__ == "__main__":
             print(f"\r🚀 And we're beginninng in {i}... 🚀", end="", flush=True)
             time.sleep(1)
 
-        app = QuizApp(filename, t=steps, s=shuffle, missed_file=missed_file)
+        app = QuizApp(filename, t=steps, s=shuffle, stats_file=stats_file)
         app.run()
     except KeyboardInterrupt:
         pass

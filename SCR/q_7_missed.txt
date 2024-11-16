@@ -1,0 +1,7 @@
+
+$image
+SCR/i_7/Screenshot 2024-11-09 205125.png
+$answer
+$image
+SCR/i_7/Screenshot 2024-11-09 205129.png
+

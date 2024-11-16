@@ -1,7 +1,0 @@
-
-$image
-/mnt/c/Users/koten/Documents/QUIZ/PDP/i_26/Screenshot 2024-06-22 145036.png
-$answer
-$image
-/mnt/c/Users/koten/Documents/QUIZ/PDP/i_26/Screenshot 2024-06-22 145040.png
-

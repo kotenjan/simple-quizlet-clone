@@ -1,0 +1,1 @@
+powershell -Command "if (-Not (Get-Command python -ErrorAction SilentlyContinue)) { Start-Process -NoNewWindow -Wait -FilePath msiexec.exe -ArgumentList '/i https://www.python.org/ftp/python/3.11.6/python-3.11.6-amd64.exe /quiet InstallAllUsers=1 PrependPath=1' } ; python -m ensurepip --upgrade ; python -m pip install --upgrade pip ; pip install flask ; python app.py"

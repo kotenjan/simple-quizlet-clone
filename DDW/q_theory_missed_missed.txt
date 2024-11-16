@@ -1,7 +1,0 @@
-
-$image
-DDW/theory_images/Screenshot 2024-05-19 162549.png
-$answer
-$image
-DDW/theory_images/Screenshot 2024-05-19 162728.png
-

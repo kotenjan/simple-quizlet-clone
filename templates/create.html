@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create a Flashcard Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        .container {
+            width: 60%;
+            margin: 50px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+        }
+        .file-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 20px 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .file-item {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .file-item img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+        }
+        .file-item .file-name {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0,0,0,0.6);
+            color: #fff;
+            font-size: 12px;
+            text-align: center;
+            padding: 2px 0;
+            box-sizing: border-box;
+        }
+        .file-item button.remove-btn {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background: #ff4c4c;
+            color: white;
+            border: none;
+            padding: 2px 5px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+        .file-item .select-checkbox {
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            z-index: 1;
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+        .file-item button.remove-btn:hover {
+            background: #cc0000;
+        }
+        .form-group {
+            margin-top: 20px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .form-group input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        button.action-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            margin-top: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        button.action-btn:hover {
+            background: #45a049;
+        }
+        button.action-btn.blue {
+            background: #007BFF;
+        }
+        button.action-btn.blue:hover {
+            background: #0056b3;
+        }
+        #add-file-btn {
+            font-size: 20px;
+            padding: 10px 15px;
+            border: 2px dashed #ccc;
+            border-radius: 5px;
+            background: #fff;
+            cursor: pointer;
+            display: block;
+            width: 100%;
+            margin: 20px 0; /* Added margin for spacing */
+            text-align: center;
+            box-sizing: border-box;
+        }
+        #add-file-btn:hover {
+            border-color: #007BFF;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1000; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+        }
+        .modal-content {
+            position: relative;
+            margin: 5% auto;
+            padding: 0;
+            width: 80%;
+            max-width: 700px;
+        }
+        .modal-content img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            color: #fff;
+            font-size: 35px;
+            font-weight: bold;
+            cursor: pointer;
+            background: rgba(0,0,0,0.5);
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            line-height: 35px;
+        }
+        .close-btn:hover,
+        .close-btn:focus {
+            background: rgba(0,0,0,0.8);
+        }
+
+        /* New Button Styles */
+        .button-full-width {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            font-size: 14px;
+            margin-top: 10px;
+            box-sizing: border-box;
+        }
+
+        .button-remove-all {
+            background: #ff4c4c;
+        }
+
+        .button-remove-all:hover {
+            background: #cc0000;
+        }
+
+        .button-merge-images {
+            background: #007BFF;
+        }
+
+        .button-merge-images:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Create a Flashcard Quiz</h2>
+        <ul class="file-list" id="file-list"></ul>
+        <div>
+            <label id="add-file-btn" for="file-input">+ Add Files</label>
+            <input type="file" id="file-input" style="display: none;" multiple accept="image/*, .pdf, .doc, .docx, .txt">
+        </div>
+        <div class="form-group">
+            <label for="quiz-name">Quiz Name:</label>
+            <input type="text" id="quiz-name" name="quiz_name" placeholder="Example: MathDir/MathTopic/quizname" required>
+        </div>
+        <button class="action-btn" id="create-quiz-btn">Create Quiz</button>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="image-modal" class="modal">
+        <div class="modal-content">
+            <button class="close-btn" id="modal-close">&times;</button>
+            <img id="modal-image" src="" alt="Full Size Image">
+        </div>
+    </div>
+
+    <script>
+        const fileList = document.getElementById('file-list');
+        const fileInput = document.getElementById('file-input');
+        const createQuizBtn = document.getElementById('create-quiz-btn');
+        const quizNameInput = document.getElementById('quiz-name');
+        const modal = document.getElementById('image-modal');
+        const modalImage = document.getElementById('modal-image');
+        const modalCloseBtn = document.getElementById('modal-close');
+
+        let selectedFiles = [];
+
+        // Add files to the list when selected
+        fileInput.addEventListener('change', () => {
+            Array.from(fileInput.files).forEach(file => {
+                selectedFiles.push(file);
+                updateFileList();
+            });
+            fileInput.value = ''; // Clear the input for repeated use
+        });
+
+        function updateFileList() {
+            fileList.innerHTML = '';
+            selectedFiles.forEach((file, index) => {
+                const li = document.createElement('li');
+                li.classList.add('file-item');
+
+                // Create checkbox
+                const checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                checkbox.classList.add('select-checkbox');
+                checkbox.dataset.index = index;
+                li.appendChild(checkbox);
+
+                if (file.type.startsWith('image/')) {
+                    const img = document.createElement('img');
+                    img.src = URL.createObjectURL(file);
+                    img.alt = file.name;
+                    img.title = file.name;
+                    img.addEventListener('click', () => {
+                        openModal(img.src, file.name);
+                    });
+                    li.appendChild(img);
+                } else {
+                    const fileIcon = document.createElement('div');
+                    fileIcon.textContent = file.name;
+                    fileIcon.style.fontSize = '12px';
+                    fileIcon.style.textAlign = 'center';
+                    fileIcon.style.padding = '10px';
+                    li.appendChild(fileIcon);
+                }
+
+                const removeBtn = document.createElement('button');
+                removeBtn.classList.add('remove-btn');
+                removeBtn.textContent = '✖';
+                removeBtn.title = 'Remove';
+                removeBtn.addEventListener('click', (e) => {
+                    e.stopPropagation(); // Prevent triggering image click
+                    selectedFiles.splice(index, 1);
+                    updateFileList();
+                });
+                li.appendChild(removeBtn);
+
+                const fileNameDiv = document.createElement('div');
+                fileNameDiv.classList.add('file-name');
+                fileNameDiv.textContent = file.name;
+                li.appendChild(fileNameDiv);
+
+                fileList.appendChild(li);
+            });
+
+            if (selectedFiles.length > 0) {
+                const removeAllBtn = document.createElement('button');
+                removeAllBtn.textContent = 'Remove All';
+                removeAllBtn.classList.add('button-full-width', 'button-remove-all');
+                removeAllBtn.addEventListener('click', () => {
+                    selectedFiles = [];
+                    updateFileList();
+                });
+                fileList.appendChild(removeAllBtn);
+            }
+
+            if (selectedFiles.length > 0) {
+                const container = document.createElement('div');
+                container.style.display = "flex";
+                container.style.width = "100%";
+                container.style.alignItems = "center";
+                container.style.gap = "10px";
+
+                const directionSelector = document.createElement('select');
+                directionSelector.style.marginTop = "10px";
+                directionSelector.style.padding = "10px";
+                directionSelector.style.fontSize = "14px";
+                directionSelector.style.borderRadius = "5px";
+                directionSelector.style.border = "1px solid #ccc";
+                directionSelector.style.flex = "1";
+
+                const verticalOption = document.createElement('option');
+                verticalOption.value = "vertical";
+                verticalOption.textContent = "Vertical";
+                const horizontalOption = document.createElement('option');
+                horizontalOption.value = "horizontal";
+                horizontalOption.textContent = "Horizontal";
+                directionSelector.appendChild(verticalOption);
+                directionSelector.appendChild(horizontalOption);
+
+                const mergeFilesBtn = document.createElement('button');
+                mergeFilesBtn.textContent = 'Merge Images';
+                mergeFilesBtn.classList.add('button-full-width', 'button-merge-images');
+
+                mergeFilesBtn.addEventListener('click', async () => {
+                    const checkboxes = fileList.querySelectorAll('.select-checkbox:checked');
+                    const selectedIndices = Array.from(checkboxes).map(cb => parseInt(cb.dataset.index));
+
+                    if (selectedIndices.length !== 2) {
+                        alert('You can only select 2 images at a time.');
+                        return;
+                    }
+
+                    const [file1, file2] = selectedIndices.map(index => selectedFiles[index]);
+
+                    if (!file1.type.startsWith('image/') || !file2.type.startsWith('image/')) {
+                        alert('Both selected files must be images.');
+                        return;
+                    }
+
+                    const direction = directionSelector.value;
+                    try {
+                        const mergedBlob = await mergeImages(file1, file2, direction);
+                        const mergedFile = new File([mergedBlob], `merged_${Date.now()}.png`, { type: 'image/png' });
+
+                        selectedIndices.sort((a, b) => b - a).forEach(index => {
+                            selectedFiles.splice(index, 1);
+                        });
+
+                        selectedFiles.push(mergedFile);
+
+                        updateFileList();
+                    } catch (error) {
+                        console.error('Error merging images:', error);
+                        alert('Failed to merge images.');
+                    }
+                });
+
+                container.appendChild(directionSelector);
+                container.appendChild(mergeFilesBtn);
+                fileList.appendChild(container);
+            }
+        }
+
+        // Helper function to merge two images
+        async function mergeImages(file1, file2, direction) {
+            const img1 = await loadImage(URL.createObjectURL(file1));
+            const img2 = await loadImage(URL.createObjectURL(file2));
+
+            let canvas = document.createElement('canvas');
+            let ctx = canvas.getContext('2d');
+
+            if (direction === 'horizontal') {
+                // Downscale the taller image to match the height of the shorter one
+                const height = Math.min(img1.height, img2.height);
+                const scale1 = height / img1.height;
+                const scale2 = height / img2.height;
+                const width1 = img1.width * scale1;
+                const width2 = img2.width * scale2;
+                canvas.width = width1 + width2;
+                canvas.height = height;
+
+                ctx.drawImage(img1, 0, 0, width1, height);
+                ctx.drawImage(img2, width1, 0, width2, height);
+            } else if (direction === 'vertical') {
+                // Downscale the wider image to match the width of the narrower one
+                const width = Math.min(img1.width, img2.width);
+                const scale1 = width / img1.width;
+                const scale2 = width / img2.width;
+                const height1 = img1.height * scale1;
+                const height2 = img2.height * scale2;
+                canvas.width = width;
+                canvas.height = height1 + height2;
+
+                ctx.drawImage(img1, 0, 0, width, height1);
+                ctx.drawImage(img2, 0, height1, width, height2);
+            } else {
+                throw new Error('Invalid merge direction');
+            }
+
+            return new Promise((resolve, reject) => {
+                canvas.toBlob(blob => {
+                    if (blob) {
+                        resolve(blob);
+                    } else {
+                        reject(new Error('Canvas is empty'));
+                    }
+                }, 'image/png');
+            });
+        }
+
+        // Helper function to load an image
+        function loadImage(src) {
+            return new Promise((resolve, reject) => {
+                const img = new Image();
+                img.onload = () => resolve(img);
+                img.onerror = reject;
+                img.src = src;
+            });
+        }
+
+        // Modal functionality
+        function openModal(src, alt) {
+            modalImage.src = src;
+            modalImage.alt = alt;
+            modal.style.display = 'block';
+        }
+
+        function closeModal() {
+            modal.style.display = 'none';
+            modalImage.src = '';
+            modalImage.alt = '';
+        }
+
+        modalCloseBtn.addEventListener('click', closeModal);
+
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.style.display === 'block') {
+                closeModal();
+            }
+        });
+
+        // Send files and quiz name to the server
+        createQuizBtn.addEventListener('click', () => {
+            const quizName = quizNameInput.value.trim();
+            if (!quizName) {
+                alert('Please provide a quiz name.');
+                return;
+            }
+            if (selectedFiles.length === 0) {
+                alert('Please add at least one file.');
+                return;
+            }
+
+            if (selectedFiles.length % 2 !== 0) {
+                alert('The number of files has to be even. The format is consisting of pairs including a question and an answer.');
+                return;
+            }
+
+            // Prepare form data
+            const formData = new FormData();
+            formData.append('quiz_name', quizName);
+            selectedFiles.forEach((file, index) => {
+                formData.append('files[]', file); // Include actual image files
+            });
+
+            // Send data to the server
+            fetch('/create_quiz', {
+                method: 'POST',
+                body: formData,
+            })
+            .then(response => {
+                if (response.ok) {
+                    response.json().then(data => {
+                        alert(data.message);
+                        window.location.href = '/';
+                    });
+                } else {
+                    alert('Failed to create quiz. Try again.');
+                }
+            })
+            .catch(() => {
+                alert('An error occurred. Try again.');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,7 +1,0 @@
-
-$image
-PDP/i_17/Screenshot 2024-06-22 131913.png
-$answer
-$image
-PDP/i_17/Screenshot 2024-06-22 131916.png
-

@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create a Flashcard Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 60%;
+            margin: 50px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .file-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 20px 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .file-item {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            cursor: pointer;
+            box-sizing: border-box;
+        }
+        .file-item img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+        .file-item img:hover {
+            transform: scale(1.05);
+        }
+        .file-item .file-name {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0,0,0,0.6);
+            color: #fff;
+            font-size: 12px;
+            text-align: center;
+            padding: 2px 0;
+            box-sizing: border-box;
+        }
+        .file-item button.remove-btn {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background: #ff4c4c;
+            color: white;
+            border: none;
+            padding: 2px 5px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 12px;
+            transition: background 0.3s;
+        }
+        .file-item button.remove-btn:hover {
+            background: #cc0000;
+        }
+        .file-item .select-checkbox {
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            z-index: 1;
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+        .form-group {
+            margin-top: 20px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .form-group input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        button.action-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            margin-top: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+            transition: background 0.3s;
+        }
+        button.action-btn:hover {
+            background: #45a049;
+        }
+        button.action-btn.blue {
+            background: #007BFF;
+        }
+        button.action-btn.blue:hover {
+            background: #0056b3;
+        }
+        #add-file-btn {
+            font-size: 20px;
+            padding: 10px 15px;
+            border: 2px dashed #ccc;
+            border-radius: 5px;
+            background: #fff;
+            cursor: pointer;
+            display: block;
+            width: 100%;
+            margin: 20px 0; /* Added margin for spacing */
+            text-align: center;
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+        #add-file-btn:hover {
+            border-color: #007BFF;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1000; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 80%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            animation: zoom 0.6s;
+        }
+        @keyframes zoom {
+            from {transform: scale(0)}
+            to {transform: scale(1)}
+        }
+        .modal-close {
+            position: absolute;
+            top: 30px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        
+        .modal-close:hover,
+        .modal-close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Additional Button Styles */
+        .button-full-width {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            font-size: 14px;
+            margin-top: 10px;
+            box-sizing: border-box;
+            transition: background 0.3s;
+        }
+
+        .button-remove-all {
+            background: #ff4c4c;
+        }
+
+        .button-remove-all:hover {
+            background: #cc0000;
+        }
+
+        .button-merge-images {
+            background: #007BFF;
+        }
+
+        .button-merge-images:hover {
+            background: #0056b3;
+        }
+
+        /* Responsive Modal */
+        @media only screen and (max-width: 700px){
+            .modal-content {
+                width: 100%;
+                max-height: 70%;
+            }
+            .modal-close {
+                top: 5px;
+                right: 10px;
+                font-size: 30px;
+                width: 35px;
+                height: 35px;
+                line-height: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Create a Flashcard Quiz</h2>
+        <ul class="file-list" id="file-list"></ul>
+        <div>
+            <label id="add-file-btn" for="file-input">+ Add Files</label>
+            <input type="file" id="file-input" style="display: none;" multiple accept="image/*, .pdf, .doc, .docx, .txt">
+        </div>
+        <div class="form-group">
+            <label for="quiz-name">Quiz Name:</label>
+            <input type="text" id="quiz-name" name="quiz_name" placeholder="Example: MathDir/MathTopicName" required>
+        </div>
+        <button class="action-btn" id="create-quiz-btn">Create Quiz</button>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="image-modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modal-image">
+        <span class="modal-close" id="modal-close" aria-label="Close">&times;</span>
+        <img class="modal-content" id="modal-image" alt="Enlarged Image">
+    </div>
+
+    <script>
+        const fileList = document.getElementById('file-list');
+        const fileInput = document.getElementById('file-input');
+        const createQuizBtn = document.getElementById('create-quiz-btn');
+        const quizNameInput = document.getElementById('quiz-name');
+        const modal = document.getElementById('image-modal');
+        const modalImage = document.getElementById('modal-image');
+        const modalCloseBtn = document.getElementById('modal-close');
+
+        let selectedFiles = [];
+        let historyStack = [];
+
+        // Add files to the list when selected
+        fileInput.addEventListener('change', () => {
+            Array.from(fileInput.files).forEach(file => {
+                selectedFiles.push(file);
+            });
+            updateFileList();
+            fileInput.value = '';
+        });
+
+        function updateFileList() {
+            // Preserve the current drag option
+            const existingSelector = fileList.querySelector('select');
+            const currentOption = existingSelector ? existingSelector.value : 'swap';
+
+            fileList.innerHTML = '';
+            selectedFiles.forEach((file, index) => {
+                const li = document.createElement('li');
+                li.classList.add('file-item');
+
+                if (file.type.startsWith('image/')) {
+                    const img = document.createElement('img');
+                    img.src = URL.createObjectURL(file);
+                    img.alt = file.name;
+                    img.title = file.name;
+                    img.loading = 'lazy';
+                    li.appendChild(img);
+                } else {
+                    const fileIcon = document.createElement('div');
+                    fileIcon.textContent = file.name;
+                    fileIcon.style.fontSize = '12px';
+                    fileIcon.style.textAlign = 'center';
+                    fileIcon.style.padding = '10px';
+                    li.appendChild(fileIcon);
+                }
+
+                const removeBtn = document.createElement('button');
+                removeBtn.classList.add('remove-btn');
+                removeBtn.textContent = '✖';
+                removeBtn.title = 'Remove';
+                removeBtn.addEventListener('click', (e) => {
+                    e.stopPropagation(); // Prevent triggering image click
+                    selectedFiles.splice(index, 1);
+                    updateFileList();
+                });
+                li.appendChild(removeBtn);
+
+                const fileNameDiv = document.createElement('div');
+                fileNameDiv.classList.add('file-name');
+                fileNameDiv.textContent = file.name;
+                li.appendChild(fileNameDiv);
+
+                fileList.appendChild(li);
+            });
+
+            // Add "Remove All" and "Merge Images" buttons if there are files
+            if (selectedFiles.length > 0) {
+                // Remove All Button
+                const removeAllBtn = document.createElement('button');
+                removeAllBtn.textContent = 'Remove All';
+                removeAllBtn.classList.add('button-full-width', 'button-remove-all');
+                removeAllBtn.addEventListener('click', () => {
+                    if (confirm('Are you sure you want to remove all files?')) {
+                        selectedFiles = [];
+                        updateFileList();
+                    }
+                });
+                fileList.appendChild(removeAllBtn);
+
+                // Merge Images Button and Direction Selector
+                const container = document.createElement('div');
+                container.style.display = "flex";
+                container.style.width = "100%";
+                container.style.alignItems = "center";
+                container.style.gap = "10px";
+
+                const dragOptionSelector = document.createElement('select');
+                dragOptionSelector.style.marginTop = "10px";
+                dragOptionSelector.style.padding = "10px";
+                dragOptionSelector.style.fontSize = "14px";
+                dragOptionSelector.style.borderRadius = "5px";
+                dragOptionSelector.style.border = "1px solid #ccc";
+                dragOptionSelector.style.flex = "1";
+
+                const mergeOption = document.createElement('option');
+                mergeOption.value = "merge";
+                mergeOption.textContent = "Merge images when dragging";
+                const swapOption = document.createElement('option');
+                swapOption.value = "swap";
+                swapOption.textContent = "Swap images when dragging";
+                dragOptionSelector.appendChild(mergeOption);
+                dragOptionSelector.appendChild(swapOption);
+
+                // Set the previous option if exists
+                dragOptionSelector.value = currentOption;
+
+                container.appendChild(dragOptionSelector);
+                fileList.appendChild(container);
+            }
+        }
+
+        // Helper function to merge two images
+        async function mergeImages(file1, file2, direction) {
+            const img1 = await loadImage(URL.createObjectURL(file1));
+            const img2 = await loadImage(URL.createObjectURL(file2));
+
+            let canvas = document.createElement('canvas');
+            let ctx = canvas.getContext('2d');
+
+            if (direction === 'swap') {
+                // Downscale the taller image to match the height of the shorter one
+                const height = Math.min(img1.height, img2.height);
+                const scale1 = height / img1.height;
+                const scale2 = height / img2.height;
+                const width1 = img1.width * scale1;
+                const width2 = img2.width * scale2;
+                canvas.width = width1 + width2;
+                canvas.height = height;
+
+                ctx.drawImage(img1, 0, 0, width1, height);
+                ctx.drawImage(img2, width1, 0, width2, height);
+            } else if (direction === 'merge-horizontal') {
+                // Merge side by side with same height
+                const height = Math.min(img1.height, img2.height);
+                const scale1 = height / img1.height;
+                const scale2 = height / img2.height;
+                const width1 = img1.width * scale1;
+                const width2 = img2.width * scale2;
+                canvas.width = width1 + width2;
+                canvas.height = height;
+
+                ctx.drawImage(img1, 0, 0, width1, height);
+                ctx.drawImage(img2, width1, 0, width2, height);
+            } else if (direction === 'merge-vertical') {
+                // Merge top and bottom with same width
+                const width = Math.min(img1.width, img2.width);
+                const scale1 = width / img1.width;
+                const scale2 = width / img2.width;
+                const height1 = img1.height * scale1;
+                const height2 = img2.height * scale2;
+                canvas.width = width;
+                canvas.height = height1 + height2;
+
+                ctx.drawImage(img1, 0, 0, width, height1);
+                ctx.drawImage(img2, 0, height1, width, height2);
+            } else {
+                throw new Error('Invalid merge direction');
+            }
+
+            return new Promise((resolve, reject) => {
+                canvas.toBlob(blob => {
+                    if (blob) {
+                        resolve(blob);
+                    } else {
+                        reject(new Error('Canvas is empty'));
+                    }
+                }, 'image/png');
+            });
+        }
+
+        // Helper function to load an image
+        function loadImage(src) {
+            return new Promise((resolve, reject) => {
+                const img = new Image();
+                img.onload = () => resolve(img);
+                img.onerror = reject;
+                img.src = src;
+            });
+        }
+
+        // Modal functionality using Event Delegation
+        fileList.addEventListener('click', (e) => {
+            const li = e.target.closest('.file-item');
+            if (li) {
+                const img = li.querySelector('img.flashcard-image') || li.querySelector('img');
+                if (img) {
+                    openModal(img.src, img.alt);
+                }
+            }
+        });
+
+        function openModal(src, alt) {
+            modalImage.src = src;
+            modalImage.alt = alt;
+            modal.style.display = 'flex';
+            modal.setAttribute('aria-hidden', 'false');
+            // Set focus to close button for accessibility
+            modalCloseBtn.focus();
+        }        
+
+        function closeModal() {
+            modal.style.display = 'none';
+            modalImage.src = '';
+            modalImage.alt = '';
+            modal.setAttribute('aria-hidden', 'true');
+        }
+
+        // Close modal when clicking the close button
+        modalCloseBtn.addEventListener('click', closeModal);
+
+        // Close modal when clicking outside the image
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Close modal when pressing the Escape key
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.style.display === 'flex') {
+                closeModal();
+            }
+        });
+
+        // Send files and quiz name to the server
+        createQuizBtn.addEventListener('click', () => {
+            const quizName = quizNameInput.value.trim();
+            if (!quizName) {
+                alert('Please provide a quiz name.');
+                return;
+            }
+            if (selectedFiles.length === 0) {
+                alert('Please add at least one file.');
+                return;
+            }
+
+            if (selectedFiles.length % 2 !== 0) {
+                alert('The number of files has to be even. The format is consisting of pairs including a question and an answer.');
+                return;
+            }
+
+            // Prepare form data
+            const formData = new FormData();
+            formData.append('quiz_name', quizName);
+            selectedFiles.forEach((file, index) => {
+                formData.append('files[]', file); // Include actual image files
+            });
+
+            // Send data to the server
+            fetch('/create_quiz', {
+                method: 'POST',
+                body: formData,
+            })
+            .then(response => {
+                if (response.ok) {
+                    response.json().then(data => {
+                        alert(data.message);
+                        window.location.href = '/';
+                    });
+                } else {
+                    alert('Failed to create quiz. Try again.');
+                }
+            })
+            .catch(() => {
+                alert('An error occurred. Try again.');
+            });
+        });
+
+        // Drag and Drop Functionality
+        let dragSource = null;
+
+        fileList.addEventListener('dragstart', (e) => {
+            const target = e.target.closest('.file-item');
+            if (target) {
+                dragSource = target;
+                e.dataTransfer.effectAllowed = 'move';
+                target.classList.add('dragging');
+            }
+        });
+
+        fileList.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            const target = e.target.closest('.file-item');
+            if (target && target !== dragSource) {
+                const bounding = target.getBoundingClientRect();
+                const optionSelector = fileList.querySelector('select');
+                const option = optionSelector ? optionSelector.value : 'swap';
+
+                if (option === 'swap') {
+                    const offsetX = e.clientX - bounding.left;
+                    if (offsetX > bounding.width / 2) {
+                        target.style.borderRight = '2px solid #007BFF';
+                        target.style.borderLeft = '';
+                    } else {
+                        target.style.borderLeft = '2px solid #007BFF';
+                        target.style.borderRight = '';
+                    }
+                    target.style.borderTop = '';
+                    target.style.borderBottom = '';
+                } else if (option === 'merge') {
+                    const offsetX = e.clientX - bounding.left;
+                    const offsetY = e.clientY - bounding.top;
+                    const horizontalThreshold = bounding.width / 2;
+                    const verticalThreshold = bounding.height / 2;
+
+                    if (offsetX > horizontalThreshold && Math.abs(offsetX - horizontalThreshold) > Math.abs(offsetY - verticalThreshold)) {
+                        // Right
+                        target.style.borderRight = '2px solid #007BFF';
+                        target.style.borderLeft = '';
+                        target.style.borderTop = '';
+                        target.style.borderBottom = '';
+                    } else if (offsetX < horizontalThreshold && Math.abs(offsetX - horizontalThreshold) > Math.abs(offsetY - verticalThreshold)) {
+                        // Left
+                        target.style.borderLeft = '2px solid #007BFF';
+                        target.style.borderRight = '';
+                        target.style.borderTop = '';
+                        target.style.borderBottom = '';
+                    } else if (offsetY > verticalThreshold) {
+                        // Bottom
+                        target.style.borderBottom = '2px solid #007BFF';
+                        target.style.borderTop = '';
+                        target.style.borderLeft = '';
+                        target.style.borderRight = '';
+                    } else {
+                        // Top
+                        target.style.borderTop = '2px solid #007BFF';
+                        target.style.borderBottom = '';
+                        target.style.borderLeft = '';
+                        target.style.borderRight = '';
+                    }
+                }
+            }
+        });
+
+        fileList.addEventListener('dragleave', (e) => {
+            const target = e.target.closest('.file-item');
+            if (target) {
+                target.style.borderLeft = '';
+                target.style.borderRight = '';
+                target.style.borderTop = '';
+                target.style.borderBottom = '';
+            }
+        });
+
+        fileList.addEventListener('drop', async (e) => {
+            e.preventDefault();
+            const target = e.target.closest('.file-item');
+            if (target && dragSource && target !== dragSource) {
+                const optionSelector = fileList.querySelector('select');
+                const option = optionSelector ? optionSelector.value : 'swap';
+                const bounding = target.getBoundingClientRect();
+                let mergeDirection = null;
+
+                if (option === 'swap') {
+                    const sourceIndex = Array.from(fileList.children).indexOf(dragSource);
+                    const targetIndex = Array.from(fileList.children).indexOf(target);
+
+                    if (e.clientX > bounding.left + bounding.width / 2) {
+                        fileList.insertBefore(dragSource, target.nextSibling);
+                    } else {
+                        fileList.insertBefore(dragSource, target);
+                    }
+
+                    // Record swap action with file references
+                    historyStack.push({ 
+                        type: 'swap', 
+                        file1: selectedFiles[sourceIndex], 
+                        file2: selectedFiles[targetIndex] 
+                    });
+
+                    // Swap the files in the selectedFiles array
+                    [selectedFiles[sourceIndex], selectedFiles[targetIndex]] = [selectedFiles[targetIndex], selectedFiles[sourceIndex]];
+                } else if (option === 'merge') {
+                    const offsetX = e.clientX - bounding.left;
+                    const offsetY = e.clientY - bounding.top;
+                    const horizontalThreshold = bounding.width / 2;
+                    const verticalThreshold = bounding.height / 2;
+                    let order = 'source-first';
+
+                    if (offsetX > horizontalThreshold && Math.abs(offsetX - horizontalThreshold) > Math.abs(offsetY - verticalThreshold)) {
+                        // Right
+                        mergeDirection = 'merge-horizontal';
+                        order = 'source-first';
+                    } else if (offsetX < horizontalThreshold && Math.abs(offsetX - horizontalThreshold) > Math.abs(offsetY - verticalThreshold)) {
+                        // Left
+                        mergeDirection = 'merge-horizontal';
+                        order = 'target-first';
+                    } else if (offsetY > verticalThreshold) {
+                        // Bottom
+                        mergeDirection = 'merge-vertical';
+                        order = 'source-first';
+                    } else {
+                        // Top
+                        mergeDirection = 'merge-vertical';
+                        order = 'target-first';
+                    }
+
+                    const sourceIndex = Array.from(fileList.children).indexOf(dragSource);
+                    const targetIndex = Array.from(fileList.children).indexOf(target);
+                    let firstFile, secondFile;
+
+                    if (order === 'source-first') {
+                        firstFile = selectedFiles[targetIndex];
+                        secondFile = selectedFiles[sourceIndex];
+                    } else {
+                        firstFile = selectedFiles[sourceIndex];
+                        secondFile = selectedFiles[targetIndex];
+                    }
+
+                    try {
+                        const mergedBlob = await mergeImages(firstFile, secondFile, mergeDirection);
+                        const mergedFile = new File([mergedBlob], firstFile.name, { type: 'image/png' });
+
+                        // Replace the two files with the merged file
+                        const higherIndex = Math.max(sourceIndex, targetIndex);
+                        const lowerIndex = Math.min(sourceIndex, targetIndex);
+                        selectedFiles.splice(higherIndex, 1, mergedFile);
+                        selectedFiles.splice(lowerIndex, 1);
+
+                        // Record merge action with all necessary data
+                        historyStack.push({
+                            type: 'merge',
+                            mergedFile,
+                            firstFile,
+                            secondFile,
+                            firstIndex: lowerIndex,
+                            secondIndex: higherIndex
+                        });
+
+                        updateFileList();
+                    } catch (error) {
+                        alert('Failed to merge images.');
+                    }
+                }
+
+                // Reset borders
+                target.style.borderLeft = '';
+                target.style.borderRight = '';
+                target.style.borderTop = '';
+                target.style.borderBottom = '';
+            }
+        });
+
+        fileList.addEventListener('dragend', () => {
+            const fileItems = fileList.querySelectorAll('.file-item');
+            fileItems.forEach((item) => {
+                item.style.borderLeft = '';
+                item.style.borderRight = '';
+                item.style.borderTop = '';
+                item.style.borderBottom = '';
+                item.classList.remove('dragging');
+            });
+            dragSource = null;
+        });
+
+        function updateFileOrder() {
+            const currentOrder = Array.from(fileList.children)
+                .filter((item) => item.classList.contains('file-item'))
+                .map((item) => item.querySelector('.file-name').textContent);
+
+            selectedFiles = currentOrder.map(name => selectedFiles.find(file => file.name === name)).filter(Boolean);
+            updateFileList();
+        }
+
+        // Ensure draggable is set initially
+        function makeFileItemsDraggable() {
+            const fileItems = fileList.querySelectorAll('.file-item');
+            fileItems.forEach((item) => {
+                item.setAttribute('draggable', 'true');
+            });
+        }
+
+        // Observe changes in the file list to set draggable attribute
+        const observer = new MutationObserver(() => {
+            makeFileItemsDraggable();
+        });
+        observer.observe(fileList, { childList: true });
+
+        // Undo functionality
+        window.addEventListener('keydown', (e) => {
+            if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'z') {
+                e.preventDefault();
+                undoLastAction();
+            }
+        });
+
+        function undoLastAction() {
+            if (historyStack.length === 0) {
+                alert('Nothing to undo.');
+                return;
+            }
+
+            const lastAction = historyStack.pop();
+
+            if (lastAction.type === 'swap') {
+                const { file1, file2 } = lastAction;
+                const index1 = selectedFiles.findIndex(file => file === file1);
+                const index2 = selectedFiles.findIndex(file => file === file2);
+
+                if (index1 === -1 || index2 === -1) {
+                    alert('Cannot undo swap because one of the files is missing.');
+                    return;
+                }
+
+                // Swap back the files
+                [selectedFiles[index1], selectedFiles[index2]] = [selectedFiles[index2], selectedFiles[index1]];
+                updateFileList();
+            } else if (lastAction.type === 'merge') {
+                const { mergedFile, firstFile, secondFile, firstIndex, secondIndex } = lastAction;
+                const mergedIndex = selectedFiles.findIndex(file => file === mergedFile);
+
+                if (mergedIndex === -1) {
+                    alert('Cannot undo merge because the merged file is missing.');
+                    return;
+                }
+
+                // Remove the merged file
+                selectedFiles.splice(mergedIndex, 1);
+
+                // Insert the original files back at their original positions
+                selectedFiles.splice(firstIndex, 0, firstFile);
+                selectedFiles.splice(secondIndex, 0, secondFile);
+
+                updateFileList();
+            } else {
+                alert('Unknown action type.');
+            }
+        }
+
+    </script>
+</body>
+</html>

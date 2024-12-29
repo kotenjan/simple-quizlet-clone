@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Flashcard Quiz Setup</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        .container {
+            width: 50%;
+            margin: 50px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        ul li {
+            margin: 5px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+        ul li.directory {
+            font-weight: bold;
+            cursor: pointer;
+        }
+        ul li.directory::before {
+            content: '📂 ';
+        }
+        ul li.file::before {
+            content: '📄 ';
+        }
+        ul li.hidden {
+            display: none;
+        }
+        ul ul.hidden {
+            display: none;
+        }
+        input[type="checkbox"], input[type="number"] {
+            margin-right: 10px;
+        }
+        input[type="checkbox"], input[type="number"] {
+            appearance: none;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            padding: 5px;
+            width: 100%;
+            box-sizing: border-box;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        input[type="checkbox"]:checked {
+            background-color: #4CAF50;
+            border-color: #4CAF50;
+        }
+        input[type="checkbox"]:hover, input[type="number"]:hover {
+            border-color: #007BFF;
+        }
+        input[type="number"] {
+            text-align: center;
+        }
+        button.action-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            margin-top: 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button.action-btn.blue {
+            background: #007BFF;
+        }
+        button.action-btn.blue:hover {
+            background: #0056b3;
+        }
+        button.action-btn:hover {
+            background: #45a049;
+        }
+        .form-group {
+            margin-top: 15px;
+        }
+        .form-group label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 25px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: 0.4s;
+            border-radius: 25px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 17px;
+            width: 17px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: 0.4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: #4CAF50;
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(25px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Setup Your Flashcard Quiz</h2>
+        <form id="quiz-form" action="/start_quiz" method="post">
+            <div id="file-explorer"></div>
+            
+            <button class="action-btn blue" type="button" onclick="window.location.href='/create_quiz'">Create New Quiz</button>
+    
+            <div class="form-group" style="display: flex; align-items: center; margin-top: 20px; margin-right: 10px;">
+                <label style="flex-grow: 1;">Should we shuffle the questions?</label>
+                <div style="margin-left: 10px;">
+                    <label class="switch">
+                        <input type="checkbox" name="shuffle_questions" value="true" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group" style="display: flex; align-items: center; margin-top: 20px; margin-right: 10px;">
+                <label style="flex-grow: 1;">Should we reset the progress in that quiz?</label>
+                <div style="margin-left: 10px;">
+                    <label class="switch">
+                        <input type="checkbox" name="reset_progress" value="false">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+    
+            <div class="form-group" style="display: flex; align-items: center; margin-top: 20px;">
+                <label style="flex-grow: 1;">How often should we repeat the ones you missed?</label>
+                <input type="number" name="repeat_interval" value="10" min="1" 
+                       style="width: 60px; padding: 5px; border: 1px solid #ccc; border-radius: 5px; text-align: center; margin-left: 10px;">
+            </div>
+    
+            <button id="start-quiz-btn" type="submit" class="action-btn">Start Quiz</button>
+        </form>
+    </div>
+
+    <script>
+        async function fetchData(path = '.') {
+            const response = await fetch(`/fetch_data?path=${encodeURIComponent(path)}`);
+            const data = await response.json();
+            return data;
+        }
+
+        function createFileTree(container, data, basePath = '.') {
+            const ul = document.createElement('ul');
+            data.forEach(item => {
+                const li = document.createElement('li');
+                li.classList.add(item.type === 'dir' ? 'directory' : 'file');
+                if (item.type === 'file') {
+                    li.innerHTML = `<input type="radio" name="files" value="${basePath}/${item.name}"> <span>${item.name}</span>`;
+                    li.addEventListener('click', function(event) {
+                        event.stopPropagation();
+                    });
+                } else {
+                    li.innerHTML = `<span>${item.name}</span>`;
+                    li.addEventListener('click', function (event) {
+                        if (event.target === this.firstElementChild) {
+                            event.stopPropagation();
+                            toggleDir(this);
+                        }
+                    });
+                    const subUl = document.createElement('ul');
+                    subUl.classList.add('hidden');
+                    li.appendChild(subUl);
+                    fetchData(`${basePath}/${item.name}`).then(subData => {
+                        createFileTree(subUl, subData, `${basePath}/${item.name}`);
+                    });
+                }
+                ul.appendChild(li);
+            });
+            container.appendChild(ul);
+        }
+
+        function toggleDir(directory) {
+            const siblingUl = directory.querySelector('ul');
+            if (siblingUl) {
+                siblingUl.classList.toggle('hidden');
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('file-explorer');
+            fetchData().then(data => createFileTree(container, data));
+
+            const startQuizBtn = document.getElementById('start-quiz-btn');
+            const quizForm = document.getElementById('quiz-form');
+
+            startQuizBtn.addEventListener('click', function(event) {
+                const selectedFile = quizForm.querySelector('input[name="files"]:checked');
+                if (!selectedFile) {
+                    event.preventDefault();
+                    alert("Please select a file before starting the quiz.");
+                }
+            });
+        });
+    </script>
+</body>
+</html>

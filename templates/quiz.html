@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flashcard Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 90%;
+            max-width: 900px; /* Further increased max-width for an even larger card */
+            margin: 50px auto;
+            background: #fff;
+            padding: 20px 30px;
+            border-radius: 12px;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        .instructions {
+            font-size: 14px;
+            color: #888;
+            margin-bottom: 20px;
+            white-space: nowrap; /* Ensure instructions stay on one line */
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .flashcard-container {
+            perspective: 1000px; /* Increased perspective for a more pronounced 3D effect */
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .flashcard {
+            position: relative;  
+            width: 100%;
+            max-width: 800px; /* Further increased size */
+            height: 500px; /* Further increased height */
+            margin: 0 auto;
+            text-align: center;
+            transition: transform 0.6s, background-color 0.3s, border-color 0.3s, border-radius 0.3s;
+            transform-style: preserve-3d;
+            cursor: pointer;
+            background: #2c2c2c; /* Darker background color */
+            border: 2px solid #2c2c2c; /* Border matches the background */
+            border-radius: 12px; /* Rounded corners */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .flashcard.flipped {
+            transform: rotateY(180deg);
+        }
+        .flashcard .front, .flashcard .back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+            overflow: hidden;
+            background: #2c2c2c; /* Match border color */
+            border-radius: 12px; /* Maintain rounded corners */
+        }
+        .flashcard .front {
+            color: #fff; /* White text for contrast */
+            font-size: 28px; /* Increased font size */
+        }
+        .flashcard .back {
+            transform: rotateY(180deg);
+            color: #ddd; /* Light grey text */
+            font-size: 28px; /* Increased font size */
+        }
+        img.flashcard-image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* Ensure image fits without cropping */
+            display: block;
+            cursor: pointer; /* Indicate that the image is clickable */
+        }
+        .status {
+            font-size: 20px; /* Increased font size */
+            color: #666;
+            margin-bottom: 20px;
+        }
+        /* Flash Effects */
+        .flashcard.correct, .flashcard.incorrect {
+            border-radius: 12px; /* Keep corners rounded */
+            transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s, border-radius 0.3s; /* Smooth transition for all properties */
+        }
+        
+        .flashcard.correct {
+            background-color: #28a745; /* Green background */
+            border-color: #28a745; /* Green border */
+            box-shadow: 0 0 40px #28a745; /* Add green shadow */
+        }
+        
+        .flashcard.incorrect {
+            background-color: #dc3545; /* Red background */
+            border-color: #dc3545; /* Red border */
+            box-shadow: 0 0 40px #dc3545; /* Add red shadow */
+        }
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .flashcard {
+                max-width: 800px; /* Adjust max-width for medium screens */
+                height: 500px; /* Adjust height for medium screens */
+            }
+        }
+        @media (max-width: 800px) {
+            .flashcard {
+                max-width: 700px; /* Adjust max-width for smaller screens */
+                height: 450px; /* Adjust height for smaller screens */
+            }
+            .flashcard .front, .flashcard .back {
+                font-size: 24px; /* Adjust font size */
+            }
+            .status {
+                font-size: 18px; /* Adjust font size */
+            }
+            .instructions {
+                font-size: 14px; /* Adjust font size */
+            }
+        }
+        @media (max-width: 600px) {
+            .flashcard {
+                height: 350px; /* Adjust height for mobile screens */
+            }
+            .flashcard .front, .flashcard .back {
+                font-size: 20px; /* Adjust font size */
+            }
+            .status {
+                font-size: 16px; /* Adjust font size */
+            }
+            .instructions {
+                font-size: 12px; /* Adjust font size */
+            }
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1000; /* Sit on top */
+            padding-top: 60px; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 80%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+
+        @keyframes zoom {
+            from {transform: scale(0)}
+            to {transform: scale(1)}
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 30px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .modal-close:hover,
+        .modal-close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Responsive Modal */
+        @media only screen and (max-width: 700px){
+            .modal-content {
+                width: 100%;
+            }
+            .modal-close {
+                top: 15px;
+                right: 25px;
+                font-size: 35px;
+            }
+        }
+
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+            padding-bottom: 20px; /* Correct padding */
+        }
+        
+        .action-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        
+        .action-button[data-action="incorrect"] {
+            background-color: #966666; /* Dark red for incorrect */
+        }
+        
+        .action-button[data-action="correct"] {
+            background-color: #669668; /* Dark green for correct */
+        }
+        
+        .action-button[data-action="flip"] {
+            background-color: #757575; /* Neutral dark gray for flip */
+        }
+        .action-button[data-action="flip"]:hover {
+            background-color: #9c9c9c; /* Neutral dark gray for flip */
+        }
+        
+        .action-button[data-action="prev"] {
+            background-color: #555555; /* Subtle dark gray for previous */
+        }
+        
+        .action-button[data-action="next"] {
+            background-color: #555555; /* Subtle dark gray for next */
+        }
+        
+        .action-button:hover {
+            background-color: #6b6b6b; /* Uniform hover for all buttons */
+        }
+
+        .action-button[data-action="correct"]:hover {
+            background-color: #79b37b; /* Uniform hover for all buttons */
+        }
+
+        .action-button[data-action="incorrect"]:hover {
+            background-color: #c48585; /* Dark red for incorrect */
+        }
+        
+        .action-button:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="flashcard-container">
+            <div class="flashcard" id="flashcard">
+                <div class="front" id="card-question">
+                    Loading...
+                </div>
+                <div class="back" id="card-answer">
+                    Loading...
+                </div>
+            </div>
+        </div>
+        <div class="action-buttons">
+            <button class="action-button" data-action="prev">Previous (←)</button>
+            <button class="action-button" data-action="incorrect">Incorrect (A)</button>
+            <button class="action-button" data-action="flip">Flip (Space)</button>
+            <button class="action-button" data-action="correct">Correct (D)</button>
+            <button class="action-button" data-action="next">Next (→)</button>
+        </div>        
+        <div class="status" id="status">
+            Question 0 of 0 | Questions Left: 0
+        </div>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="image-modal" class="modal">
+        <span class="modal-close" id="modal-close">&times;</span>
+        <img class="modal-content" id="modal-image" alt="Enlarged Image">
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const flashcard = document.getElementById('flashcard');
+            const cardQuestion = document.getElementById('card-question');
+            const cardAnswer = document.getElementById('card-answer');
+            const status = document.getElementById('status');
+
+            // Modal Elements
+            const modal = document.getElementById('image-modal');
+            const modalImage = document.getElementById('modal-image');
+            const modalCloseBtn = document.getElementById('modal-close');
+
+            // Define supported image extensions
+            const imageExtensions = ['.png', '.jpg', '.jpeg', '.gif', '.bmp', '.svg', '.webp'];
+
+            // Utility function to check if a path is an image
+            function isImagePath(path) {
+                return imageExtensions.some(ext => path.toLowerCase().endsWith(ext));
+            }
+
+            // Fetch the initial card
+            fetchCard();
+
+            // Event listeners for flipping
+            // flashcard.addEventListener('click', flipCard);
+            document.addEventListener('keydown', handleKeyPress);
+
+            // Modal event listeners
+            modalCloseBtn.addEventListener('click', closeModal);
+            window.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    closeModal();
+                }
+            });
+            window.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && modal.style.display === 'block') {
+                    closeModal();
+                }
+            });
+
+            function flipCard() {
+                flashcard.classList.toggle('flipped');
+            }
+
+            function handleKeyPress(event) {
+                const key = event.key.toLowerCase();
+                if (key === 'a') {
+                    markCard('incorrect');
+                } else if (key === 'd') {
+                    markCard('correct');
+                } else if (event.key === 'ArrowRight') {
+                    moveCard('next');
+                } else if (event.key === 'ArrowLeft') {
+                    moveCard('prev');
+                } else if (event.code === 'Space') {
+                    event.preventDefault(); // Prevent page scrolling
+                    flipCard();
+                }
+            }
+
+            function fetchCard() {
+                fetch('/quiz/get_card')
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.error) {
+                            alert(data.error);
+                            // Optionally, redirect or disable further actions
+                            cardQuestion.innerHTML = "No more questions.";
+                            cardAnswer.innerHTML = "";
+                            status.textContent = "Quiz Completed.";
+                            flashcard.style.cursor = 'default';
+                        } else {
+                            renderContent(cardQuestion, data.question);
+                            renderContent(cardAnswer, data.answer);
+                            status.textContent = `Question ${data.question_n} of ${data.questions_total} | Questions Left: ${data.questions_left}`;
+                            // Ensure the card is showing the front
+                            if (flashcard.classList.contains('flipped')) {
+                                flashcard.classList.remove('flipped');
+                            }
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error fetching card:', error);
+                        alert('An error occurred while fetching the card.');
+                    });
+            }
+
+            function markCard(action) {
+                fetch('/quiz/mark', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ action: action })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.error) {
+                        alert(data.error);
+                        cardQuestion.innerHTML = "No more questions.";
+                        cardAnswer.innerHTML = "";
+                        status.textContent = "Quiz Completed.";
+                        flashcard.style.cursor = 'default';
+                    } else {
+                        // Apply flash effect
+                        applyFlashEffect(action);
+
+                        renderContent(cardQuestion, data.question);
+                        renderContent(cardAnswer, data.answer);
+                        status.textContent = `Question ${data.question_n} of ${data.questions_total} | Questions Left: ${data.questions_left}`;
+                        // Ensure the card is showing the front
+                        if (flashcard.classList.contains('flipped')) {
+                            flashcard.classList.remove('flipped');
+                        }
+                    }
+                })
+                .catch(error => {
+                    console.error('Error marking card:', error);
+                    alert('An error occurred while marking the card.');
+                });
+            }
+
+            function moveCard(direction) {
+                fetch('/quiz/move', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ direction: direction })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.error) {
+                        alert(data.error);
+                        cardQuestion.innerHTML = "No more questions.";
+                        cardAnswer.innerHTML = "";
+                        status.textContent = "Quiz Completed.";
+                        flashcard.style.cursor = 'default';
+                    } else {
+                        renderContent(cardQuestion, data.question);
+                        renderContent(cardAnswer, data.answer);
+                        status.textContent = `Question ${data.question_n} of ${data.questions_total} | Questions Left: ${data.questions_left}`;
+                        // Ensure the card is showing the front
+                        if (flashcard.classList.contains('flipped')) {
+                            flashcard.classList.remove('flipped');
+                        }
+                    }
+                })
+                .catch(error => {
+                    console.error('Error moving card:', error);
+                    alert('An error occurred while moving the card.');
+                });
+            }
+
+            // Function to render content as text or image
+            function renderContent(element, content) {
+                if (isImagePath(content)) {
+                    element.innerHTML = `<img src="/${content}" alt="Flashcard Image" class="flashcard-image">`;
+                    // Attach click event listener to the new image
+                    const img = element.querySelector('img.flashcard-image');
+                    if (img) {
+                        img.addEventListener('click', () => {
+                            openModal(img.src, img.alt);
+                        });
+                    }
+                } else {
+                    element.textContent = content;
+                }
+            }
+
+            // Function to apply flash effect based on action
+            function applyFlashEffect(action) {
+                if (action === 'correct') {
+                    flashcard.classList.add('correct');
+                } else if (action === 'incorrect') {
+                    flashcard.classList.add('incorrect');
+                }
+
+                // Remove the flash effect after 500ms
+                setTimeout(() => {
+                    flashcard.classList.remove('correct');
+                    flashcard.classList.remove('incorrect');
+                }, 500);
+            }
+
+            // Modal Functionality with Zoom and Pan
+            let scale = 1;
+            let minScale = 1;
+            let maxScale = 3;
+            let originX = 0;
+            let originY = 0;
+
+            function openModal(src, alt) {
+                modalImage.src = src;
+                modalImage.alt = alt;
+                modal.style.display = 'block';
+
+                // Reset transformations
+                scale = 1;
+                originX = 0;
+                originY = 0;
+                updateTransform();
+
+                // Add event listeners for zoom and pan
+                modalImage.addEventListener('wheel', handleWheel);
+                modalImage.addEventListener('mousemove', handleMouseMove);
+                modalImage.style.cursor = 'grab';
+            }
+
+            function closeModal() {
+                modal.style.display = 'none';
+                modalImage.src = '';
+                modalImage.alt = '';
+
+                // Remove event listeners to prevent memory leaks
+                modalImage.removeEventListener('wheel', handleWheel);
+                modalImage.removeEventListener('mousemove', handleMouseMove);
+                modalImage.style.cursor = 'default';
+            }
+
+            function handleWheel(event) {
+                event.preventDefault();
+                const delta = event.deltaY;
+
+                if (delta < 0) {
+                    // Zoom in
+                    scale += 0.1;
+                } else {
+                    // Zoom out
+                    scale -= 0.1;
+                }
+
+                // Clamp the scale
+                scale = Math.min(Math.max(scale, minScale), maxScale);
+
+                updateTransform();
+            }
+
+            function handleMouseMove(event) {
+                // Only pan if the image is zoomed in
+                if (scale <= 1) return;
+
+                // Calculate the mouse position relative to the center
+                const rect = modal.getBoundingClientRect();
+                const x = event.clientX - rect.left - rect.width / 2;
+                const y = event.clientY - rect.top - rect.height / 2;
+
+                // Adjust the origin based on mouse position
+                originX = (x / (rect.width / 2)) * (scale - 1) * 50; // 50 is a factor for movement sensitivity
+                originY = (y / (rect.height / 2)) * (scale - 1) * 50;
+
+                updateTransform();
+            }
+
+            function updateTransform() {
+                modalImage.style.transform = `scale(${scale}) translate(${originX}%, ${originY}%)`;
+            }
+
+            const buttons = document.querySelectorAll('.action-button');
+            
+            buttons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const action = button.getAttribute('data-action');
+
+                    if (action === 'incorrect') {
+                        markCard('incorrect');
+                    } else if (action === 'flip') {
+                        flipCard();
+                    } else if (action === 'correct') {
+                        markCard('correct');
+                    } else if (action === 'prev') {
+                        moveCard('prev');
+                    } else if (action === 'next') {
+                        moveCard('next');
+                    }
+                });
+            });
+        });
+
+    </script>
+</body>
+</html>

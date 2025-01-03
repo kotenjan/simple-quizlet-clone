@@ -43,7 +43,9 @@ def start_quiz():
 
         quiz_data = sorted(
             quiz_data,
-            key=lambda question: 0 if question["correct"] == 0 and question["incorrect"] == 0 else max(1, question["correct"] - question["incorrect"])
+            key=lambda q: (
+                -(q["correct"] - q["incorrect"])
+            )
         )
 
     session['quiz_questions'] = quiz_data
@@ -100,7 +102,7 @@ def mark():
         session['question_index'] = min(index + 1, len(quiz_questions) - 1)
     
     elif action == 'incorrect':
-        quiz_questions[index]['incorrect'] += 1
+        quiz_questions[index]['incorrect'] += 1.5
         save_quiz(quiz_questions)
         session['question_index'] = min(index + 1, len(quiz_questions) - 1)
 

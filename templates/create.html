@@ -359,11 +359,11 @@
                 const mergeOption = document.createElement('option');
                 mergeOption.value = "merge";
                 mergeOption.textContent = "Merge images when dragging";
-                const swapOption = document.createElement('option');
-                swapOption.value = "swap";
-                swapOption.textContent = "Swap images when dragging";
+                const moveOption = document.createElement('option');
+                moveOption.value = "move";
+                moveOption.textContent = "Move images when dragging";
                 dragOptionSelector.appendChild(mergeOption);
-                dragOptionSelector.appendChild(swapOption);
+                dragOptionSelector.appendChild(moveOption);
 
                 // Set the previous option if exists
                 dragOptionSelector.value = currentOption;
@@ -510,7 +510,6 @@
             .then(response => {
                 if (response.ok) {
                     response.json().then(data => {
-                        alert(data.message);
                         window.location.href = '/';
                     });
                 } else {
@@ -542,7 +541,7 @@
                 const optionSelector = fileList.querySelector('select');
                 const option = optionSelector ? optionSelector.value : 'merge';
 
-                if (option === 'swap') {
+                if (option === 'move') {
                     const offsetX = e.clientX - bounding.left;
                     if (offsetX > bounding.width / 2) {
                         target.style.borderRight = '2px solid #007BFF';
@@ -607,25 +606,33 @@
                 const bounding = target.getBoundingClientRect();
                 let mergeDirection = null;
 
-                if (option === 'swap') {
-                    const sourceIndex = Array.from(fileList.children).indexOf(dragSource);
-                    const targetIndex = Array.from(fileList.children).indexOf(target);
+                if (option === 'move') {
+                    const childrenArray = Array.from(fileList.children);
+                    const sourceIndex = childrenArray.indexOf(dragSource);
+                    const targetIndex = childrenArray.indexOf(target);
 
+                    // Determine the bounding rectangle of the target element
+                    const bounding = target.getBoundingClientRect();
+
+                    // Decide whether to insert before or after the target based on cursor position
                     if (e.clientX > bounding.left + bounding.width / 2) {
                         fileList.insertBefore(dragSource, target.nextSibling);
                     } else {
                         fileList.insertBefore(dragSource, target);
                     }
 
-                    // Record swap action with file references
-                    historyStack.push({ 
-                        type: 'swap', 
-                        file1: selectedFiles[sourceIndex], 
-                        file2: selectedFiles[targetIndex] 
-                    });
+                    // Update the selectedFiles array to reflect the move
+                    const [movedFile] = selectedFiles.splice(sourceIndex, 1); // Remove the file from its original position
+                    const newIndex = e.clientX > bounding.left + bounding.width / 2 ? targetIndex + 1 : targetIndex;
+                    selectedFiles.splice(newIndex, 0, movedFile); // Insert the file at the new position
 
-                    // Swap the files in the selectedFiles array
-                    [selectedFiles[sourceIndex], selectedFiles[targetIndex]] = [selectedFiles[targetIndex], selectedFiles[sourceIndex]];
+                    // Record the move action with relevant details for history tracking
+                    historyStack.push({ 
+                        type: 'move', 
+                        file: movedFile, 
+                        from: sourceIndex, 
+                        to: newIndex
+                    });
                 } else if (option === 'merge') {
                     const offsetX = e.clientX - bounding.left;
                     const offsetY = e.clientY - bounding.top;
@@ -752,18 +759,24 @@
 
             const lastAction = historyStack.pop();
 
-            if (lastAction.type === 'swap') {
-                const { file1, file2 } = lastAction;
-                const index1 = selectedFiles.findIndex(file => file === file1);
-                const index2 = selectedFiles.findIndex(file => file === file2);
-
-                if (index1 === -1 || index2 === -1) {
-                    alert('Cannot undo swap because one of the files is missing.');
+            if (lastAction.type === 'move') {
+                const { file, from, to } = lastAction;
+        
+                // Find the current index of the moved file
+                const currentIndex = selectedFiles.findIndex(f => f === file);
+        
+                if (currentIndex === -1) {
+                    alert('Cannot undo move because the file is missing.');
                     return;
                 }
-
-                // Swap back the files
-                [selectedFiles[index1], selectedFiles[index2]] = [selectedFiles[index2], selectedFiles[index1]];
+        
+                // Remove the file from its current position
+                selectedFiles.splice(currentIndex, 1);
+        
+                // Insert the file back to its original position
+                selectedFiles.splice(from, 0, file);
+        
+                // Update the DOM to reflect the changes
                 updateFileList();
             } else if (lastAction.type === 'merge') {
                 const { mergedFile, firstFile, secondFile, firstIndex, secondIndex } = lastAction;

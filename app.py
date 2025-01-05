@@ -65,8 +65,15 @@ def get_card():
     index = session.get('question_index', 0)
     quiz_questions = session['quiz_questions']
     card = quiz_questions[index]
-    print(card["correct"], card["incorrect"])
-    return jsonify({'question': card["question"], "answer": card["answer"], "question_n": index+1, "questions_total": len(quiz_questions), "questions_left": len(quiz_questions) - (index+1)})
+    return jsonify({
+        'question': card["question"], 
+        "answer": card["answer"], 
+        "question_n": index+1, 
+        "questions_total": len(quiz_questions), 
+        "questions_left": len(quiz_questions) - (index+1),
+        "correct": card["correct"],
+        "incorrect": card["incorrect"]
+    })
 
 @app.route('/quiz/mark', methods=['POST'])
 def mark():
@@ -113,8 +120,15 @@ def mark():
     index = session.get('question_index', 0)
     quiz_questions = session['quiz_questions']
     card = quiz_questions[index]
-    print(card["correct"], card["incorrect"])
-    return jsonify({'question': card["question"], "answer": card["answer"], "question_n": index+1, "questions_total": len(quiz_questions), "questions_left": len(quiz_questions) - (index+1)})
+    return jsonify({
+        'question': card["question"], 
+        "answer": card["answer"], 
+        "question_n": index+1, 
+        "questions_total": len(quiz_questions), 
+        "questions_left": len(quiz_questions) - (index+1),
+        "correct": card["correct"],
+        "incorrect": card["incorrect"]
+    })
 
 @app.route('/quiz/move', methods=['POST'])
 def move():
@@ -136,8 +150,15 @@ def move():
     index = session.get('question_index', 0)
     quiz_questions = session['quiz_questions']
     card = quiz_questions[index]
-    print(card["correct"], card["incorrect"])
-    return jsonify({'question': card["question"], "answer": card["answer"], "question_n": index+1, "questions_total": len(quiz_questions), "questions_left": len(quiz_questions) - (index+1)})
+    return jsonify({
+        'question': card["question"], 
+        "answer": card["answer"], 
+        "question_n": index+1, 
+        "questions_total": len(quiz_questions), 
+        "questions_left": len(quiz_questions) - (index+1),
+        "correct": card["correct"],
+        "incorrect": card["incorrect"]
+    })
 
 @app.route('/DATA/<path:filename>')
 def data_files(filename):

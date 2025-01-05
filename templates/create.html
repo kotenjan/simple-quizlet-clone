@@ -381,42 +381,45 @@
             let canvas = document.createElement('canvas');
             let ctx = canvas.getContext('2d');
 
+            // Disable image smoothing to preserve line art quality during upscaling
+            ctx.imageSmoothingEnabled = false;
+
             if (direction === 'swap') {
-                // Downscale the taller image to match the height of the shorter one
-                const height = Math.min(img1.height, img2.height);
-                const scale1 = height / img1.height;
-                const scale2 = height / img2.height;
+                // Upscale the shorter image to match the height of the taller one
+                const maxHeight = Math.max(img1.height, img2.height);
+                const scale1 = maxHeight / img1.height;
+                const scale2 = maxHeight / img2.height;
                 const width1 = img1.width * scale1;
                 const width2 = img2.width * scale2;
                 canvas.width = width1 + width2;
-                canvas.height = height;
+                canvas.height = maxHeight;
 
-                ctx.drawImage(img1, 0, 0, width1, height);
-                ctx.drawImage(img2, width1, 0, width2, height);
+                ctx.drawImage(img1, 0, 0, width1, maxHeight);
+                ctx.drawImage(img2, width1, 0, width2, maxHeight);
             } else if (direction === 'merge-horizontal') {
-                // Merge side by side with same height
-                const height = Math.min(img1.height, img2.height);
-                const scale1 = height / img1.height;
-                const scale2 = height / img2.height;
+                // Merge side by side with the same height by upscaling the shorter image
+                const maxHeight = Math.max(img1.height, img2.height);
+                const scale1 = maxHeight / img1.height;
+                const scale2 = maxHeight / img2.height;
                 const width1 = img1.width * scale1;
                 const width2 = img2.width * scale2;
                 canvas.width = width1 + width2;
-                canvas.height = height;
+                canvas.height = maxHeight;
 
-                ctx.drawImage(img1, 0, 0, width1, height);
-                ctx.drawImage(img2, width1, 0, width2, height);
+                ctx.drawImage(img1, 0, 0, width1, maxHeight);
+                ctx.drawImage(img2, width1, 0, width2, maxHeight);
             } else if (direction === 'merge-vertical') {
-                // Merge top and bottom with same width
-                const width = Math.min(img1.width, img2.width);
-                const scale1 = width / img1.width;
-                const scale2 = width / img2.width;
+                // Merge top and bottom with the same width by upscaling the narrower image
+                const maxWidth = Math.max(img1.width, img2.width);
+                const scale1 = maxWidth / img1.width;
+                const scale2 = maxWidth / img2.width;
                 const height1 = img1.height * scale1;
                 const height2 = img2.height * scale2;
-                canvas.width = width;
+                canvas.width = maxWidth;
                 canvas.height = height1 + height2;
 
-                ctx.drawImage(img1, 0, 0, width, height1);
-                ctx.drawImage(img2, 0, height1, width, height2);
+                ctx.drawImage(img1, 0, 0, maxWidth, height1);
+                ctx.drawImage(img2, 0, height1, maxWidth, height2);
             } else {
                 throw new Error('Invalid merge direction');
             }
@@ -431,6 +434,7 @@
                 }, 'image/png');
             });
         }
+
 
         // Helper function to load an image
         function loadImage(src) {

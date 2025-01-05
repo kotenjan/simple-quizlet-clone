@@ -43,9 +43,7 @@ def start_quiz():
 
         quiz_data = sorted(
             quiz_data,
-            key=lambda q: (
-                -(q["correct"] - q["incorrect"])
-            )
+            key=lambda q: (q["correct"] - q["incorrect"])
         )
 
     session['quiz_questions'] = quiz_data
@@ -67,6 +65,7 @@ def get_card():
     index = session.get('question_index', 0)
     quiz_questions = session['quiz_questions']
     card = quiz_questions[index]
+    print(card["correct"], card["incorrect"])
     return jsonify({'question': card["question"], "answer": card["answer"], "question_n": index+1, "questions_total": len(quiz_questions), "questions_left": len(quiz_questions) - (index+1)})
 
 @app.route('/quiz/mark', methods=['POST'])
@@ -114,6 +113,7 @@ def mark():
     index = session.get('question_index', 0)
     quiz_questions = session['quiz_questions']
     card = quiz_questions[index]
+    print(card["correct"], card["incorrect"])
     return jsonify({'question': card["question"], "answer": card["answer"], "question_n": index+1, "questions_total": len(quiz_questions), "questions_left": len(quiz_questions) - (index+1)})
 
 @app.route('/quiz/move', methods=['POST'])
@@ -136,6 +136,7 @@ def move():
     index = session.get('question_index', 0)
     quiz_questions = session['quiz_questions']
     card = quiz_questions[index]
+    print(card["correct"], card["incorrect"])
     return jsonify({'question': card["question"], "answer": card["answer"], "question_n": index+1, "questions_total": len(quiz_questions), "questions_left": len(quiz_questions) - (index+1)})
 
 @app.route('/DATA/<path:filename>')

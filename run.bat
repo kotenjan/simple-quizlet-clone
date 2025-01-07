@@ -10,6 +10,12 @@ if %errorlevel% neq 0 (
 python -m ensurepip --upgrade
 python -m pip install --upgrade pip
 
+:: Create and activate virtual environment
+if not exist venv (
+    python -m venv venv
+)
+call venv\Scripts\activate
+
 :: Check and install Flask and Requests if not already installed
 pip show flask >nul 2>&1
 if %errorlevel% neq 0 (

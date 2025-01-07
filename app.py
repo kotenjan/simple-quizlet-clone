@@ -54,7 +54,7 @@ def start_quiz():
         
         quiz_data = sorted(
             quiz_data,
-            key="index"
+            key=lambda q: q["index"]
         )
 
     session['quiz_questions'] = quiz_data

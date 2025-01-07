@@ -29,6 +29,9 @@ def start_quiz():
     session["reset_progress"] = request.form.get('reset_progress') == 'true'
     session["repeat_after"] = int(request.form.get('repeat_interval', 1))
     session["quiz_path"] = quiz_file
+    
+    print(session["shuffle"], session["reset_progress"])
+    
     with open(quiz_file, 'r', encoding="utf-8") as f:
         quiz_data = json.load(f)
 
@@ -38,12 +41,20 @@ def start_quiz():
             quiz_data[i]["incorrect"] = 0
 
     if session["shuffle"]:
-
         random.shuffle(quiz_data)
 
         quiz_data = sorted(
             quiz_data,
             key=lambda q: (q["correct"] - q["incorrect"])
+        )
+    else:
+        if len(quiz_data) > 0 and "index" not in quiz_data[0]:
+            for index, question in enumerate(quiz_data):
+                question["index"] = index
+        
+        quiz_data = sorted(
+            quiz_data,
+            key="index"
         )
 
     session['quiz_questions'] = quiz_data
@@ -205,15 +216,15 @@ def create_quiz():
 
     def group_into_pairs(elements):
         result = []
-        for i in range(0, len(elements), 2):
-            if i + 1 < len(elements):
-                pair = {
-                    "question": os.path.join(quiz_images_folder, elements[i].filename),
-                    "answer": os.path.join(quiz_images_folder, elements[i + 1].filename),
-                    "correct": 0,
-                    "incorrect": 0
-                }
-                result.append(pair)
+        for i in range(0, len(elements) - 1, 2):
+            pair = {
+                "question": os.path.join(quiz_images_folder, elements[i].filename),
+                "answer": os.path.join(quiz_images_folder, elements[i + 1].filename),
+                "correct": 0,
+                "incorrect": 0,
+                "index": i,
+            }
+            result.append(pair)
         return result
     
     quiz_name = request.form.get('quiz_name')

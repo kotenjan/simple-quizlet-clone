@@ -388,10 +388,7 @@
                 .then(data => {
                     if (data.error) {
                         alert(data.error);
-                        cardQuestion.innerHTML = "No more questions.";
-                        cardAnswer.innerHTML = "";
-                        status.textContent = "Quiz Completed.";
-                        flashcard.style.cursor = 'default';
+                        window.location.href = '/';
                     } else {
                         // Apply flash effect
                         applyFlashEffect(action);
@@ -423,10 +420,7 @@
                 .then(data => {
                     if (data.error) {
                         alert(data.error);
-                        cardQuestion.innerHTML = "No more questions.";
-                        cardAnswer.innerHTML = "";
-                        status.textContent = "Quiz Completed.";
-                        flashcard.style.cursor = 'default';
+                        window.location.href = '/';
                     } else {
                         renderContent(cardQuestion, data.question);
                         renderContent(cardAnswer, data.answer);

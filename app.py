@@ -110,13 +110,12 @@ def mark():
     
     quiz_questions = session['quiz_questions']
     
-    if index >= len(quiz_questions):
-        return jsonify({'error': 'You have reached the end of the quiz. Congrats! 🥳'}), 400
-    
     if action == 'correct':
         quiz_questions[index]['correct'] += 1
         save_quiz(quiz_questions)
-        session['question_index'] = min(index + 1, len(quiz_questions) - 1)
+        if index + 1 >= len(quiz_questions):
+            return jsonify({'error': 'You have reached the end of the quiz. Congrats! 🥳'}), 400
+        session['question_index'] = index + 1
     
     elif action == 'incorrect':
         quiz_questions[index]['incorrect'] += 1.5
@@ -150,13 +149,15 @@ def move():
     
     index = session.get('question_index', 0)
     
+    quiz_questions = session['quiz_questions']
+    
     if direction == 'next':
-        session['question_index'] = min(index + 1, len(session['quiz_questions']) - 1)
+        if index + 1 >= len(quiz_questions):
+            return jsonify({'error': 'You have reached the end of the quiz. Congrats! 🥳'}), 400
+        session['question_index'] = index + 1
     
     elif direction == 'prev':
         session['question_index'] = max(index - 1, 0)
-    
-    quiz_questions = session['quiz_questions']
     
     index = session.get('question_index', 0)
     quiz_questions = session['quiz_questions']
@@ -201,7 +202,7 @@ def fetch_data():
                     'name': entry.name,
                     'type': 'file'
                 })
-        return jsonify(entries)
+        return jsonify(sorted(entries, key=lambda x: x["name"]))
     except Exception as e:
         return jsonify([])
 

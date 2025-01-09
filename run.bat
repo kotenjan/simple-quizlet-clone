@@ -1,10 +1,21 @@
 @echo off
-:: Check if Python is installed
-where python >nul 2>&1
-if %errorlevel% neq 0 (
-    echo Python not found, installing...
-    start /wait msiexec.exe /i https://www.python.org/ftp/python/3.11.6/python-3.11.6-amd64.exe /quiet InstallAllUsers=1 PrependPath=1
-)
+
+:: Check if Python is installed using your method
+:check
+python --version >nul 2>&1
+if errorlevel 1 goto errorNoPython
+
+:: If Python is installed, proceed with the rest of the script
+goto proceed_setup
+
+:: Install Python
+:errorNoPython
+echo Python not found, installing...
+python
+timeout /t 60
+goto check
+
+:proceed_setup
 
 :: Ensure pip is upgraded
 python -m ensurepip --upgrade

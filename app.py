@@ -118,7 +118,7 @@ def mark():
         session['question_index'] = index + 1
     
     elif action == 'incorrect':
-        quiz_questions[index]['incorrect'] += 1.5
+        quiz_questions[index]['incorrect'] += 2
         save_quiz(quiz_questions)
         session['question_index'] = min(index + 1, len(quiz_questions) - 1)
 

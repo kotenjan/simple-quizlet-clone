@@ -1,1 +1,135 @@
-[{"answer": "DATA\\MPI/ROZSTREL_III\\images\\Screenshot 2025-01-17 134741.png", "correct": 1, "incorrect": 1.5, "index": 28, "question": "DATA\\MPI/ROZSTREL_III\\images\\Screenshot 2025-01-17 134738.png"}, {"answer": "DATA\\MPI/ROZSTREL_III\\images\\Screenshot 2025-01-17 133329.png", "correct": 1, "incorrect": 1.5, "index": 14, "question": "DATA\\MPI/ROZSTREL_III\\images\\Screenshot 2025-01-17 133326.png"}, {"answer": "DATA\\MPI/ROZSTREL_III\\images\\Screenshot 2025-01-17 134909.png", "correct": 1, "incorrect": 1.5, "index": 32, "question": "DATA\\MPI/ROZSTREL_III\\images\\Screenshot 2025-01-17 134901.png"}, {"answer": "DATA\\MPI/ROZSTREL_III\\images\\Screenshot 2025-01-17 134209.png", "correct": 1, "incorrect": 1.5, "index": 24, "question": "DATA\\MPI/ROZSTREL_III\\images\\Screenshot 2025-01-17 134207.png"}, {"answer": "DATA\\MPI/ROZSTREL_III\\images\\Screenshot 2025-01-17 121523.png", "correct": 1, "incorrect": 1.5, "index": 2, "question": "DATA\\MPI/ROZSTREL_III\\images\\Screenshot 2025-01-17 121518.png"}, {"answer": "DATA\\MPI/ROZSTREL_III\\images\\Screenshot 2025-01-17 133242.png", "correct": 1, "incorrect": 1.5, "index": 10, "question": "DATA\\MPI/ROZSTREL_III\\images\\Screenshot 2025-01-17 133240.png"}, {"answer": "DATA\\MPI/ROZSTREL_III\\images\\Screenshot 2025-01-17 134503.png", "correct": 1, "incorrect": 1.5, "index": 26, "question": "DATA\\MPI/ROZSTREL_III\\images\\Screenshot 2025-01-17 134455.png"}, {"answer": "DATA\\MPI/ROZSTREL_III\\images\\Screenshot 2025-01-17 134807.png", "correct": 1, "incorrect": 1.5, "index": 30, "question": "DATA\\MPI/ROZSTREL_III\\images\\Screenshot 2025-01-17 134801.png"}, {"answer": "DATA\\MPI/ROZSTREL_III\\images\\Screenshot 2025-01-17 134142.png", "correct": 1, "incorrect": 1.5, "index": 22, "question": "DATA\\MPI/ROZSTREL_III\\images\\Screenshot 2025-01-17 134130.png"}, {"answer": "DATA\\MPI/ROZSTREL_III\\images\\Screenshot 2025-01-17 135005.png", "correct": 1, "incorrect": 0, "index": 36, "question": "DATA\\MPI/ROZSTREL_III\\images\\Screenshot 2025-01-17 135001.png"}, {"answer": "DATA\\MPI/ROZSTREL_III\\images\\Screenshot 2025-01-17 133323.png", "correct": 1, "incorrect": 0, "index": 12, "question": "DATA\\MPI/ROZSTREL_III\\images\\Screenshot 2025-01-17 133320.png"}, {"answer": "DATA\\MPI/ROZSTREL_III\\images\\Screenshot 2025-01-17 110734.png", "correct": 1, "incorrect": 0, "index": 0, "question": "DATA\\MPI/ROZSTREL_III\\images\\Screenshot 2025-01-17 110731.png"}, {"answer": "DATA\\MPI/ROZSTREL_III\\images\\Screenshot 2025-01-17 132213.png", "correct": 1, "incorrect": 0, "index": 6, "question": "DATA\\MPI/ROZSTREL_III\\images\\Screenshot 2025-01-17 132207.png"}, {"answer": "DATA\\MPI/ROZSTREL_III\\images\\Screenshot 2025-01-17 133335.png", "correct": 1, "incorrect": 0, "index": 16, "question": "DATA\\MPI/ROZSTREL_III\\images\\Screenshot 2025-01-17 133333.png"}, {"answer": "DATA\\MPI/ROZSTREL_III\\images\\Screenshot 2025-01-17 122816.png", "correct": 1, "incorrect": 0, "index": 4, "question": "DATA\\MPI/ROZSTREL_III\\images\\Screenshot 2025-01-17 122813.png"}, {"answer": "DATA\\MPI/ROZSTREL_III\\images\\Screenshot 2025-01-17 134934.png", "correct": 1, "incorrect": 0, "index": 34, "question": "DATA\\MPI/ROZSTREL_III\\images\\Screenshot 2025-01-17 134943.png"}, {"answer": "DATA\\MPI/ROZSTREL_III\\images\\Screenshot 2025-01-17 134101.png", "correct": 1, "incorrect": 0, "index": 20, "question": "DATA\\MPI/ROZSTREL_III\\images\\Screenshot 2025-01-17 134055.png"}, {"answer": "DATA\\MPI/ROZSTREL_III\\images\\Screenshot 2025-01-17 133727.png", "correct": 1, "incorrect": 0, "index": 18, "question": "DATA\\MPI/ROZSTREL_III\\images\\Screenshot 2025-01-17 133722.png"}, {"answer": "DATA\\MPI/ROZSTREL_III\\images\\Screenshot 2025-01-17 132237.png", "correct": 1, "incorrect": 1.5, "index": 8, "question": "DATA\\MPI/ROZSTREL_III\\images\\Screenshot 2025-01-17 132235.png"}]
+[
+    {
+        "answer": "Screenshot 2025-01-17 134741.png",
+        "correct": 1,
+        "incorrect": 1.5,
+        "index": 28,
+        "question": "Screenshot 2025-01-17 134738.png"
+    },
+    {
+        "answer": "Screenshot 2025-01-17 133329.png",
+        "correct": 1,
+        "incorrect": 1.5,
+        "index": 14,
+        "question": "Screenshot 2025-01-17 133326.png"
+    },
+    {
+        "answer": "Screenshot 2025-01-17 134909.png",
+        "correct": 1,
+        "incorrect": 1.5,
+        "index": 32,
+        "question": "Screenshot 2025-01-17 134901.png"
+    },
+    {
+        "answer": "Screenshot 2025-01-17 134209.png",
+        "correct": 1,
+        "incorrect": 1.5,
+        "index": 24,
+        "question": "Screenshot 2025-01-17 134207.png"
+    },
+    {
+        "answer": "Screenshot 2025-01-17 121523.png",
+        "correct": 1,
+        "incorrect": 1.5,
+        "index": 2,
+        "question": "Screenshot 2025-01-17 121518.png"
+    },
+    {
+        "answer": "Screenshot 2025-01-17 133242.png",
+        "correct": 1,
+        "incorrect": 1.5,
+        "index": 10,
+        "question": "Screenshot 2025-01-17 133240.png"
+    },
+    {
+        "answer": "Screenshot 2025-01-17 134503.png",
+        "correct": 1,
+        "incorrect": 1.5,
+        "index": 26,
+        "question": "Screenshot 2025-01-17 134455.png"
+    },
+    {
+        "answer": "Screenshot 2025-01-17 134807.png",
+        "correct": 1,
+        "incorrect": 1.5,
+        "index": 30,
+        "question": "Screenshot 2025-01-17 134801.png"
+    },
+    {
+        "answer": "Screenshot 2025-01-17 134142.png",
+        "correct": 1,
+        "incorrect": 1.5,
+        "index": 22,
+        "question": "Screenshot 2025-01-17 134130.png"
+    },
+    {
+        "answer": "Screenshot 2025-01-17 135005.png",
+        "correct": 1,
+        "incorrect": 0,
+        "index": 36,
+        "question": "Screenshot 2025-01-17 135001.png"
+    },
+    {
+        "answer": "Screenshot 2025-01-17 133323.png",
+        "correct": 1,
+        "incorrect": 0,
+        "index": 12,
+        "question": "Screenshot 2025-01-17 133320.png"
+    },
+    {
+        "answer": "Screenshot 2025-01-17 110734.png",
+        "correct": 1,
+        "incorrect": 0,
+        "index": 0,
+        "question": "Screenshot 2025-01-17 110731.png"
+    },
+    {
+        "answer": "Screenshot 2025-01-17 132213.png",
+        "correct": 1,
+        "incorrect": 0,
+        "index": 6,
+        "question": "Screenshot 2025-01-17 132207.png"
+    },
+    {
+        "answer": "Screenshot 2025-01-17 133335.png",
+        "correct": 1,
+        "incorrect": 0,
+        "index": 16,
+        "question": "Screenshot 2025-01-17 133333.png"
+    },
+    {
+        "answer": "Screenshot 2025-01-17 122816.png",
+        "correct": 1,
+        "incorrect": 0,
+        "index": 4,
+        "question": "Screenshot 2025-01-17 122813.png"
+    },
+    {
+        "answer": "Screenshot 2025-01-17 134934.png",
+        "correct": 1,
+        "incorrect": 0,
+        "index": 34,
+        "question": "Screenshot 2025-01-17 134943.png"
+    },
+    {
+        "answer": "Screenshot 2025-01-17 134101.png",
+        "correct": 1,
+        "incorrect": 0,
+        "index": 20,
+        "question": "Screenshot 2025-01-17 134055.png"
+    },
+    {
+        "answer": "Screenshot 2025-01-17 133727.png",
+        "correct": 1,
+        "incorrect": 0,
+        "index": 18,
+        "question": "Screenshot 2025-01-17 133722.png"
+    },
+    {
+        "answer": "Screenshot 2025-01-17 132237.png",
+        "correct": 1,
+        "incorrect": 1.5,
+        "index": 8,
+        "question": "Screenshot 2025-01-17 132235.png"
+    }
+]

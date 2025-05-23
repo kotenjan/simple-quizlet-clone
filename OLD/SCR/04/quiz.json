@@ -1,1 +1,16 @@
-[{"answer": "DATA\\SCR/04\\images\\Screenshot 2025-01-14 213721.png", "correct": 0, "incorrect": 0, "index": 2, "question": "DATA\\SCR/04\\images\\Screenshot 2025-01-14 213713.png"}, {"answer": "DATA\\SCR/04\\images\\Screenshot 2025-01-14 213705.png", "correct": 2, "incorrect": 0, "index": 0, "question": "DATA\\SCR/04\\images\\Screenshot 2025-01-14 213658.png"}]
+[
+    {
+        "answer": "Screenshot 2025-01-14 213721.png",
+        "correct": 0,
+        "incorrect": 0,
+        "index": 2,
+        "question": "Screenshot 2025-01-14 213713.png"
+    },
+    {
+        "answer": "Screenshot 2025-01-14 213705.png",
+        "correct": 2,
+        "incorrect": 0,
+        "index": 0,
+        "question": "Screenshot 2025-01-14 213658.png"
+    }
+]

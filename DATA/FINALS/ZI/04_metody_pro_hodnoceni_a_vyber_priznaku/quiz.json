@@ -1,1 +1,30 @@
-[{"question": "DATA\\FINALS/ZI/04_metody_pro_hodnoceni_a_vyber_priznaku\\images\\Screenshot 2025-05-12 152248.png", "answer": "DATA\\FINALS/ZI/04_metody_pro_hodnoceni_a_vyber_priznaku\\images\\Screenshot 2025-05-12 152251.png", "correct": 0, "incorrect": 0, "index": 0}, {"question": "DATA\\FINALS/ZI/04_metody_pro_hodnoceni_a_vyber_priznaku\\images\\Screenshot 2025-05-12 152423.png", "answer": "DATA\\FINALS/ZI/04_metody_pro_hodnoceni_a_vyber_priznaku\\images\\Screenshot 2025-05-12 152258.png", "correct": 0, "incorrect": 0, "index": 2}, {"question": "DATA\\FINALS/ZI/04_metody_pro_hodnoceni_a_vyber_priznaku\\images\\Screenshot 2025-05-12 152309.png", "answer": "DATA\\FINALS/ZI/04_metody_pro_hodnoceni_a_vyber_priznaku\\images\\Screenshot 2025-05-12 152311.png", "correct": 0, "incorrect": 0, "index": 4}, {"question": "DATA\\FINALS/ZI/04_metody_pro_hodnoceni_a_vyber_priznaku\\images\\Screenshot 2025-05-12 152324.png", "answer": "DATA\\FINALS/ZI/04_metody_pro_hodnoceni_a_vyber_priznaku\\images\\Screenshot 2025-05-12 152328.png", "correct": 0, "incorrect": 0, "index": 6}]
+[
+    {
+        "question": "Screenshot 2025-05-12 152248.png",
+        "answer": "Screenshot 2025-05-12 152251.png",
+        "correct": 0,
+        "incorrect": 0,
+        "index": 0
+    },
+    {
+        "question": "Screenshot 2025-05-12 152423.png",
+        "answer": "Screenshot 2025-05-12 152258.png",
+        "correct": 0,
+        "incorrect": 0,
+        "index": 2
+    },
+    {
+        "question": "Screenshot 2025-05-12 152309.png",
+        "answer": "Screenshot 2025-05-12 152311.png",
+        "correct": 0,
+        "incorrect": 0,
+        "index": 4
+    },
+    {
+        "question": "Screenshot 2025-05-12 152324.png",
+        "answer": "Screenshot 2025-05-12 152328.png",
+        "correct": 0,
+        "incorrect": 0,
+        "index": 6
+    }
+]

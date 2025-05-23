@@ -25,6 +25,7 @@ def quiz():
 @app.route('/start_quiz', methods=['POST'])
 def start_quiz():
     quiz_file = os.path.join("DATA", request.form.getlist('files')[0], "quiz.json")
+    quiz_images = os.path.join("DATA", request.form.getlist('files')[0], "images")
     session["shuffle"] = request.form.get('shuffle_questions') == 'true'
     session["reset_progress"] = request.form.get('reset_progress') == 'true'
     session["repeat_after"] = int(request.form.get('repeat_interval', 1))
@@ -56,7 +57,13 @@ def start_quiz():
             quiz_data,
             key=lambda q: q["index"]
         )
+        
+    for question in quiz_data:
+        question["question"] = os.path.join(quiz_images, question["question"])
+        question["answer"] = os.path.join(quiz_images, question["answer"])
 
+    print(quiz_data)
+    
     session['quiz_questions'] = quiz_data
     session['question_index'] = 0
     return redirect(url_for('quiz'))
@@ -96,7 +103,13 @@ def mark():
         for element in quiz[::-1]: # last copy of element has correct/incorrect with current state
             if element["question"] not in elements: # keep only first instance of element
                 elements.add(element["question"])
-                questions_to_save.append(element)
+                questions_to_save.append({
+                    "answer": os.path.basename(element["answer"]),
+                    "correct": element["correct"],
+                    "incorrect": element["incorrect"],
+                    "index": element["index"],
+                    "question": os.path.basename(element["question"])
+                })
 
         with open(session["quiz_path"], "w", encoding="utf-8") as f:
             json.dump(questions_to_save[::-1], f) # reverse back to get original order
@@ -219,8 +232,8 @@ def create_quiz():
         result = []
         for i in range(0, len(elements) - 1, 2):
             pair = {
-                "question": os.path.join(quiz_images_folder, elements[i].filename),
-                "answer": os.path.join(quiz_images_folder, elements[i + 1].filename),
+                "question": elements[i].filename,
+                "answer": elements[i + 1].filename,
                 "correct": 0,
                 "incorrect": 0,
                 "index": i,

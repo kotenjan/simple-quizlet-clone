@@ -1,1 +1,16 @@
-[{"question": "DATA/FINALS/SPOL/07_zaklady_teorie_informace/images/Screenshot from 2025-05-07 14-05-33.png", "answer": "DATA/FINALS/SPOL/07_zaklady_teorie_informace/images/Screenshot from 2025-05-07 14-05-41.png", "correct": 0, "incorrect": 0, "index": 0}, {"question": "DATA/FINALS/SPOL/07_zaklady_teorie_informace/images/Screenshot from 2025-05-07 14-06-14.png", "answer": "DATA/FINALS/SPOL/07_zaklady_teorie_informace/images/Screenshot from 2025-05-07 14-06-18.png", "correct": 0, "incorrect": 0, "index": 2}]
+[
+    {
+        "question": "Screenshot from 2025-05-07 14-05-33.png",
+        "answer": "Screenshot from 2025-05-07 14-05-41.png",
+        "correct": 0,
+        "incorrect": 0,
+        "index": 0
+    },
+    {
+        "question": "Screenshot from 2025-05-07 14-06-14.png",
+        "answer": "Screenshot from 2025-05-07 14-06-18.png",
+        "correct": 0,
+        "incorrect": 0,
+        "index": 2
+    }
+]

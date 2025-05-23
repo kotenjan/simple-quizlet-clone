@@ -1,1 +1,23 @@
-[{"question": "DATA\\FINALS/ZI/11_ensemble_metody\\images\\Screenshot 2025-05-12 154352.png", "answer": "DATA\\FINALS/ZI/11_ensemble_metody\\images\\Screenshot 2025-05-12 154356.png", "correct": 0, "incorrect": 0, "index": 0}, {"question": "DATA\\FINALS/ZI/11_ensemble_metody\\images\\Screenshot 2025-05-12 154400.png", "answer": "DATA\\FINALS/ZI/11_ensemble_metody\\images\\Screenshot 2025-05-12 154429.png", "correct": 0, "incorrect": 0, "index": 2}, {"question": "DATA\\FINALS/ZI/11_ensemble_metody\\images\\Screenshot 2025-05-12 154432.png", "answer": "DATA\\FINALS/ZI/11_ensemble_metody\\images\\Screenshot 2025-05-12 154436.png", "correct": 0, "incorrect": 0, "index": 4}]
+[
+    {
+        "question": "Screenshot 2025-05-12 154352.png",
+        "answer": "Screenshot 2025-05-12 154356.png",
+        "correct": 0,
+        "incorrect": 0,
+        "index": 0
+    },
+    {
+        "question": "Screenshot 2025-05-12 154400.png",
+        "answer": "Screenshot 2025-05-12 154429.png",
+        "correct": 0,
+        "incorrect": 0,
+        "index": 2
+    },
+    {
+        "question": "Screenshot 2025-05-12 154432.png",
+        "answer": "Screenshot 2025-05-12 154436.png",
+        "correct": 0,
+        "incorrect": 0,
+        "index": 4
+    }
+]

@@ -1,1 +1,37 @@
-[{"question": "DATA\\FINALS/SPOL/20_paralelni_algoritmy_pro_redukci\\images\\Screenshot 2025-05-12 161509.png", "answer": "DATA\\FINALS/SPOL/20_paralelni_algoritmy_pro_redukci\\images\\Screenshot 2025-05-12 161513.png", "correct": 0, "incorrect": 0, "index": 0}, {"question": "DATA\\FINALS/SPOL/20_paralelni_algoritmy_pro_redukci\\images\\Screenshot 2025-05-12 161516.png", "answer": "DATA\\FINALS/SPOL/20_paralelni_algoritmy_pro_redukci\\images\\Screenshot 2025-05-12 161518.png", "correct": 0, "incorrect": 0, "index": 2}, {"question": "DATA\\FINALS/SPOL/20_paralelni_algoritmy_pro_redukci\\images\\Screenshot 2025-05-12 161531.png", "answer": "DATA\\FINALS/SPOL/20_paralelni_algoritmy_pro_redukci\\images\\Screenshot 2025-05-12 161534.png", "correct": 0, "incorrect": 0, "index": 4}, {"question": "DATA\\FINALS/SPOL/20_paralelni_algoritmy_pro_redukci\\images\\Screenshot 2025-05-12 161537.png", "answer": "DATA\\FINALS/SPOL/20_paralelni_algoritmy_pro_redukci\\images\\Screenshot 2025-05-12 161539.png", "correct": 0, "incorrect": 0, "index": 6}, {"question": "DATA\\FINALS/SPOL/20_paralelni_algoritmy_pro_redukci\\images\\Screenshot 2025-05-12 161542.png", "answer": "DATA\\FINALS/SPOL/20_paralelni_algoritmy_pro_redukci\\images\\Screenshot 2025-05-12 161545.png", "correct": 0, "incorrect": 0, "index": 8}]
+[
+    {
+        "question": "Screenshot 2025-05-12 161509.png",
+        "answer": "Screenshot 2025-05-12 161513.png",
+        "correct": 0,
+        "incorrect": 0,
+        "index": 0
+    },
+    {
+        "question": "Screenshot 2025-05-12 161516.png",
+        "answer": "Screenshot 2025-05-12 161518.png",
+        "correct": 0,
+        "incorrect": 0,
+        "index": 2
+    },
+    {
+        "question": "Screenshot 2025-05-12 161531.png",
+        "answer": "Screenshot 2025-05-12 161534.png",
+        "correct": 0,
+        "incorrect": 0,
+        "index": 4
+    },
+    {
+        "question": "Screenshot 2025-05-12 161537.png",
+        "answer": "Screenshot 2025-05-12 161539.png",
+        "correct": 0,
+        "incorrect": 0,
+        "index": 6
+    },
+    {
+        "question": "Screenshot 2025-05-12 161542.png",
+        "answer": "Screenshot 2025-05-12 161545.png",
+        "correct": 0,
+        "incorrect": 0,
+        "index": 8
+    }
+]

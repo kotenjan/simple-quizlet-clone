@@ -279,7 +279,7 @@
             <button class="action-button" data-action="next">Next (→)</button>
         </div>        
         <div class="status" id="status">
-            Question 0 of 0 | Questions Left: 0 | Accuracy: 0
+            Question 0 of 0 | Questions Left: 0 | Score: 0
         </div>
     </div>
 
@@ -363,7 +363,7 @@
                         } else {
                             renderContent(cardQuestion, data.question);
                             renderContent(cardAnswer, data.answer);
-                            status.textContent = `Question ${data.question_n} of ${data.questions_total} | Questions Left: ${data.questions_left} | Accuracy: ${data.correct-data.incorrect}`;
+                            status.textContent = `Question ${data.question_n} of ${data.questions_total} | Questions Left: ${data.questions_left} | Score: ${data.correct-data.incorrect}`;
                             // Ensure the card is showing the front
                             if (flashcard.classList.contains('flipped')) {
                                 flashcard.classList.remove('flipped');
@@ -395,7 +395,7 @@
 
                         renderContent(cardQuestion, data.question);
                         renderContent(cardAnswer, data.answer);
-                        status.textContent = `Question ${data.question_n} of ${data.questions_total} | Questions Left: ${data.questions_left} | Accuracy: ${data.correct-data.incorrect}`;
+                        status.textContent = `Question ${data.question_n} of ${data.questions_total} | Questions Left: ${data.questions_left} | Score: ${data.correct-data.incorrect}`;
                         // Ensure the card is showing the front
                         if (flashcard.classList.contains('flipped')) {
                             flashcard.classList.remove('flipped');
@@ -424,7 +424,7 @@
                     } else {
                         renderContent(cardQuestion, data.question);
                         renderContent(cardAnswer, data.answer);
-                        status.textContent = `Question ${data.question_n} of ${data.questions_total} | Questions Left: ${data.questions_left} | Accuracy: ${data.correct-data.incorrect}`;
+                        status.textContent = `Question ${data.question_n} of ${data.questions_total} | Questions Left: ${data.questions_left} | Score: ${data.correct-data.incorrect}`;
                         // Ensure the card is showing the front
                         if (flashcard.classList.contains('flipped')) {
                             flashcard.classList.remove('flipped');

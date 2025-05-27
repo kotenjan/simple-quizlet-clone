@@ -223,6 +223,18 @@
             background: #0056b3;
         }
 
+        .file-item .card-label {
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            background: rgba(0,0,0,0.6);
+            color: #fff;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-size: 12px;
+            z-index: 1;
+        }
+
         /* Responsive Modal */
         @media only screen and (max-width: 700px){
             .modal-content {
@@ -291,6 +303,13 @@
             selectedFiles.forEach((file, index) => {
                 const li = document.createElement('li');
                 li.classList.add('file-item');
+
+                // add Question/Answer label
+                const label = document.createElement('div');
+                label.classList.add('card-label');
+                const num = Math.floor(index/2) + 1;
+                label.textContent = `${(index % 2 === 0 ? 'Question' : 'Answer')} ${num}`;
+                li.appendChild(label);
 
                 if (file.type.startsWith('image/')) {
                     const img = document.createElement('img');
